@@ -1,0 +1,16 @@
+@import "../../theme/for-import/shared";
+
+.e-success{
+    margin-left: 0px;
+    .e-icons{
+        background: white;
+        border: 1px inset #eee;
+        border-left: 1px solid #eee;
+        
+        &::before{
+            color:limegreen;
+            font-weight: bolder;
+            font-size: 15px;
+        }
+    }
+}

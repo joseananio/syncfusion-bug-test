@@ -1,0 +1,861 @@
+├─ @angular/animations@7.2.15
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/angular/angular
+│  ├─ publisher: angular
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\animations
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\animations\README.md
+├─ @angular/cdk@7.3.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/angular/material2
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\cdk
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\cdk\LICENSE
+├─ @angular/common@7.2.15
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/angular/angular
+│  ├─ publisher: angular
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\common
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\common\README.md
+├─ @angular/compiler@7.2.15
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/angular/angular
+│  ├─ publisher: angular
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\compiler
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\compiler\README.md
+├─ @angular/core@7.2.15
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/angular/angular
+│  ├─ publisher: angular
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\core
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\core\README.md
+├─ @angular/forms@7.2.15
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/angular/angular
+│  ├─ publisher: angular
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\forms
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\forms\README.md
+├─ @angular/material@7.3.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/angular/material2
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\material
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\material\LICENSE
+├─ @angular/platform-browser-dynamic@7.2.15
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/angular/angular
+│  ├─ publisher: angular
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\platform-browser-dynamic
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\platform-browser-dynamic\README.md
+├─ @angular/platform-browser@7.2.15
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/angular/angular
+│  ├─ publisher: angular
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\platform-browser
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\platform-browser\README.md
+├─ @angular/router@7.2.15
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/angular/angular
+│  ├─ publisher: angular
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\router
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@angular\router\README.md
+├─ @biesbjerg/ngx-translate-extract-marker@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/biesbjerg/ngx-translate-extract-marker
+│  ├─ publisher: Kim Biesbjerg
+│  ├─ email: kim@biesbjerg.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@biesbjerg\ngx-translate-extract-marker
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@biesbjerg\ngx-translate-extract-marker\README.md
+├─ @ngx-translate/core@11.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ngx-translate/core
+│  ├─ publisher: Olivier Combe
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@ngx-translate\core
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@ngx-translate\core\README.md
+├─ @ngx-translate/http-loader@4.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ngx-translate/http-loader
+│  ├─ publisher: Olivier Combe
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@ngx-translate\http-loader
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@ngx-translate\http-loader\README.md
+├─ @syncfusion/ej2-angular-base@17.3.14
+│  ├─ licenses: Custom: https://www.syncfusion.com/eula/es/
+│  ├─ repository: https://github.com/syncfusion/ej2-angular-ui-components
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-base
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-base\license
+├─ @syncfusion/ej2-angular-base@17.3.19
+│  ├─ licenses: Custom: https://www.syncfusion.com/eula/es/
+│  ├─ repository: https://github.com/syncfusion/ej2-angular-ui-components
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-popups\node_modules\@syncfusion\ej2-angular-base
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-popups\node_modules\@syncfusion\ej2-angular-base\license
+├─ @syncfusion/ej2-angular-buttons@17.3.15
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/products/images/button/readme.gif
+│  ├─ repository: https://github.com/syncfusion/ej2-angular-ui-components
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-buttons
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-buttons\README.md
+├─ @syncfusion/ej2-angular-calendars@17.3.14
+│  ├─ licenses: Custom: https://www.syncfusion.com/
+│  ├─ repository: https://github.com/syncfusion/ej2-angular-ui-components
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-calendars
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-calendars\README.md
+├─ @syncfusion/ej2-angular-charts@17.3.14
+│  ├─ licenses: Custom: http://ej2.syncfusion.com/angular/documentation/data
+│  ├─ repository: https://github.com/syncfusion/ej2-angular-ui-components
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-charts
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-charts\README.md
+├─ @syncfusion/ej2-angular-dropdowns@17.3.14
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/products/images/dropdowns/readme.gif
+│  ├─ repository: https://github.com/syncfusion/ej2-angular-ui-components
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-dropdowns
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-dropdowns\README.md
+├─ @syncfusion/ej2-angular-grids@17.3.14
+│  ├─ licenses: Custom: http://ej2.syncfusion.com/angular/documentation/data
+│  ├─ repository: https://github.com/syncfusion/ej2-angular-ui-components
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-grids
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-grids\README.md
+├─ @syncfusion/ej2-angular-navigations@17.3.14
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/products/images/navigations/readMe.gif
+│  ├─ repository: https://github.com/syncfusion/ej2-angular-ui-components
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-navigations
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-navigations\README.md
+├─ @syncfusion/ej2-angular-popups@17.3.20
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/products/images/popup/readme.png
+│  ├─ repository: https://github.com/syncfusion/ej2-angular-ui-components
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-popups
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-popups\README.md
+├─ @syncfusion/ej2-angular-treegrid@17.3.14
+│  ├─ licenses: Custom: http://ej2.syncfusion.com/documentation/data
+│  ├─ repository: https://github.com/syncfusion/ej2-angular-ui-components
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-treegrid
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-treegrid\README.md
+├─ @syncfusion/ej2-base@17.3.14
+│  ├─ licenses: Custom: https://www.syncfusion.com/content/downloads/syncfusion
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-base
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-base\license
+├─ @syncfusion/ej2-base@17.3.19
+│  ├─ licenses: Custom: https://www.syncfusion.com/content/downloads/syncfusion
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-popups\node_modules\@syncfusion\ej2-base
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-popups\node_modules\@syncfusion\ej2-base\license
+├─ @syncfusion/ej2-buttons@17.3.15
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/products/images/button/readme.gif
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-buttons
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-buttons\license
+├─ @syncfusion/ej2-buttons@17.3.19
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/products/images/button/readme.gif
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-popups\node_modules\@syncfusion\ej2-buttons
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-popups\node_modules\@syncfusion\ej2-buttons\license
+├─ @syncfusion/ej2-calendars@17.3.14
+│  ├─ licenses: Custom: https://www.syncfusion.com/
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-calendars
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-calendars\license
+├─ @syncfusion/ej2-charts@17.3.14
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/documentation/data/
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls/tree/master/controls/charts
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-charts
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-charts\license
+├─ @syncfusion/ej2-compression@17.3.14
+│  ├─ licenses: [1m[31mUNKNOWN[39m[22m
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-compression
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-compression\license
+├─ @syncfusion/ej2-data@17.3.14
+│  ├─ licenses: [1m[31mUNKNOWN[39m[22m
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-data
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-data\license
+├─ @syncfusion/ej2-dropdowns@17.3.14
+│  ├─ licenses: Custom: https://www.syncfusion.com/eula/es/
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-dropdowns
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-dropdowns\license
+├─ @syncfusion/ej2-excel-export@17.3.14
+│  ├─ licenses: [1m[31mUNKNOWN[39m[22m
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-excel-export
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-excel-export\license
+├─ @syncfusion/ej2-file-utils@17.3.14
+│  ├─ licenses: [1m[31mUNKNOWN[39m[22m
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-file-utils
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-file-utils\license
+├─ @syncfusion/ej2-grids@17.3.14
+│  ├─ licenses: Custom: http://ej2.syncfusion.com/documentation/data
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls/tree/master/controls/grids
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-grids
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-grids\license
+├─ @syncfusion/ej2-icons@17.3.14
+│  ├─ licenses: Custom: https://www.syncfusion.com/eula/es/
+│  ├─ repository: https://github.com/syncfusion/ej2-icons
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-icons
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-icons\README.md
+├─ @syncfusion/ej2-icons@17.3.19
+│  ├─ licenses: Custom: https://www.syncfusion.com/eula/es/
+│  ├─ repository: https://github.com/syncfusion/ej2-icons
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-popups\node_modules\@syncfusion\ej2-icons
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-popups\node_modules\@syncfusion\ej2-icons\README.md
+├─ @syncfusion/ej2-inputs@17.3.14
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/products/images/input/readme.gif
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls/tree/master/controls/inputs
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-inputs
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-inputs\license
+├─ @syncfusion/ej2-layouts@17.3.14
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/products/images/layout/readme.png
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls/tree/master/controls/layouts
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-layouts
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-layouts\license
+├─ @syncfusion/ej2-lists@17.3.14
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/products/images/listview/readme.gif
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls/tree/master/controls/lists
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-lists
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-lists\license
+├─ @syncfusion/ej2-navigations@17.3.14
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/products/images/navigations/readMe.gif
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-navigations
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-navigations\license
+├─ @syncfusion/ej2-pdf-export@17.3.14
+│  ├─ licenses: [1m[31mUNKNOWN[39m[22m
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-pdf-export
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-pdf-export\license
+├─ @syncfusion/ej2-popups@17.3.15
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/products/images/popup/readme.png
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-popups
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-popups\license
+├─ @syncfusion/ej2-popups@17.3.19
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/products/images/popup/readme.png
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-popups\node_modules\@syncfusion\ej2-popups
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-popups\node_modules\@syncfusion\ej2-popups\license
+├─ @syncfusion/ej2-splitbuttons@17.3.14
+│  ├─ licenses: Custom: https://ej2.syncfusion.com/products/images/splitbutton/readme.gif
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-splitbuttons
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-splitbuttons\license
+├─ @syncfusion/ej2-svg-base@17.3.14
+│  ├─ licenses: [1m[31mUNKNOWN[39m[22m
+│  ├─ repository: https://github.com/syncfusion/ej2-javascript-ui-controls
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-svg-base
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-svg-base\license
+├─ @syncfusion/ej2-treegrid@17.3.14
+│  ├─ licenses: Custom: http://ej2.syncfusion.com/documentation/data
+│  ├─ repository: https://github.com/syncfusion/ej2-treegrid
+│  ├─ publisher: Syncfusion Inc.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-treegrid
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-treegrid\license
+├─ abbrev@1.1.1
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/abbrev-js
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\abbrev
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\abbrev\LICENSE
+├─ adm-zip@0.4.11
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/cthackers/adm-zip
+│  ├─ publisher: Nasca Iacob
+│  ├─ email: sy@another-d-mention.ro
+│  ├─ url: https://github.com/cthackers
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\adm-zip
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\adm-zip\README.md
+├─ ajv@5.5.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/epoberezkin/ajv
+│  ├─ publisher: Evgeny Poberezkin
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\ajv
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\ajv\LICENSE
+├─ asn1@0.2.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/joyent/node-asn1
+│  ├─ publisher: Joyent
+│  ├─ url: joyent.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\asn1
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\asn1\LICENSE
+├─ assert-plus@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/mcavage/node-assert-plus
+│  ├─ publisher: Mark Cavage
+│  ├─ email: mcavage@gmail.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\assert-plus
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\assert-plus\README.md
+├─ asynckit@0.4.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/alexindigo/asynckit
+│  ├─ publisher: Alex Indigo
+│  ├─ email: iam@alexindigo.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\asynckit
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\asynckit\LICENSE
+├─ aws-sign2@0.7.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/mikeal/aws-sign
+│  ├─ publisher: Mikeal Rogers
+│  ├─ email: mikeal.rogers@gmail.com
+│  ├─ url: http://www.futurealoof.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\aws-sign2
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\aws-sign2\LICENSE
+├─ aws4@1.8.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/mhart/aws4
+│  ├─ publisher: Michael Hart
+│  ├─ email: michael.hart.au@gmail.com
+│  ├─ url: http://github.com/mhart
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\aws4
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\aws4\LICENSE
+├─ balanced-match@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/juliangruber/balanced-match
+│  ├─ publisher: Julian Gruber
+│  ├─ email: mail@juliangruber.com
+│  ├─ url: http://juliangruber.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\balanced-match
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\balanced-match\LICENSE.md
+├─ bcrypt-pbkdf@1.0.2
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/joyent/node-bcrypt-pbkdf
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\bcrypt-pbkdf
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\bcrypt-pbkdf\LICENSE
+├─ bootstrap@4.3.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/twbs/bootstrap
+│  ├─ publisher: The Bootstrap Authors
+│  ├─ url: https://github.com/twbs/bootstrap/graphs/contributors
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\bootstrap
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\bootstrap\LICENSE
+├─ brace-expansion@1.1.11
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/juliangruber/brace-expansion
+│  ├─ publisher: Julian Gruber
+│  ├─ email: mail@juliangruber.com
+│  ├─ url: http://juliangruber.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\brace-expansion
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\brace-expansion\LICENSE
+├─ caseless@0.12.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/mikeal/caseless
+│  ├─ publisher: Mikeal Rogers
+│  ├─ email: mikeal.rogers@gmail.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\caseless
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\caseless\LICENSE
+├─ classlist.js@1.1.20150312
+│  ├─ licenses: Public Domain
+│  ├─ repository: https://github.com/eligrey/classList.js
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\classlist.js
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\classlist.js\LICENSE.md
+├─ cldr-data-downloader@0.3.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/rxaviers/cldr-data-downloader
+│  ├─ publisher: Rafael Xavier de Souza
+│  ├─ email: rxaviers@gmail.com
+│  ├─ url: http://rafael.xavier.blog.br
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\LICENSE-MIT
+├─ cldr-data@35.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/rxaviers/cldr-data-npm
+│  ├─ publisher: Rafael Xavier de Souza
+│  ├─ email: rxaviers@gmail.com
+│  ├─ url: http://rafael.xavier.blog.br
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data\LICENSE
+├─ co@4.6.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/tj/co
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\co
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\co\LICENSE
+├─ combined-stream@1.0.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/felixge/node-combined-stream
+│  ├─ publisher: Felix Geisendörfer
+│  ├─ email: felix@debuggable.com
+│  ├─ url: http://debuggable.com/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\combined-stream
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\combined-stream\License
+├─ concat-map@0.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/substack/node-concat-map
+│  ├─ publisher: James Halliday
+│  ├─ email: mail@substack.net
+│  ├─ url: http://substack.net
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\concat-map
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\concat-map\LICENSE
+├─ core-js@2.6.9
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/zloirock/core-js
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\core-js
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\core-js\LICENSE
+├─ core-util-is@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/isaacs/core-util-is
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\core-util-is
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\core-util-is\LICENSE
+├─ dashdash@1.14.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/trentm/node-dashdash
+│  ├─ publisher: Trent Mick
+│  ├─ email: trentm@gmail.com
+│  ├─ url: http://trentm.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\dashdash
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\dashdash\LICENSE.txt
+├─ delayed-stream@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/felixge/node-delayed-stream
+│  ├─ publisher: Felix Geisendörfer
+│  ├─ email: felix@debuggable.com
+│  ├─ url: http://debuggable.com/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\delayed-stream
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\delayed-stream\License
+├─ ecc-jsbn@0.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/quartzjer/ecc-jsbn
+│  ├─ publisher: Jeremie Miller
+│  ├─ email: jeremie@jabber.org
+│  ├─ url: http://jeremie.com/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\ecc-jsbn
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\ecc-jsbn\LICENSE
+├─ extend@3.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/justmoon/node-extend
+│  ├─ publisher: Stefan Thomas
+│  ├─ email: justmoon@members.fsf.org
+│  ├─ url: http://www.justmoon.net
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\extend
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\extend\LICENSE
+├─ extsprintf@1.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/davepacheco/node-extsprintf
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\extsprintf
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\extsprintf\LICENSE
+├─ fast-deep-equal@1.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/epoberezkin/fast-deep-equal
+│  ├─ publisher: Evgeny Poberezkin
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\fast-deep-equal
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\fast-deep-equal\LICENSE
+├─ fast-json-stable-stringify@2.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/epoberezkin/fast-json-stable-stringify
+│  ├─ publisher: James Halliday
+│  ├─ email: mail@substack.net
+│  ├─ url: http://substack.net
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\fast-json-stable-stringify
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\fast-json-stable-stringify\LICENSE
+├─ file-saver@2.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/eligrey/FileSaver.js
+│  ├─ publisher: Eli Grey
+│  ├─ email: me@eligrey.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\file-saver
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\file-saver\LICENSE.md
+├─ flag-icon-css@3.4.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lipis/flag-icon-css
+│  ├─ publisher: Panayiotis Lipiridis
+│  ├─ email: lipiridis@gmail.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\flag-icon-css
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\flag-icon-css\LICENSE
+├─ forever-agent@0.6.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/mikeal/forever-agent
+│  ├─ publisher: Mikeal Rogers
+│  ├─ email: mikeal.rogers@gmail.com
+│  ├─ url: http://www.futurealoof.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\forever-agent
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\forever-agent\LICENSE
+├─ form-data@2.3.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/form-data/form-data
+│  ├─ publisher: Felix Geisendörfer
+│  ├─ email: felix@debuggable.com
+│  ├─ url: http://debuggable.com/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\form-data
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\form-data\License
+├─ getpass@0.1.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/arekinath/node-getpass
+│  ├─ publisher: Alex Wilson
+│  ├─ email: alex.wilson@joyent.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\getpass
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\getpass\LICENSE
+├─ glob@5.0.15
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/node-glob
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data\node_modules\glob
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data\node_modules\glob\LICENSE
+├─ hammerjs@2.0.8
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/hammerjs/hammer.js
+│  ├─ publisher: Jorik Tangelder
+│  ├─ email: j.tangelder@gmail.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\hammerjs
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\hammerjs\LICENSE.md
+├─ har-schema@2.0.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/ahmadnassri/har-schema
+│  ├─ publisher: Ahmad Nassri
+│  ├─ email: ahmad@ahmadnassri.com
+│  ├─ url: https://www.ahmadnassri.com/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\har-schema
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\har-schema\LICENSE
+├─ har-validator@5.0.3
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/ahmadnassri/har-validator
+│  ├─ publisher: Ahmad Nassri
+│  ├─ email: ahmad@ahmadnassri.com
+│  ├─ url: https://www.ahmadnassri.com/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\har-validator
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\har-validator\LICENSE
+├─ http-signature@1.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/joyent/node-http-signature
+│  ├─ publisher: Joyent, Inc
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\http-signature
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\http-signature\LICENSE
+├─ inflight@1.0.6
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/npm/inflight
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\inflight
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\inflight\LICENSE
+├─ inherits@2.0.3
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/inherits
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\inherits
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\inherits\LICENSE
+├─ is-typedarray@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/hughsk/is-typedarray
+│  ├─ publisher: Hugh Kennedy
+│  ├─ email: hughskennedy@gmail.com
+│  ├─ url: http://hughsk.io/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\is-typedarray
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\is-typedarray\LICENSE.md
+├─ isstream@0.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/rvagg/isstream
+│  ├─ publisher: Rod Vagg
+│  ├─ email: rod@vagg.org
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\isstream
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\isstream\LICENSE.md
+├─ jsbn@0.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/andyperlitch/jsbn
+│  ├─ publisher: Tom Wu
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\jsbn
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\jsbn\LICENSE
+├─ json-schema-traverse@0.3.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/epoberezkin/json-schema-traverse
+│  ├─ publisher: Evgeny Poberezkin
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\json-schema-traverse
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\json-schema-traverse\LICENSE
+├─ json-schema@0.2.3
+│  ├─ licenses
+│  │  ├─ 0: AFLv2.1
+│  │  └─ 1: BSD
+│  ├─ repository: https://github.com/kriszyp/json-schema
+│  ├─ publisher: Kris Zyp
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\json-schema
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\json-schema\README.md
+├─ json-stringify-safe@5.0.1
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/json-stringify-safe
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\json-stringify-safe
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\json-stringify-safe\LICENSE
+├─ jsprim@1.4.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/joyent/node-jsprim
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\jsprim
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\jsprim\LICENSE
+├─ mime-db@1.38.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/mime-db
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\mime-db
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\mime-db\LICENSE
+├─ mime-types@2.1.22
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/mime-types
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\mime-types
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\mime-types\LICENSE
+├─ minimatch@3.0.4
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/minimatch
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\minimatch
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\minimatch\LICENSE
+├─ minimist@0.0.8
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/substack/minimist
+│  ├─ publisher: James Halliday
+│  ├─ email: mail@substack.net
+│  ├─ url: http://substack.net
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\minimist
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\minimist\LICENSE
+├─ mkdirp@0.5.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/substack/node-mkdirp
+│  ├─ publisher: James Halliday
+│  ├─ email: mail@substack.net
+│  ├─ url: http://substack.net
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\mkdirp
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\mkdirp\LICENSE
+├─ nopt@3.0.6
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/npm/nopt
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\nopt
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\nopt\LICENSE
+├─ oauth-sign@0.8.2
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/mikeal/oauth-sign
+│  ├─ publisher: Mikeal Rogers
+│  ├─ email: mikeal.rogers@gmail.com
+│  ├─ url: http://www.futurealoof.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\oauth-sign
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\oauth-sign\LICENSE
+├─ once@1.4.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/once
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\once
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\once\LICENSE
+├─ opencollective-postinstall@2.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/opencollective/opencollective-postinstall
+│  ├─ publisher: Xavier Damman
+│  ├─ url: @xdamman
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\opencollective-postinstall
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\opencollective-postinstall\LICENSE
+├─ parse5@5.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/inikulin/parse5
+│  ├─ publisher: Ivan Nikulin
+│  ├─ email: ifaaan@gmail.com
+│  ├─ url: https://github.com/inikulin
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\parse5
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\parse5\README.md
+├─ path-is-absolute@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/path-is-absolute
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\path-is-absolute
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\path-is-absolute\license
+├─ performance-now@2.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/braveg1rl/performance-now
+│  ├─ publisher: Braveg1rl
+│  ├─ email: braveg1rl@outlook.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\performance-now
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\performance-now\license.txt
+├─ progress@1.1.8
+│  ├─ licenses: MIT*
+│  ├─ repository: https://github.com/visionmedia/node-progress
+│  ├─ publisher: TJ Holowaychuk
+│  ├─ email: tj@vision-media.ca
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\progress
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\progress\LICENSE
+├─ punycode@1.4.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/bestiejs/punycode.js
+│  ├─ publisher: Mathias Bynens
+│  ├─ url: https://mathiasbynens.be/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\punycode
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\punycode\LICENSE-MIT.txt
+├─ q@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/kriskowal/q
+│  ├─ publisher: Kris Kowal
+│  ├─ email: kris@cixar.com
+│  ├─ url: https://github.com/kriskowal
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\q
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\q\LICENSE
+├─ qs@6.5.2
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/ljharb/qs
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\qs
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\qs\LICENSE
+├─ reflect-metadata@0.1.13
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/rbuckton/reflect-metadata
+│  ├─ publisher: Ron Buckton
+│  ├─ email: ron.buckton@microsoft.com
+│  ├─ url: http://github.com/rbuckton
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\reflect-metadata
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\reflect-metadata\LICENSE
+├─ request-progress@0.3.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/IndigoUnited/node-request-progress
+│  ├─ publisher: IndigoUnited
+│  ├─ email: hello@indigounited.com
+│  ├─ url: http://indigounited.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\request-progress
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\request-progress\LICENSE
+├─ request@2.87.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/request/request
+│  ├─ publisher: Mikeal Rogers
+│  ├─ email: mikeal.rogers@gmail.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\request
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\request\LICENSE
+├─ rxjs@5.5.12
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/ReactiveX/RxJS
+│  ├─ publisher: Ben Lesh
+│  ├─ email: ben@benlesh.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-base\node_modules\rxjs
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-base\node_modules\rxjs\LICENSE.txt
+├─ rxjs@6.3.3
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/reactivex/rxjs
+│  ├─ publisher: Ben Lesh
+│  ├─ email: ben@benlesh.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\rxjs
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\rxjs\LICENSE.txt
+├─ safe-buffer@5.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/feross/safe-buffer
+│  ├─ publisher: Feross Aboukhadijeh
+│  ├─ email: feross@feross.org
+│  ├─ url: http://feross.org
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\safe-buffer
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\safe-buffer\LICENSE
+├─ safer-buffer@2.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ChALkeR/safer-buffer
+│  ├─ publisher: Nikita Skovoroda
+│  ├─ email: chalkerx@gmail.com
+│  ├─ url: https://github.com/ChALkeR
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\safer-buffer
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\safer-buffer\LICENSE
+├─ sshpk@1.16.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/joyent/node-sshpk
+│  ├─ publisher: Joyent, Inc
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\sshpk
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\sshpk\LICENSE
+├─ symbol-observable@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/blesh/symbol-observable
+│  ├─ publisher: Ben Lesh
+│  ├─ email: ben@benlesh.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\symbol-observable
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\symbol-observable\license
+├─ throttleit@0.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/component/throttle
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\throttleit
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\throttleit\Readme.md
+├─ tough-cookie@2.3.4
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/salesforce/tough-cookie
+│  ├─ publisher: Jeremy Stashewsky
+│  ├─ email: jstashewsky@salesforce.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\tough-cookie
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\cldr-data-downloader\node_modules\tough-cookie\LICENSE
+├─ tslib@1.10.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/Microsoft/tslib
+│  ├─ publisher: Microsoft Corp.
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\tslib
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\tslib\LICENSE.txt
+├─ tunnel-agent@0.6.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/mikeal/tunnel-agent
+│  ├─ publisher: Mikeal Rogers
+│  ├─ email: mikeal.rogers@gmail.com
+│  ├─ url: http://www.futurealoof.com
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\tunnel-agent
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\tunnel-agent\LICENSE
+├─ tweetnacl@0.14.5
+│  ├─ licenses: Unlicense
+│  ├─ repository: https://github.com/dchest/tweetnacl-js
+│  ├─ publisher: TweetNaCl-js contributors
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\tweetnacl
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\tweetnacl\LICENSE
+├─ twms-frontend-common@0.23.0
+│  ├─ licenses: [1m[31mUNLICENSED[39m[22m
+│  ├─ private: true
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\README.md
+├─ uuid@3.3.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/kelektiv/node-uuid
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\uuid
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\uuid\LICENSE.md
+├─ verror@1.10.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/davepacheco/node-verror
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\verror
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\verror\LICENSE
+├─ wrappy@1.0.2
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/npm/wrappy
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\wrappy
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\wrappy\LICENSE
+├─ zone.js@0.7.8
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/angular/zone.js
+│  ├─ publisher: Brian Ford
+│  ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-base\node_modules\zone.js
+│  └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\@syncfusion\ej2-angular-base\node_modules\zone.js\LICENSE
+└─ zone.js@0.8.29
+   ├─ licenses: MIT
+   ├─ repository: https://github.com/angular/zone.js
+   ├─ publisher: Brian Ford
+   ├─ path: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\zone.js
+   └─ licenseFile: C:\Users\Schuster\sandbox\twms-frontend-common\node_modules\zone.js\LICENSE

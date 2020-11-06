@@ -1,0 +1,160 @@
+/* TODO: importing _shared leads to many styles defined, overriding the following partially.
+* we should discuss fixing the _shared theme to comply with guideline digital.
+*/
+@import 'src/app/shared/lib/viega-common/theme/for-import/shared';
+
+/*
+* === Variables and Mixins ===
+*/
+$viega-color-selected: $viega-c13;
+$viega-color-background: $viega-c9;
+$viega-color-header: $viega-c8;
+$viega-color-hover: $viega-c8;
+$viega-color-font: $viega-c2;
+$viega-color-font-inactive: $viega-c7;
+$viega-color-shadow: rgba(0, 0, 0, 0.25);
+$viega-font-family: $viega-font-bold;
+$viega-border-radius: 4px;
+
+@mixin viega-guideline-font {
+  font-size: 14px;
+  font-family: $viega-font-family;
+  color: $viega-color-font;
+}
+
+@mixin viega-guideline-boxes {
+  // shadow and radius
+  border-radius: $viega-border-radius;
+  box-shadow: 0 1px 0 0 $viega-color-shadow;
+}
+
+@mixin remove-tap-highlight {
+  // fixes flicker once tapping on mobile devices
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.modal-header-box {
+  background-color: $viega-c9;
+  padding: 10px 25px;
+  display: inline-block;
+  clear: both;
+  width: 100%;
+}
+
+.modal-header-logo {
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin-right: 20px;
+}
+
+.modal-header-text {
+  float: left;
+
+  label {
+    line-height: 50px;
+  }
+}
+
+.modal-button-row {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 15px;
+  padding-top: 10px;
+}
+
+.modal-button {
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+  //   &.btn-left {
+  //     flex-direction: -1;
+  //   }
+}
+
+.mat-dialog-content {
+  margin: 0;
+  padding: 0;
+}
+
+.mat-dialog-title {
+  margin: 0;
+}
+
+.container {
+  padding: 0;
+}
+
+.mat-dialog-actions {
+  display: unset;
+}
+
+.modal-container {
+  overflow: hidden;
+}
+/*
+* === Reusable Classes ===
+* Import this .scss & use these classes for your ng-content to allow homogeneous look:
+*/
+
+// Form with text, containing input box as child
+.modal-input-form {
+  @include viega-guideline-font();
+  display: grid;
+}
+
+// Validation alert
+input.ng-invalid.ng-touched {
+  border: 1px solid $viega-c15;
+}
+
+.alert.alert-danger {
+  color: $viega-c15;
+  font-size: 14px;
+  font-family: $viega-font-family;
+}
+
+.modal-input-form-label {
+  @include viega-guideline-font();
+  display: grid;
+}
+
+.modal-label {
+  @include viega-guideline-font();
+  line-height: 14px;
+}
+
+.modal-input-box {
+  @include viega-guideline-font();
+  @include viega-guideline-boxes();
+}
+
+.modal-radio-input,
+input[type=radio] ~ label {
+  @include viega-guideline-font();
+}
+
+.modal-radio-container {
+  line-height: 100%;
+}
+
+// Styling of disabled radio buttons
+input[type="radio"]:disabled {
+    &:after {
+        width: 1em;
+        height: 1em;
+        border-radius: 15px;
+        position: relative;
+        background-color: $viega-c8;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        transform: scale(0.6);
+    }
+    & ~ label {
+        color: $viega-c6;
+    }
+}

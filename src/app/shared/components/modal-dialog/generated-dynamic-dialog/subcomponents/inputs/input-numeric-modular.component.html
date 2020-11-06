@@ -1,0 +1,15 @@
+<label class="modal-input-form">
+  {{ getData() | translateLocaliationData }}:
+  <input
+    type="number"
+    class="modal-input-box"
+    [ngClass]="{ 'input-no-arrows': isWaiting }"
+    [disabled]="readOnly"
+    [(ngModel)]="model"
+    ng-pattern="integerval"
+    (ngModelChange)="changed($event)"
+  />
+</label>
+<div class="spinner-wrapper spinner-inside-input" *ngIf="isWaiting">
+  <viega-loading-spinner></viega-loading-spinner>
+</div>

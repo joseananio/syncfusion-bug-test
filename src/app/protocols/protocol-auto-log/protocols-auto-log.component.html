@@ -1,0 +1,57 @@
+<div class="row m-3" *ngIf="authorities.has(AuthorityCodes.CREATEANYUSER)">
+  <div class="col-lg-2">
+    <viega-button (click)="onAddReporting()" id="btn-reporting-servive-add">{{'PROTOCOLS.ADD_REPORTING_SERVICE' | translate}}</viega-button>
+  </div>
+</div>
+
+<div *ngIf="stateLoading" class="row m-3"><em>{{'GLOBAL.LOADING_DATA' | translate}}</em></div>
+<div *ngIf="!stateLoading">
+
+<div class="row m-3">
+
+
+    <div class="col-12">
+    <ejs-grid
+      id="serviceTable"
+      [dataSource]="services"
+      [allowPaging]="false"
+      [allowSorting]="true"
+      [allowFiltering]="false"
+      allowTextWrap="true"
+      [locale]="'_META.LOCALE' | translate"
+    >
+      <e-columns>
+        <e-column
+          *ngFor="let item of serviceColumns"
+          [field]="item.field"
+          [headerText]="item.headerText | translate"
+          [textAlign]="item.textAlign || 'Left'"
+          [format]="item.format || null"
+          [hideAtMedia]="item.hideAtMedia || null">
+        </e-column>
+        <e-column [headerText]="'PROTOCOLS.PERIOD' | translate" textAlign="left">
+          <ng-template #template let-data>
+            {{data.trigger |translate}}
+          </ng-template>
+        </e-column>
+        <e-column [headerText]="'GLOBAL.ACTION' | translate" textAlign="left">
+          <ng-template #template let-data>
+            {{data.action |translate}}
+          </ng-template>
+        </e-column>
+        <e-column class="reportservice-grid-tools" headerText="" [width]="3 * 40 + 2 * 21" textAlign="Center">
+          <ng-template #headerTemplate>
+            <!-- TODO (Reger): Add legend here -->
+          </ng-template>
+          <ng-template #template let-data>
+            <viega-icon-button icon="arrow_next-01" (click)="onExecuteReporting(data.serviceId)"></viega-icon-button>
+            <viega-icon-button icon="edit-01" (click)="onEditReporting(data.serviceId)"></viega-icon-button>
+            <viega-icon-button icon="cross-01" (click)="onDeleteReporting(data.serviceId)"></viega-icon-button>
+          </ng-template>
+        </e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</div>
+
+</div>

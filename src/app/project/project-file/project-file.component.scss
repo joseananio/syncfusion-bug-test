@@ -1,0 +1,14 @@
+.viega-button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .viega-button-wr {
+        margin-left: 20px;
+
+        .button-style {
+            width: 200PX;
+            margin-top: 10px;
+        }
+    }
+}

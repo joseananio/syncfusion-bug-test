@@ -1,0 +1,21 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+  // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+
+  // List of extensions which should be recommended for users of this workspace.
+  "recommendations": [
+    // Support for eslint
+    "dbaeumer.vscode-eslint",
+    // Support for npm scripts
+    "eg2.vscode-npm-script",
+    // Meta-package with lots of Angular extensions
+    "loiane.angular-extension-pack",
+    // Support for work with i18n files
+    "antfu.i18n-ally"
+  ],
+  // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+  "unwantedRecommendations": [
+    // We do not need support for tslint.
+    "ms-vscode.vscode-typescript-tslint-plugin"
+  ]
+}

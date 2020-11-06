@@ -1,0 +1,58 @@
+<header class="desktop desktop-header" [class.mobile]="forceMode === 'desktop'" [class.hidden]="forceMode === 'mobile'">
+    <div class="top-bar">
+        <span class="title">
+            <a *ngIf="titleHref" [href]="titleHref">{{appTitle}}</a>
+            <span *ngIf="!titleHref">{{appTitle}}</span>
+        </span>
+        <div class="desktop-menu-items-wrapper">
+            <ng-content select="[menu-items]"></ng-content>
+        </div>
+    </div>
+
+    <a [routerLink]="logoRouterLink" [queryParams]="logoRouterLinkQueryParams">
+        <viega-logo></viega-logo>
+    </a>
+    <div class="bottom-content-wrapper">
+        <span class="page-title"
+              [class.hidden]="pageTitleMode === 'mobile-only'">
+            {{pageTitle}}
+        </span>
+        <div class="left-content-wrapper">
+            <ng-content select="[content]" class="content"></ng-content>
+        </div>
+    </div>
+</header>
+
+<header class="mobile mobile-header" [class.desktop]="forceMode === 'mobile'" [class.hidden]="forceMode === 'desktop'">
+    <a [routerLink]="logoRouterLink">
+        <viega-logo></viega-logo>
+    </a>
+    <div class="bottom-content-wrapper">
+        <span class="page-title"
+                [class.hidden]="pageTitleMode === 'desktop-only'">
+            {{pageTitle}}
+        </span>
+        <a class="burger-button"
+            [class.hidden]="disableBurgerMenu"
+            (click)="setSidebarStatus(true)"></a>
+    </div>
+</header>
+
+<aside class="mobile" [class.expanded]="isMobileMenuExpanded" [class.desktop]="forceMode === 'mobile'" [class.hidden]="forceMode === 'desktop'">
+    <div class="header">
+        <viega-logo></viega-logo>
+        <span class="page-title"
+              [class.hidden]="pageTitleMode !== 'mobile-only'">
+            {{pageTitle}}
+        </span>
+    </div>
+
+    <div class="content">
+        <ng-content select="[mobile-panel-content]"></ng-content>
+    </div>
+    <div class="bottom-content">
+        <ng-content select="[mobile-panel-bottom]"></ng-content>
+    </div>
+</aside>
+
+<div class="page-wrapper" [class.hidden]="!isMobileMenuExpanded" (click)="setSidebarStatus(false)"></div>

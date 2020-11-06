@@ -1,0 +1,70 @@
+@import "src/app/shared/lib/viega-common/theme/for-import/shared";
+
+$badge-size:25px;
+
+.container {
+    height: 40px;
+    line-height: 40px;
+
+
+    .cright {
+
+        .label {
+            padding: 0px 10px;
+            height: 30px;
+            line-height: 30px;
+            background: $viega-c11;
+            font-size: 14px;
+            color: white;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 15px;
+            position: relative;
+            z-index: 10;
+
+            &.error {
+                background-color: rgb(192, 50, 50);
+            }
+
+            &.warning {
+                background-color: orange;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .badge {
+                cursor: pointer;
+                position: absolute;
+                top: -15px;
+                right: -15px;
+                font-size: 11px;
+                line-height: $badge-size;
+                height: $badge-size;
+                width: $badge-size;
+                border-radius: $badge-size;
+                background-color: $viega-c13;
+                color: $viega-c1;
+                text-align: center;
+                z-index: 11;
+            }
+        }
+    }
+
+    &.input-item {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    input,
+    viega-button {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+
+    input {
+        border: 1px solid $viega-c8;
+    }
+}

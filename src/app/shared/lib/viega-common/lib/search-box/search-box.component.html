@@ -1,0 +1,10 @@
+<div [class]="'viega-search-box' + ' theme-' + theme">
+  <input
+    [placeholder]="placeholder || ''"
+    type="text"
+    [ngModel]="value"
+    (ngModelChange)="inputChanged($event)"
+    [disabled]="disabled"
+  />
+  <span class="icon" [ngClass]="'icon-search-01'"> </span>
+</div>

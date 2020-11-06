@@ -1,0 +1,38 @@
+<div class="row m-2" (input)="onParamChange()">
+  <form class="col-lg-8 mb-2">
+    <table class="device-config-table">
+      <tr *ngFor="let parameter of displayParameters">
+        <td class="device-param-label">{{ 'API.DEVICE_PARAMETERS.' + parameter.keyName | translate }}</td>
+        <td class="device-param-value" style="text-align: center;">
+          <viega-unit-input *ngIf="parameter.dataType !== 'boolean' && !parameter.selectableOptions"
+            id="input-device-details-configuration-{{parameter.keyName}}" name={{parameter.keyName}}
+            [(ngModel)]="parameter.value" inputWidth="5em" [isSliderEnabled]="false" [unitLabel]="[parameter.unit]"
+            [min]="parameter.min" [max]="parameter.max || 1000000">
+          </viega-unit-input>
+
+          <!-- TODO: Set value when available -->
+          <viega-checkbox *ngIf="parameter.dataType === 'boolean'"
+            id="input-device-details-configuration-{{parameter.keyName}}" name={{parameter.keyName}}
+            [(ngModel)]="parameter.valueBoolean" (valueChange)="onParamChange()"></viega-checkbox>
+
+          <viega-dropdown
+            *ngIf="parameter.selectableOptions"
+            [(value)]="parameter.value"
+            (valueChange)="onParamChange()"
+            [dataSource]="parameter.selectableOptions"
+            [locale]="'_META.LOCALE' | translate"
+          ></viega-dropdown>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <div class="col-lg-4">
+    <div
+      *ngIf="specialParameters['Werkseinstellungen wieder herstellen'] && authorities.has(AuthorityCodes.FACTORYRESETDEVICE)"
+      class="mb-2">
+      <!-- Handle factory reset -->
+      <viega-button (click)="factoryResetParameters()">{{ 'PROJECT.RESET_DEVICE'| translate }}</viega-button>
+    </div>
+    <!-- Handle firmware update -->
+  </div>
+</div>

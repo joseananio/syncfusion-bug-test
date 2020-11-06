@@ -1,0 +1,8 @@
+<viega-routed-tab-view [routes]="routes" basePath="/system" >
+  <viega-tab [tabTitle]="controllerOverViewHeader | translate" *ngIf="includeControllerOverviewTab">
+    <app-controller-overview></app-controller-overview>
+  </viega-tab>
+  <viega-tab [tabTitle]="systemSettingsHeader | translate">
+    <app-system-settings></app-system-settings>
+  </viega-tab>
+</viega-routed-tab-view>

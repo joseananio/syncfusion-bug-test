@@ -1,0 +1,78 @@
+// Bootstrap grid system
+@import '../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
+
+// Flag icons
+// TODO: (anane) recompile to use only necessary icons
+@import '../node_modules/flag-icon-css/css/flag-icon.min.css';
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+@import 'src/app/shared/lib/viega-common/theme/for-import/variables';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$twms-frontend-common-primary: mat-palette($mat-indigo);
+$twms-frontend-common-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$twms-frontend-common-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$twms-frontend-common-theme: mat-light-theme($twms-frontend-common-primary, $twms-frontend-common-accent, $twms-frontend-common-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($twms-frontend-common-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: $viega-font-regular;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+/**
+ * The Syncfusion styles are imported here, to allow injecting variables into the Synfusion styles.
+ */
+@import 'src/app/shared/lib/viega-common/theme/global/viega-syncfusion';
+
+@import 'node_modules/@syncfusion/ej2-base/styles/material';
+@import 'node_modules/@syncfusion/ej2-layouts/styles/material';
+@import 'node_modules/@syncfusion/ej2-buttons/styles/material';
+@import 'node_modules/@syncfusion/ej2-calendars/styles/material';
+@import 'node_modules/@syncfusion/ej2-dropdowns/styles/material';
+@import 'node_modules/@syncfusion/ej2-inputs/styles/material';
+@import 'node_modules/@syncfusion/ej2-lists/styles/material';
+@import 'node_modules/@syncfusion/ej2-navigations/styles/material';
+@import 'node_modules/@syncfusion/ej2-popups/styles/material';
+@import 'node_modules/@syncfusion/ej2-splitbuttons/styles/material';
+@import 'node_modules/@syncfusion/ej2-angular-buttons/styles/material';
+@import 'node_modules/@syncfusion/ej2-angular-calendars/styles/material';
+@import 'node_modules/@syncfusion/ej2-angular-dropdowns/styles/material';
+@import 'node_modules/@syncfusion/ej2-angular-grids/styles/material';
+@import 'node_modules/@syncfusion/ej2-angular-navigations/styles/material';
+@import 'node_modules/@syncfusion/ej2-angular-popups/styles/material';
+@import 'node_modules/@syncfusion/ej2-angular-treegrid/styles/material';
+@import 'node_modules/@syncfusion/ej2-angular-notifications/styles/material';

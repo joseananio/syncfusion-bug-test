@@ -1,0 +1,29 @@
+@import '~@angular/material/theming';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@include mat-core();
+
+// Define the theme.
+$primary-palette: mat-palette($mat-grey, 900, 900, 900);
+$accent-palette: mat-palette($mat-yellow);
+$theme: mat-light-theme($primary-palette, $accent-palette);
+
+@include angular-material-theme($theme);
+
+// Modal style overrides
+.cdk-overlay-pane {
+    // IE11 fix
+    flex: 0 0 auto;
+}
+
+// remove the padding from material dialogs
+.cdk-overlay-pane .mat-dialog-container {
+    padding: 0;
+}
+
+// alter backdrop color a bit
+.cdk-overlay-backdrop.deep-dark-dialog-backdrop {
+    background: rgba(0, 0, 0, 0.888);
+}

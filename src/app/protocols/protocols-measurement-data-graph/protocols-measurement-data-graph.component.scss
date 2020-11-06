@@ -1,0 +1,105 @@
+@import "src/app/shared/lib/viega-common/theme/for-import/shared";
+
+// variables
+
+$viega-color-background: $viega-c9;
+$viega-color-mouseover: $viega-c8;
+$viega-color-font: $viega-c2;
+$viega-color-font-inactive: $viega-c7;
+$viega-color-shadow: rgba(0, 0, 0, 0.25);
+$viega-font-family: $viega-font-regular;
+$viega-border-radius: 4px;
+
+@mixin viega-guideline-font {
+    font-size: 14px;
+    font-family: $viega-font-family;
+    color: $viega-color-font;
+}
+
+@mixin viega-guideline-boxes {
+    border-radius: $viega-border-radius;
+    box-shadow: 0 1px 0 0 $viega-color-shadow;
+}
+
+@mixin remove-tap-highlight {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.e-multiselect.e-input-group {
+    background-color: $viega-color-background;
+    @include viega-guideline-boxes();
+    border-width: 0;
+    min-height: 41px;
+}
+
+// input is needed to achieve selector specificity needed:
+input.e-dropdownbase {
+    @include viega-guideline-font();
+    min-height: 41px;
+    background-color: $viega-color-background;
+    padding: 0;
+    background-color: transparent;
+    border-width: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.e-delim-view.e-delim-values {
+    @include viega-guideline-font();
+    min-height: 41px;
+    background-color: $viega-color-background;
+    padding: 0;
+    background-color: transparent;
+    border-width: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#live-toggle {
+    display: inline-block;
+}
+
+label {
+    font-family: $viega-font-family;
+}
+
+.chip1 {
+    background-color: $viega-c11;
+}
+
+.chip2 {
+    background-color: #9ce1e6;
+}
+
+.chip3 {
+    background-color: $viega-c13;
+}
+
+.chip4 {
+    background-color: #e3aa7f;
+}
+
+.chip5 {
+    background-color: $viega-c15;
+}
+
+.chip6 {
+    background-color: $viega-c16;
+}
+
+.chip7 {
+    background-color: $viega-c8;
+}
+
+.chip8 {
+    background-color: $viega-c7;
+}
+
+.picker-width {
+    width: 300px;
+}
+
+.value {
+    line-height: 40px;
+}

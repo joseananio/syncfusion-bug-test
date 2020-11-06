@@ -1,0 +1,8 @@
+<div class="viega-button-group">
+  <div *ngFor="let button of buttons" class="viega-button-wr">
+    <viega-button class="button-style" [type]="button.type" (click)="button.onClick()"
+      [isDisabled]="isDisabled(button)">{{ button.name | translate }}
+    </viega-button>
+  </div>
+</div>
+<input #fileInput type="file" multiple="false" [accept]="'.bin'" class="d-none" (change)="importProjectFile($event)" />

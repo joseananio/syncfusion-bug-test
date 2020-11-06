@@ -1,0 +1,61 @@
+@import "src/app/shared/lib/viega-common/theme/for-import/shared";
+@import "src/app/shared/components/modal-dialog/modal-dialog/modal-dialog.component.scss";
+
+.normal-text {
+    font-size: 13px;
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+.other-fn-wr {
+    margin-top: 20px;
+}
+
+// tree view
+
+.tree-wr {
+    margin-bottom: 30px;
+
+    label {
+        font-size: 14px;
+        line-height: 40px;
+        color: $viega-font-regular;
+    }
+}
+
+.side-data {
+    .text-danger {
+        color: $viega-c15;
+    }
+    table {
+        border-collapse: collapse;
+        margin-top: 20px;
+
+        td {
+            font-size: 12px;
+            line-height: 20px;
+            color: $viega-c4;
+            border: 1px solid $viega-c7;
+            padding: 10px 10px;
+
+            &:nth-child(2) {
+                text-align: center;
+            }
+        }
+        th {
+            text-align: left;
+            color: $viega-c1;
+            font-size: 14px;
+            line-height: 25px;
+            border: 1px solid $viega-c7;
+            padding: 10px;
+        }
+    }
+    a {
+        float: right;
+        margin-right: 50px;
+        color: $viega-c15;
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "i18n-ally.localesPaths": [
+    "src/assets/i18n"
+  ],
+  "i18n-ally.keystyle": "nested",
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    }
+  ],
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modifications",
+  "eslint.format.enable": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSaveMode": "file",
+  }
+}

@@ -1,0 +1,21 @@
+<div class="lang-section" *ngIf="!isMobile">
+  <div
+    [className]="'flag-icon flag-icon-squared flag-icon-' + selectedLang?.flagId"
+    mat-flat-button
+    [matMenuTriggerFor]="langMenu"></div>
+  <mat-menu #langMenu="matMenu">
+    <button class="menu-item" *ngFor="let lang of appLanguages" mat-menu-item (click)="onLangChange(lang.id)">
+      <span
+      [className]="'flag-icon flag-icon-squared flag-icon-' + lang.flagId"
+      [class.active]="lang.id === selectedLang?.id"
+      ></span> &nbsp;{{lang.name}}
+    </button>
+  </mat-menu>
+</div>
+<div class="lang-section mobile" *ngIf="isMobile">
+  <span
+    *ngFor="let lang of appLanguages"
+    [className]="'flag-icon flag-icon-squared flag-icon-' + lang.flagId"
+    [class.active]="lang.id === selectedLang?.id"
+    (click)="onLangChange(lang.id)"></span>
+</div>

@@ -1,0 +1,20 @@
+<app-modal-dialog [title]="title" [buttons]="modalButtons" (buttonEvent)="onButtonClick($event)">
+  <viega-tab-view *ngIf="inEditMode() && !isController()">
+    <viega-tab [tabTitle]="'PROJECT.BASIC_INFO'|translate">
+      <app-device-point-basic-info (formChange)="onTabChange(0, $event)">
+      </app-device-point-basic-info>
+    </viega-tab>
+    <viega-tab [tabTitle]="'PROJECT.DEVICE_POINT_CONFIG'| translate">
+      <app-device-point-config-tab
+        *ngIf="data.device"
+        (formChange)="onTabChange(1, $event)"
+        [devicePoint]="data.device"
+        [authorities]="data.authorities">
+      </app-device-point-config-tab>
+    </viega-tab>
+  </viega-tab-view>
+  <app-device-point-basic-info
+    *ngIf="!inEditMode() || isController()"
+    (formChange)="onTabChange(0, $event)">
+  </app-device-point-basic-info>
+</app-modal-dialog>

@@ -1,0 +1,115 @@
+{
+  "extends": [
+    "airbnb/base",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "jsdoc"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "import/no-unresolved": 0,
+    "ter-arrow-parens": 0,
+    // Support two spaces before end-of-line comment.
+    "no-multi-spaces": [2, { "ignoreEOLComments": true }],
+    // Do not enforce Yoda conditions.
+    "yoda": 0,
+    // Allow console output.
+    "no-console": 0,
+    // We do not see an issue here.
+    "no-prototype-builtins": 0,
+    // Infinite loops are fine.
+    "no-constant-condition": [2, { "checkLoops": false }],
+    // Allow awaits in loops (used heavily in e2e tests).
+    "no-await-in-loop": 0,
+    // We are using pretty wide lines in this project.
+    "max-len": [2, { "code": 140, "ignoreUrls": true }],
+    // We don't really encourage this, but do not enforce this right now.
+    "no-underscore-dangle": 0,
+    // This would be a bit strict...
+    "no-continue": 0,
+    // Support VSC folding regions.
+    "spaced-comment": [ 2, "always", {
+      "line": {
+        "markers": ["#region", "#endregion"]
+      },
+      "block": {
+        "exceptions": ["*"],
+        "balanced": true
+      }
+    }],
+    // We don't really care...
+    "no-useless-constructor": 0,
+    // Allow old-school array access.
+    "prefer-destructuring": [
+      0,
+      {
+        "VariableDeclarator": {
+          "array": false,
+          "object": true
+        },
+        "AssignmentExpression": {
+          "array": false,
+          "object": false
+        }
+      },
+      {
+        "enforceForRenamedProperties": false
+      }
+    ],
+    // We are not so picky about line endings. This can cause issues with automatic conversion by git.
+    "linebreak-style": 0,
+    // This is more strict than we could handle.
+    "@typescript-eslint/no-explicit-any": 0,
+    // Allow empty constructos - we have plenty of theses.
+    "@typescript-eslint/no-empty-function": [1, { "allow": ["constructors"] }],
+    // Would be nice, but just too much work to introduce now.
+    // We do not want this.
+    "import/extensions": 0,
+    // Not very useful for us.
+    "import/prefer-default-export": 0,
+    // npm install would revert direct inclusion of transitive dependencies.
+    "import/no-extraneous-dependencies": 0,
+    // A good idea, but not compatible with the way parameter binding in templates works.
+    "class-methods-use-this": 0,
+    // Way stricter than we can handle.
+    "no-param-reassign": 0,
+    // This is not working well - in many cases we use string keys to trick the compiler.
+    "dot-notation": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    // TODO(schuster): Let"s check later if this is useful.
+    "no-use-before-define": 0,
+    // TODO(schuster): Let"s check later if this is useful.
+    "@typescript-eslint/ban-types": 0,
+    // Allow unused arguments.
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "none",
+        "ignoreRestSiblings": true
+      }
+    ],
+    // Activate jsdoc rules.
+    "jsdoc/check-alignment": [
+      1,
+      {
+        "fix": true
+      }
+    ],
+    "jsdoc/check-param-names": 1,
+    "jsdoc/check-syntax": [
+      1,
+      {
+        "fix": true
+      }
+    ],
+    "jsdoc/check-tag-names": 1,
+    "jsdoc/check-types": 1,
+    "jsdoc/implements-on-classes": 1,
+    "jsdoc/match-description": 1,
+    "jsdoc/newline-after-description": 1,
+    "jsdoc/no-types": 1,  // TypeScript already provides type information.
+    "jsdoc/require-description": 1,
+    "jsdoc/require-param-name": 1
+  }
+}

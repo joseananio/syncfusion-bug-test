@@ -1,0 +1,51 @@
+<app-modal-dialog [title]="data.title" [buttons]="buttons" (buttonEvent)="onButtonEvent($event)">
+
+  <div class="row m-3">
+    <div class="modal-label">
+      {{data.message|translate}}
+    </div>
+  </div>
+
+  <div class="row m-3">
+
+    <div class="col-md-6">
+      <label class="modal-input-form-label" id="label-sensor-add-name" for="input-sensor-add-name">
+        {{ 'DEVICES.SENSOR_NAME' | translate }}<br>
+        <input type="text" class="modal-input-box" id="input-sensor-add-name" name="sensorname"
+          [placeholder]="'DEVICES.NAME_OF_SENSOR' | translate" required #sensorNameVal="ngModel" [(ngModel)]="newSensorName"
+          (input)="onNameChange($event)">
+        <div *ngIf="sensorNameVal.invalid && (sensorNameVal.touched)" class="alert alert-danger">
+          <label *ngIf="!!sensorNameVal.errors.required">
+            {{ 'GLOBAL.REQUIRED_FIELD_TEXT' | translate }}
+          </label>
+        </div>
+      </label>
+    </div>
+
+    <div class="col-md-6">
+      <label class="modal-input-form-label" id="label-sensor-add-type" for="select-sensor-add-type">
+        {{ 'DEVICES.TYPE' | translate }}<br>
+        <viega-dropdown
+          [(value)]="selectedType"
+          [dataSource]="sensorTypeNames"
+          name="sensorType"
+          id="select-sensor-add-type"
+          [locale]="'_META.LOCALE' | translate"
+        ></viega-dropdown>
+      </label>
+    </div>
+
+  </div>
+
+  <div class="row m-3">
+
+    <div class="col-12">
+      <label class="modal-input-form-label" id="label-sensor-add-remark" for="input-sensor-add-remark">
+        {{ 'DEVICES.COMMENT' | translate }}<br>
+        <input type="text" class="modal-input-box" id="input-sensor-add-remark" name="sensorremark"
+          [placeholder]="'DEVICES.COMMENT_PLACEHOLDER' |translate" #sensorRemarkVal="ngModel" [(ngModel)]="remark">
+      </label>
+    </div>
+  </div>
+
+</app-modal-dialog>

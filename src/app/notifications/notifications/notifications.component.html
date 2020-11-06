@@ -1,0 +1,11 @@
+<viega-routed-tab-view [routes]="routes" basePath="/notifications">
+  <viega-tab [tabTitle]="'NOTIFICATIONS.REPORTS' | translate" *ngIf="notificationsEnabled">
+    <app-open-notifications (change)="onUnfixedMessageRefresh()"></app-open-notifications>
+  </viega-tab>
+  <viega-tab [tabTitle]="'NOTIFICATIONS.DONE' | translate" *ngIf="notificationsEnabled">
+    <app-done-notifications #doneNotifications></app-done-notifications>
+  </viega-tab>
+  <viega-tab [tabTitle]="'NOTIFICATIONS.EVENTS' | translate" *ngIf="eventNotificationsEnabled">
+    <app-event-notifications></app-event-notifications>
+  </viega-tab>
+</viega-routed-tab-view>

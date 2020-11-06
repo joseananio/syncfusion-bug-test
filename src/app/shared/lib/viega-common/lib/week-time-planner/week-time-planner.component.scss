@@ -1,0 +1,84 @@
+@import "../../theme/for-import/shared";
+$view-size: 30px;
+
+$viega-color-font: $viega-c2;
+$viega-font-family: 'HelveticaNeue75Bold';
+
+@mixin viega-guideline-font {
+    font-size: 14px;
+    font-family: $viega-font-family;
+    color: $viega-color-font;
+}
+
+.viega-week-time-planner {
+    @include viega-guideline-font();
+    box-sizing: border-box;
+
+    .planner-entry {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: $view-size;
+        overflow-y: hidden;
+
+        .selector-box {
+            width: 38%;
+            flex: 0.38;
+            background: $viega-c9;
+            padding-left: 10px;
+            border-radius: 5px;
+
+            .e-input::placeholder {
+                color: #000 !important;
+                font-weight: normal;
+                font-size: 16px;
+
+            }
+        }
+
+        .day-box {
+            background: $viega-c7;
+            width: 20%;
+            flex: 0.2;
+            height: $view-size;
+            line-height: $view-size;
+            font-size: 14px;
+            text-align: center;
+
+            &.invalid-entry{
+                border:1px solid $viega-c15;
+            }
+        }
+        .header{
+            text-align: left;
+            background: none;
+
+        }
+    }
+
+    .activator {
+        text-align: left;
+        line-height: 30px;
+        margin: 10px 0;
+    }
+
+    viega-week-time-planner-control {
+        margin-top: 40px;
+        text-align: left;
+        padding-left: 50px;
+    }
+}
+
+@media(max-width: map-get($viega-grid-breakpoints, 'md')) {
+    .viega-week-time-planner {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .calendar {
+            flex: 1;
+        }
+
+    }
+}

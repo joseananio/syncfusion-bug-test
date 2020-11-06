@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-lg-9 col-sm-8">
+    <app-project-tree
+      #tree
+      id="treeelement"
+      class="tree-wr"
+      [allowDragAndDrop]="true">
+    </app-project-tree>
+  </div>
+  <div class="col-lg-3 col-sm-4" [class.fixed]="actionsBarFixed">
+    <div class="actions row">
+      <div class="action col-4 col-sm-12" (click)="onNewNode()">
+        <viega-icon-button icon="plus-01" [isDisabled]="!currentIsProject()">
+        <span>{{ 'PROJECT.NEW_BUILDING'|translate }}</span>
+      </viega-icon-button>
+      </div>
+      <div class="action col-4 col-sm-12" (click)="onNewNode()">
+        <viega-icon-button icon="plus-01" [isDisabled]="!currentIsBuiling()">
+          <span>{{ 'PROJECT.NEW_AREA'|translate }}</span>
+        </viega-icon-button>
+      </div>
+      <div class="action col-4 col-sm-12" (click)="onNewNode()">
+        <viega-icon-button icon="plus-01" [isDisabled]="!currentIsArea()">
+          <span>{{ 'PROJECT.NEW_ROOM'|translate }}</span>
+        </viega-icon-button>
+      </div>
+      <div class="action col-4 col-sm-12" (click)="onNewNode()">
+        <viega-icon-button icon="plus-01" [isDisabled]="!currentIsRoom()">
+          <span>{{ 'PROJECT.NEW_SEGMENT'|translate }}</span>
+        </viega-icon-button>
+      </div>
+      <div class="action col-4 col-sm-12" (click)="onNewDevice()">
+        <viega-icon-button icon="plus-01" [isDisabled]="!currentIsAreaType()"
+        *ngIf="authorities.has(AuthorityCodes.CREATEDEVICEPOINT) || authorities.has(AuthorityCodes.CREATECONTROLLERPOINT)">
+        <span>{{ 'PROJECT.NEW_DEVICE_POINT'|translate }}</span>
+      </viega-icon-button>
+      </div>
+      <div class="col-4 col-sm-0"></div>
+      <div class="action col-4 col-sm-12" (click)="onDuplicateNode()">
+        <viega-icon-button #duplicate_node icon="copy-01" [isDisabled]="true">
+          <span>{{ 'PROJECT.DUPLICATE'|translate }}</span>
+        </viega-icon-button>
+      </div>
+      <div class="action col-4 col-sm-12" (click)="onEditNode()">
+        <viega-icon-button icon="edit-01" [isDisabled]="!tree.getSelectedNode() || tree.getSelectedNode().type === 'project'">
+          <span>{{ 'GLOBAL.EDIT_BUTTON_TEXT'|translate }}</span>
+        </viega-icon-button>
+      </div>
+      <div class="action col-4 col-sm-12" (click)="onRemoveNode()" >
+        <viega-icon-button icon="cross-01"
+        [isDisabled]="!removeEnabled()">
+        <span>{{ 'PROJECT.REMOVE'|translate }}</span>
+      </viega-icon-button>
+      </div>
+      <div class="action col-4 col-sm-12" (click)="onFunctionOverview()">
+        <viega-icon-button icon="calendar" [isDisabled]="!currentIsDevice()">
+          <span>{{ 'PROJECT.FUNCTIONAL_OVERVIEW'|translate }}</span>
+        </viega-icon-button>
+      </div>
+      <div class="action col-4 col-sm-12" (click)="onFunctionAdd()">
+        <viega-icon-button icon="gebrauchs" [isDisabled]="!currentIsDevice()">
+          <span>{{ 'PROJECT.ASSIGN_FUNCTION'|translate }}</span>
+        </viega-icon-button>
+      </div>
+    </div>
+  </div>
+</div>

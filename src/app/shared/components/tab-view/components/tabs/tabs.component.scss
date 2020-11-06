@@ -1,0 +1,75 @@
+@import "../../../../lib/viega-common/theme/for-import/shared";
+
+$border-color: $viega-c8;
+
+@mixin viega-font() {
+    font-size: 14px;
+    font-family: "HelveticaNeue31Regular";
+    color: $viega-c3;
+}
+
+.viega-tab-view {
+    text-align: left;
+    width: 100%;
+
+    .e-tab-header {
+        border-bottom: 1px solid $border-color;
+        overflow: visible;
+        margin-bottom: 20px;
+
+        .e-toolbar-items {
+            border: none;
+
+            .e-indicator.e-ignore {
+                border-bottom-color: white;
+                background-color: white;
+                bottom: -1px;
+                height: 2px;
+                z-index: 3000;
+                display: none;
+            }
+
+            .e-toolbar-item {
+                border: none;
+                border-radius: 5px 5px 0 0;
+                overflow: hidden;
+
+                .e-tab-text {
+                    @include viega-font();
+                    text-transform: none;
+                }
+
+                &.e-active {
+                    border: 1px solid $border-color;
+                    border-bottom: none;
+                    z-index: 3000;
+                    margin-bottom: -1px;
+                    background: white;
+
+                    &:hover {
+                        .e-tab-text {
+                            color: $viega-c1;
+                        }
+                    }
+
+                    .e-tab-text {
+                        color: $viega-c1;
+                        font-family: $viega-font-bold;
+
+                    }
+                }
+
+            }
+        }
+
+    }
+
+
+    &.e-focused .e-tab-header .e-toolbar-item .e-tab-wrap:focus {
+        background: $viega-c16;
+
+        .e-tab-text {
+            color: $viega-c1;
+        }
+    }
+}

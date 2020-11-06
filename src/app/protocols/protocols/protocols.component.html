@@ -1,0 +1,21 @@
+<!-- Wait until authorities are known since updating the visibility of tabs afterwards is messy. -->
+<viega-routed-tab-view [routes]="routes" basePath="/protocols" *ngIf="!!authorities">
+  <viega-tab [tabTitle]="'PROTOCOLS.MEASUREMENT_DATA' | translate">
+    <app-protocols-measurement-data></app-protocols-measurement-data>
+  </viega-tab>
+  <viega-tab [tabTitle]="'PROTOCOLS.MEASUREMENT_DATA_GRAPH' | translate">
+    <app-protocols-measurement-data-graph></app-protocols-measurement-data-graph>
+  </viega-tab>
+  <viega-tab [tabTitle]="'PROTOCOLS.FUNCTIONS' | translate" *ngIf="protocolFunctionsEnabled">
+    <app-protocols-functions></app-protocols-functions>
+  </viega-tab>
+  <viega-tab [tabTitle]="'PROTOCOLS.USER_ACTIONS' | translate" *ngIf="protocolUserActionsEnabled">
+    <app-protocols-user-actions></app-protocols-user-actions>
+  </viega-tab>
+  <viega-tab [tabTitle]="'PROTOCOLS.OPERATING_SYSTEM' | translate" *ngIf="protocolOperationSystemEnabled">
+    <app-protocols-operating-system></app-protocols-operating-system>
+  </viega-tab>
+  <viega-tab [tabTitle]="'PROTOCOLS.REPORTING_SERVICE' | translate" *ngIf="authorities.has(AuthorityCodes.GETREPORTSERVICES)">
+    <app-protocols-auto-log [authorities]="authorities"></app-protocols-auto-log>
+  </viega-tab>
+</viega-routed-tab-view>

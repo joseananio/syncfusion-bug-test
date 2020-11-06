@@ -1,0 +1,162 @@
+<!-- Modal child component, including header and buttons as defined in "buttons" -->
+<app-modal-dialog [title]="'USERS.EDIT_USER' | translate" [buttons]="buttons" (buttonEvent)="onButtonEvent($event)"
+  id="modal-user-details">
+
+  <form #form="ngForm" name="form" (input)="onChange()">
+
+    <!-- Warning if self-editing -->
+    <div *ngIf="selfEdit" class="row m-3">
+      <div class="row mx-3 mt-0">
+        <div class="col-12 alert alert-danger">
+          <label>{{ 'USERS.SELF_EDIT_TEXT' | translate }}</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 1 -->
+    <div class="row m-3">
+      <div class="col-sm-6">
+        <label class="modal-input-form">
+          {{ 'USERS.FIRSTNAME' | translate }}:<br>
+          <input type="text" class="modal-input-box" [disabled]="readOnly" name="firstname"
+            id="input-user-details-firstname" required #firstNameVal="ngModel" [(ngModel)]="userDetails.firstName">
+          <div *ngIf="firstNameVal.invalid && (firstNameVal.touched)" class="alert alert-danger">
+            <label *ngIf="!!firstNameVal.errors.required">
+              {{ 'GLOBAL.REQUIRED_FIELD_TEXT' | translate }}
+            </label>
+          </div>
+        </label>
+      </div>
+      <div class="col-sm-6 mt-3 mt-sm-0">
+        <label class="modal-input-form">
+          {{ 'USERS.LASTNAME' | translate }}:<br>
+          <input type="text" class="modal-input-box" [disabled]="readOnly" name="lastname"
+            id="input-user-details-lastname" required #lastNameVal="ngModel" [(ngModel)]="userDetails.lastName">
+          <div *ngIf="lastNameVal.invalid && (lastNameVal.touched)" class="alert alert-danger">
+            <label *ngIf="!!lastNameVal.errors.required">
+              {{ 'GLOBAL.REQUIRED_FIELD_TEXT' | translate }}
+            </label>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="row m-3">
+      <div class="col-sm-6">
+        <label class="modal-input-form">
+          {{ 'USERS.EMAIL' | translate }}:<br>
+          <input type="email" class="modal-input-box" [disabled]="readOnly" name="email" id="input-user-details-email"
+            required email #emailVal="ngModel" [(ngModel)]="userDetails.email">
+          <div *ngIf="emailVal.invalid && (emailVal.touched)" class="alert alert-danger">
+            <label *ngIf="!!emailVal.errors.required">
+              {{ 'GLOBAL.REQUIRED_FIELD_TEXT' | translate }}
+            </label>
+            <label *ngIf="(!!emailVal.errors.email) || (!!emailVal.errors.pattern)">
+              {{ 'USERS.INVALID_EMAIL_TEXT' | translate }}
+            </label>
+          </div>
+        </label>
+      </div>
+      <div class="col-sm-6">
+      </div>
+    </div>
+
+    <!-- ROW 3 -->
+    <div class="row m-3">
+      <div class="col-sm-6">
+        <label class="modal-input-form">
+          {{ 'USERS.LOGINNAME' | translate }}:<br>
+          <input type="text" id="input-user-details-username" class="modal-input-box" [disabled]="readOnly" name="username"
+            required #userNameVal="ngModel" [(ngModel)]="userDetails.loginName" pattern="[a-zA-Z0-9-_\.]+" minlength=5>
+          <div *ngIf="userNameVal.invalid && (userNameVal.touched) && !!getUsernameError(userNameVal.errors).length" class="alert alert-danger">
+            <label> {{ getUsernameError(userNameVal.errors) | translate: { num: (userNameVal.errors.minlength || {}).requiredLength } }} </label>
+          </div>
+        </label>
+      </div>
+      <div class="col-sm-6">
+      </div>
+    </div>
+
+    <!-- ROW 4 -->
+    <!-- Password inputs use 'readonly' workaround to avoid browser filling out credentials -->
+    <div *ngIf="data.authorities.has(AuthorityCodes.CHANGEANYPASSWORD)">
+      <div class="row m-3">
+        <div class="col-sm-6">
+          <label class="modal-input-form-label" id="label-user-add-password">
+            {{ 'LOGIN.PASSWORD' | translate }}:<br>
+            <input type="password" class="modal-input-box" [disabled]="readOnly" id="input-user-details-password"
+              name="password" [(ngModel)]="userPassword.password" pattern={{passwordPattern}} #passwordVal="ngModel"
+              readonly (focus)="removeReadonly($event)" placeholder="******">
+            <div *ngIf="passwordVal.invalid && (passwordVal.touched)" class="alert alert-danger">
+              <label *ngIf="!!passwordVal.errors.required">
+                {{ 'GLOBAL.REQUIRED_FIELD_TEXT' | translate }}
+              </label>
+              <label *ngIf="!!passwordVal.errors.pattern">
+                {{ 'USERS.INSECURE_PASSWORD_TEXT' | translate }}
+              </label>
+            </div>
+          </label>
+        </div>
+        <div class="col-sm-6">
+          <label *ngIf="userPassword.password !== ''" class="modal-input-form-label"
+            id="label-user-add-password-retype">
+            {{ 'LOGIN.CONFIRM_PASSWORD' | translate }}:<br>
+            <input type="password" class="modal-input-box" [disabled]="readOnly" id="input-user-details-password-retype"
+              name="passwordConfirmation" [(ngModel)]="userPassword.passwordConfirmation" required
+              [appValidateEqual]="['password', 'passwordConfirmation']" #passwordConfirmationVal="ngModel" readonly
+              (focus)="removeReadonly($event)" placeholder="******">
+            <div *ngIf="passwordConfirmationVal.invalid && (passwordConfirmationVal.touched)"
+              class="alert alert-danger">
+              <label
+                *ngIf="!!passwordConfirmationVal.errors.pattern">{{ 'USERS.PASSWORDS_NOT_EQUAL' | translate }}</label>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div *ngIf="passwordVal.invalid && (passwordVal.touched)" class="row mx-3 mt-0">
+        <div class="col-12 alert alert-danger">
+          <label *ngIf="!!passwordVal.errors.pattern">
+            *{{ 'USERS.PASSWORD_SUMMARY' | translate }}
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!--  ROW 5 -->
+    <div *ngIf="data.authorities.has(AuthorityCodes.REGISTERAUTHORITYTEMPLATEANYUSER)" class="row m-3">
+
+      <!-- User role selection -->
+      <div class="col-sm-6">
+        <label class="modal-input-form" for="form-user-details-roleselect">
+          {{ 'USERS.USER_GROUP' | translate }}
+        </label>
+        <div id="form-user-details-roleselect">
+          <div *ngFor="let role of userRoles" class="modal-radio-container">
+            <input type="radio" name="userRole" value={{role.id}} [disabled]="readOnly" (change)="onChange()"
+              id="radio-user-details-role-select-{{role.id}}" [(ngModel)]="userDetails.authorityTemplateName">
+            <label class="modal-radio-input" for="radio-user-details-role-select-{{role.id}}"
+              (click)="onUserRoleSelect(role); onChange()">{{ role.description | translate }}</label><br>
+          </div>
+        </div>
+      </div>
+
+      <!-- User locking -->
+      <div class="col-sm-6">
+        <label class="modal-input-form" for="form-user-details-lock">
+          {{ 'USERS.LOCK_SECTION_LABEL' | translate }}
+        </label>
+        <div id="form-user-details-lock">
+          <div class="user-lock-control">
+            <viega-toggle-button [(value)]="userDetails.isLocked" (click)="onChange()" [isDisabled]="readOnly" type="secondary" class="mt-5"
+              id="toggle-user-details-lock"></viega-toggle-button>
+            <label class="modal-radio-input" for="toggle-user-details-lock">
+              {{ userDetails.isLocked ? ('USERS.IS_LOCKED' | translate) : ('USERS.IS_NOT_LOCKED' | translate) }}
+            </label><br>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </form>
+</app-modal-dialog>

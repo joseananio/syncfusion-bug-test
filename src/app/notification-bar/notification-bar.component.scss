@@ -1,0 +1,12 @@
+@import "src/app/shared/lib/viega-common/theme/for-import/shared";
+
+:host {
+    color: $viega-c10;
+    background-color: $viega-c15;
+    display: block;
+}
+
+.notification-bar {
+    margin: 0;
+    padding: 13px 2.9em;
+}

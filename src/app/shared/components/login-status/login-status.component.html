@@ -1,0 +1,13 @@
+<div class="profile" *ngIf="authenticated">
+    <div class="mr-2">
+        {{ currentUserName }}
+    </div>
+    <div>
+      <div class="profile-icon icon-login-01" mat-flat-button [matMenuTriggerFor]="menu"></div>
+      <mat-menu #menu="matMenu">
+        <button class="menu-item" mat-menu-item (click)="openUserDetails()">{{'APP.MY_PROFILE' | translate}}</button>
+        <button class="menu-item" mat-menu-item (click)="onLogoutClick()" class="last">{{'APP.LOGOUT' | translate}}</button>
+      </mat-menu>
+    </div>
+</div>
+

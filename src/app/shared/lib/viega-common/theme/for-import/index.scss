@@ -1,0 +1,9 @@
+// Import this file in any component of an consuming Angular application. Do not import it internally as it will lead to circular imports!
+
+// @import './components/viega-header/_export';
+// @import './components/viega-start-page/_export';
+
+@import "./_shared";
+
+// component exports
+@import '../../lib/header/_export';

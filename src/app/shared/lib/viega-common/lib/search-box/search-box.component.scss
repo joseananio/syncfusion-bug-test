@@ -1,0 +1,46 @@
+@import "../../theme/for-import/shared";
+
+.viega-search-box{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  input{
+    width: 100%;
+    box-sizing:border-box;
+    line-height: 20px;
+    padding: 7px 10px;
+    padding-top: 5px;
+    padding-left: 20px;
+    border-radius: 20px;
+    font-family: "HelveticaNeue65Medium";
+    letter-spacing: 1px;
+    font-size: 14px;
+    color:#999999;
+    &:focus{
+      color:#111111;
+    }
+    &::placeholder{
+      color: #999999;
+      margin-top: -5px;
+    }
+  }
+  .icon{
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    color: $viega-c7;
+  }
+  &.theme-dark{
+    input{
+      background: $viega-c5;
+      color: $viega-c7;
+      border:none;
+      &::placeholder{
+        color: $viega-c7;
+      }
+      &:focus{
+        color:$viega-c8;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "src/app/shared/components/modal-dialog/modal-dialog/modal-dialog.component.scss";
+@import "src/app/shared/lib/viega-common/theme/for-import/shared";
+
+.viega-button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .button-wr {
+        margin-left: 20px;
+    }
+}
+
+.value {
+    line-height: 40px;
+}
+
+.sys-form {
+    .form-group {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .viega-group-heading {
+        margin-top: 150px;
+    }
+
+    label {
+        line-height: 25px;
+        display: block;
+    }
+
+    .input-date-time {
+        min-width: 40%;
+    }
+
+    input[name="currentDate"], #datepicker {
+        margin-right: 10px;
+    }
+
+    .modal-input-box {
+        width: 100%;
+    }
+}
+
+.warning {
+    color: $viega-c10;
+    background: $viega-c15;
+    padding: 5px;
+    border-radius: $viega-border-radius;
+}

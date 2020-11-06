@@ -1,0 +1,16 @@
+@import "src/app/shared/lib/viega-common/theme/for-import/shared";
+// @import "src/app/shared/components/modal-dialog/modal-dialog/modal-dialog.component.scss";
+
+
+/* input.input-item {
+    @include viega-guideline-font();
+    @include viega-guideline-boxes();
+    font-size: 12px;
+    width: 100%;
+} */
+
+.modal-input-form-label {
+    margin-top: 15px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}

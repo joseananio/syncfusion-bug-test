@@ -1,0 +1,13 @@
+<div class="project-wrapper">
+  <viega-routed-tab-view [routes]="routes" basePath="/project">
+    <viega-tab [tabTitle]="'PROJECT.STRUCTURE' | translate">
+      <app-project-structure></app-project-structure>
+    </viega-tab>
+    <viega-tab [tabTitle]="'PROJECT.BASE_DATA' | translate">
+      <app-project-data></app-project-data>
+    </viega-tab>
+    <viega-tab [tabTitle]="'PROJECT.FILE_TAB' | translate">
+      <app-project-file></app-project-file>
+    </viega-tab>
+  </viega-routed-tab-view>
+</div>

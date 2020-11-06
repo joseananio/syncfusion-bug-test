@@ -1,0 +1,20 @@
+viega-button button.type-default {
+    .mat-button-ripple .mat-ripple-element {
+        background: rgba(255, 255, 0, .15);
+    }
+}
+
+viega-button button.type-secondary,
+viega-button button.type-back,
+viega-button button.type-cancel,
+viega-button button.type-back-mini {
+    .mat-button-ripple .mat-ripple-element {
+        background: rgba(0, 0, 0, .10);
+    }
+}
+
+viega-button {
+    button.viega-button-raised.mat-raised-button {
+        background: transparent;
+    }
+}

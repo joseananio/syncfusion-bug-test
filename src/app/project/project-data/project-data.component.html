@@ -1,0 +1,336 @@
+<!-- <form class="row mt-1" [formGroup]="projectDataForm" (change)="onSubmit($event)"> -->
+<!-- <form class="row mt-1" (change)="onSubmit($event)" (onsubmit)="onSubmitForm()"> -->
+<!-- FIRST ROW -->
+<!-- TODO (Reger): in-template variables not unique. Form validation might double-trigger. pls cleanup -->
+<div class="viega-button-group">
+  <div>
+    <viega-button [type]="buttons[0].type" (click)="onHandleClick(buttons[0].eventName)"
+      [isDisabled]="buttons[0].isDisabled">{{ buttons[0].name|translate }}
+    </viega-button>
+  </div>
+  <div class="viega-button-wr">
+    <viega-button [type]="buttons[1].type" (click)="onHandleClick(buttons[1].eventName)"
+      [isDisabled]="buttons[1].isDisabled">{{ buttons[1].name|translate }}
+    </viega-button>
+  </div>
+  <div class="viega-button-wr">
+    <viega-button [type]="buttons[2].type" (click)="onHandleClick(buttons[2].eventName)"
+      [isDisabled]="buttons[2].isDisabled">{{ buttons[2].name|translate }}
+    </viega-button>
+  </div>
+</div>
+<form class="row my-3" (input)="onChange()">
+  <div class="col-md-8">
+    <!-- FIRST ROW -->
+    <div class="row">
+      <div class="col-6">
+        <!-- FORM BASIC COMPONENT -->
+        <viega-group-heading>{{ 'PROJECT.MASTER_DATA'|translate }}</viega-group-heading>
+        <div class="form-group input-container mt-3">
+          <label class="modal-input-form-label" id="label-user-add-firstname">
+            {{ 'GLOBAL.NAME'|translate }}
+          </label>
+          <input type="text" class="input-item" id="input-project-name" name="projectBaseNameVal" required
+            [readonly]="isReadOnly" #projectBaseNameVal="ngModel" [(ngModel)]="projectFormData.name" />
+          <div *ngIf="projectBaseNameVal.invalid && projectBaseNameVal.touched" class="alert alert-danger">
+            <label *ngIf="!!projectBaseNameVal?.errors.required">
+              {{ 'GLOBAL.REQUIRED_FIELD_TEXT'|translate }}
+            </label>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="form-group col-lg-8 input-container">
+            <!-- TODO (Reger): Refactor labels in all templates to wrap around inputs instead closing before -->
+            <label class="modal-input-form-label" id="label-project-place">
+              {{ 'PROJECT.PLACE'|translate }}
+            </label>
+            <input type="text" class="input-item" id="input-project-place" name="project-place" required
+              [readonly]="isReadOnly" [(ngModel)]="projectFormData.place" />
+          </div>
+          <div class="form-group col-md-12 col-lg-4 input-container">
+            <label class="modal-input-form-label" id="label-project-zip-code">
+              {{ 'PROJECT.POST_CODE'|translate }}
+            </label>
+            <input type="number" class="input-item no-spinners" id="input-project-code no-spinners" name="project-zip-code" required
+              [readonly]="isReadOnly" [(ngModel)]="projectFormData.postalCode" />
+          </div>
+        </div>
+        <div class="form-group input-container">
+          <label class="modal-input-form-label" id="label-project-street" for="input-project-street">
+            {{ 'PROJECT.ROAD'|translate }}
+          </label>
+          <input type="text" class="input-item" id="input-project-street" name="project-name" required
+            [readonly]="isReadOnly" [(ngModel)]="projectFormData.street" />
+        </div>
+        <!-- END FORM BASIC COMPONENT -->
+      </div>
+      <div class="col-6 image-view">
+        <div class="row mt-3">
+          <div class="col">
+            <div class="list-item">{{ 'PROJECT.BUILDINGS'|translate }} <span class="text-right">{{countBuildings}}</span>
+            </div>
+            <div class="list-item">{{ 'PROJECT.AREAS'|translate }} <span class="text-right">{{countAreas}}</span></div>
+            <div class="list-item">{{ 'PROJECT.ROOMS'|translate }} <span class="text-right">{{countRooms}}</span></div>
+            <div class="list-item">{{ 'PROJECT.SEGMENTS'|translate }} <span class="text-right">{{countSegments}}</span></div>
+            <input #imageInput type="file" multiple="false" accept="image/x-png,image/jpeg" class="d-none" (change)="handlePictureUpload($event)" >
+            <div>
+                <viega-button [type]="buttons[3].type" (click)="imageInput.click()" [id]="buttons[3].id"
+                  [isDisabled]="buttons[3].isDisabled || isReadOnly">{{ buttons[3].name|translate }}
+                </viega-button>
+              </div>
+          </div>
+          <div class="col">
+            <img *ngIf="projectFormData.imageUrl" [src]="projectFormData.imageUrl" alt="Projektbild"
+              class="project-picture" id="image-project-picture" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECOND ROW -->
+    <div class="row my-3">
+      <div class="col-md-6">
+        <!-- ORGANISATION -->
+        <!--  -->
+        <!--  -->
+        <viega-group-heading>{{ 'PROJECT.RESPONSIBLE'|translate }}</viega-group-heading>
+        <div class="form-group input-container mt-3">
+          <label class="modal-input-form-label" for="input-firm-name">
+            {{ 'PROJECT.COMPANY'|translate }}
+          </label>
+          <input type="text" class="input-item" id="input-firm-name" name="firm-name" required [readonly]="isReadOnly"
+            [(ngModel)]="projectFormData.projectResponsible.company" #projectName="ngModel" />
+          <div *ngIf="projectName.invalid && projectName.touched" class="alert alert-danger">
+            <label *ngIf="!!projectName?.errors.required">
+              {{ 'GLOBAL.REQUIRED_FIELD_TEXT'|translate }}
+            </label>
+            <label *ngIf="!!projectName?.errors.pattern">
+              {{ 'PROJECT.INVALID_ENTRY'|translate}}
+            </label>
+          </div>
+        </div>
+        <div class="row form-row">
+          <div class="form-group col-lg-8 input-container">
+            <label class="modal-input-form-label" for="input-firm-place">
+              {{ 'PROJECT.PLACE'|translate }}
+            </label>
+            <input type="text" class="input-item" id="input-firm-place" name="firm-place" required
+              [readonly]="isReadOnly" [(ngModel)]="projectFormData.projectResponsible.place" #placeVal="ngModel" />
+            <div *ngIf="placeVal.invalid && placeVal.touched" class="alert alert-danger">
+              <label *ngIf="!!placeVal?.errors.required">
+                {{ 'GLOBAL.REQUIRED_FIELD_TEXT'|translate }}
+              </label>
+              <label *ngIf="!!placeVal?.errors.pattern">
+                {{ 'PROJECT.INVALID_ENTRY'|translate}}
+              </label>
+            </div>
+          </div>
+          <div class="form-group col-md-12 col-lg-4 input-container">
+            <label class="modal-input-form-label" for="input-firm-zipcode">
+              {{ 'PROJECT.POST_CODE'|translate }}
+            </label>
+            <input type="number" class="input-item no-spinners" id="input-firm-zipcode" name="firm-zipcode"
+              [(ngModel)]="projectFormData.projectResponsible.postalCode" required [readonly]="isReadOnly"
+              #zipCodeVal="ngModel" />
+            <div *ngIf="zipCodeVal.invalid && zipCodeVal.touched" class="alert alert-danger">
+              <label *ngIf="!!zipCodeVal?.errors.required">
+                {{ 'GLOBAL.REQUIRED_FIELD_TEXT'|translate }}
+              </label>
+              <label *ngIf="!!zipCodeVal?.errors.pattern">
+                {{ 'PROJECT.INVALID_ENTRY'|translate}}
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group input-container">
+          <label class="modal-input-form-label" for="input-firm-street">
+            {{ 'PROJECT.ROAD'|translate }}
+          </label>
+          <input type="text" class="input-item" id="input-firm-street" name="firm-street" required
+            [readonly]="isReadOnly" [(ngModel)]="projectFormData.projectResponsible.street" #streetVal="ngModel" />
+          <div *ngIf="streetVal.invalid && streetVal.touched" class="alert alert-danger">
+            <label *ngIf="!!streetVal?.errors.required">
+              {{ 'GLOBAL.REQUIRED_FIELD_TEXT'|translate }}
+            </label>
+            <label *ngIf="!!streetVal?.errors.pattern">
+              {{ 'PROJECT.INVALID_ENTRY'|translate}}
+            </label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-lg-2 input-container">
+            <label class="modal-input-form-label" for="input-firm-title">
+              {{ 'PROJECT.TITLE'|translate }}
+            </label>
+            <input type="text" class="input-item" id="input-firm-title" name="firm-title" [readonly]="isReadOnly"
+              [(ngModel)]="projectFormData.projectResponsible.title" #titleVal="ngModel" />
+            <div *ngIf="titleVal.invalid && titleVal.touched" class="alert alert-danger">
+              <label *ngIf="!!titleVal?.errors.pattern">
+                {{ 'PROJECT.INVALID_ENTRY'|translate}}
+              </label>
+            </div>
+          </div>
+          <div class="form-group col-lg-5 input-container">
+            <label class="modal-input-form-label" for="input-firm-firstname">
+              {{ 'USERS.FIRSTNAME'|translate}}
+            </label>
+            <input type="text" class="input-item" id="input-firm-firstname" name="firm-firstname"
+              [(ngModel)]="projectFormData.projectResponsible.firstName" required [readonly]="isReadOnly"
+              #firstName="ngModel" />
+            <div *ngIf="firstName.invalid && firstName.touched" class="alert alert-danger">
+              <label *ngIf="!!firstName?.errors.required">
+                {{ 'GLOBAL.REQUIRED_FIELD_TEXT'|translate }}
+              </label>
+              <label *ngIf="!!firstName?.errors.pattern">
+                {{ 'PROJECT.INVALID_ENTRY'|translate}}
+              </label>
+            </div>
+          </div>
+          <div class="form-group col-lg-5 input-container">
+            <label class="modal-input-form-label" for="input-firm-lastname">
+              {{ 'USERS.LASTNAME'|translate }}
+            </label>
+            <input type="text" class="input-item" id="input-firm-lastname" name="firm-lastname"
+              [(ngModel)]="projectFormData.projectResponsible.lastName" required [readonly]="isReadOnly"
+              #lastName="ngModel" />
+            <div *ngIf="lastName.invalid && lastName.touched" class="alert alert-danger">
+              <label *ngIf="!!lastName?.errors.required">
+                {{ 'GLOBAL.REQUIRED_FIELD_TEXT'|translate }}
+              </label>
+              <label *ngIf="!!lastName?.errors.pattern">
+                {{ 'PROJECT.INVALID_ENTRY'|translate}}
+              </label>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!--  -->
+        <!-- ORGANISATION END -->
+      </div>
+
+      <div class="col-md-6">
+        <!-- INSTALLATION -->
+        <!--  -->
+        <!--  -->
+
+        <viega-group-heading>{{ 'PROJECT.INSTALLATION'|translate }}</viega-group-heading>
+        <div class="form-group input-container mt-3">
+          <label class="modal-input-form-label" for="input-firmi-name">
+            {{ 'PROJECT.COMPANY'|translate }}
+          </label>
+          <input type="text" class="input-item" id="input-firmi-name" name="firmi-name" required [readonly]="isReadOnly"
+            [(ngModel)]="projectFormData.projectInstalledBy.company" #projectName="ngModel" />
+          <div *ngIf="projectName.invalid && projectName.touched" class="alert alert-danger">
+            <label *ngIf="!!projectName?.errors.required">
+              {{ 'GLOBAL.REQUIRED_FIELD_TEXT'|translate }}
+            </label>
+            <label *ngIf="!!projectName?.errors.pattern">
+              {{ 'PROJECT.INVALID_ENTRY'|translate}}
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-lg-8 input-container">
+            <label class="modal-input-form-label" for="input-firmi-place">
+              {{ 'PROJECT.PLACE'|translate }}
+            </label>
+            <input type="text" class="input-item" id="input-firmi-place" name="firmi-place" required
+              [readonly]="isReadOnly" [(ngModel)]="projectFormData.projectInstalledBy.place" #placeVal="ngModel" />
+            <div *ngIf="placeVal.invalid && placeVal.touched" class="alert alert-danger">
+              <label *ngIf="!!placeVal?.errors.required">
+                {{ 'GLOBAL.REQUIRED_FIELD_TEXT'|translate }}
+              </label>
+              <label *ngIf="!!placeVal?.errors.pattern">
+                {{ 'PROJECT.INVALID_ENTRY'|translate}}
+              </label>
+            </div>
+          </div>
+          <div class="form-group col-lg-4 input-container">
+            <label class="modal-input-form-label" for="input-firmi-zipcode">
+              {{ 'PROJECT.POST_CODE'|translate }}
+            </label>
+            <input type="number" class="input-item no-spinners" id="input-firmi-zipcode" name="firmi-zipcode"
+              [(ngModel)]="projectFormData.projectInstalledBy.postalCode" required [readonly]="isReadOnly"
+              #zipCodeVal="ngModel" />
+            <div *ngIf="zipCodeVal.invalid && zipCodeVal.touched" class="alert alert-danger">
+              <label *ngIf="!!zipCodeVal?.errors.required">
+                {{ 'GLOBAL.REQUIRED_FIELD_TEXT'|translate }}
+              </label>
+              <label *ngIf="!!zipCodeVal?.errors.pattern">
+                {{ 'PROJECT.INVALID_ENTRY'|translate}}
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group input-container">
+          <label class="modal-input-form-label" for="input-firmi-street">
+            {{ 'PROJECT.ROAD'|translate }}
+          </label>
+          <input type="text" class="input-item" id="input-firmi-street" name="firmi-street" required
+            [readonly]="isReadOnly" [(ngModel)]="projectFormData.projectInstalledBy.street" #streetVal="ngModel" />
+          <div *ngIf="streetVal.invalid && streetVal.touched" class="alert alert-danger">
+            <label *ngIf="!!streetVal?.errors.required">
+              {{ 'GLOBAL.REQUIRED_FIELD_TEXT'|translate }}
+            </label>
+            <label *ngIf="!!streetVal?.errors.pattern">
+              {{ 'PROJECT.INVALID_ENTRY'|translate}}
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-lg-2 input-container">
+            <label class="modal-input-form-label" for="input-firmi-title">
+              {{ 'PROJECT.TITLE'|translate }}
+            </label>
+            <input type="text" class="input-item" id="input-firmi-title" name="firmi-title" [readonly]="isReadOnly"
+              [(ngModel)]="projectFormData.projectInstalledBy.title" #titleVal="ngModel" />
+            <div *ngIf="titleVal.invalid && titleVal.touched" class="alert alert-danger">
+              <label *ngIf="!!titleVal?.errors.pattern">
+                {{ 'PROJECT.INVALID_ENTRY'|translate}}
+              </label>
+            </div>
+          </div>
+          <div class="form-group col-lg-5 input-container">
+            <label class="modal-input-form-label" for="input-firmi-firstname">
+              {{ 'USERS.FIRSTNAME'|translate }}
+            </label>
+            <input type="text" class="input-item" id="input-firmi-firstname" name="firmi-firstname"
+              [(ngModel)]="projectFormData.projectInstalledBy.firstName" required [readonly]="isReadOnly"
+              #firstName="ngModel" />
+            <div *ngIf="firstName.invalid && firstName.touched" class="alert alert-danger">
+              <label *ngIf="!!firstName?.errors.required">
+                {{ 'GLOBAL.REQUIRED_FIELD_TEXT'|translate }}
+              </label>
+              <label *ngIf="!!firstName?.errors.pattern">
+                {{ 'PROJECT.INVALID_ENTRY'|translate}}
+              </label>
+            </div>
+          </div>
+          <div class="form-group col-lg-5 input-container">
+            <label class="modal-input-form-label" for="input-firmi-lastname">
+              {{ 'USERS.LASTNAME'|translate }}
+            </label>
+            <input type="text" class="input-item" id="input-firmi-lastname" name="firmi-lastname"
+              [(ngModel)]="projectFormData.projectInstalledBy.lastName" required [readonly]="isReadOnly"
+              #lastName="ngModel" />
+            <div *ngIf="lastName.invalid && lastName.touched" class="alert alert-danger">
+              <label *ngIf="!!lastName?.errors.required">
+                {{ 'GLOBAL.REQUIRED_FIELD_TEXT'|translate }}
+              </label>
+              <label *ngIf="!!lastName?.errors.pattern">
+                {{ 'PROJECT.INVALID_ENTRY'|translate}}
+              </label>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!--  -->
+        <!-- INSTALLATION END -->
+      </div>
+    </div>
+  </div>
+</form>
+<p></p>

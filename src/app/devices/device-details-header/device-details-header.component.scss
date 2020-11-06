@@ -1,0 +1,15 @@
+@import "src/app/shared/lib/viega-common/theme/for-import/_variables.scss";
+
+.base-data-label,
+.base-data-value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.base-data-value {
+  color: $viega-c1;
+}
+.root {
+  font-family: $viega-font-regular;
+  font-size: 13px;
+}

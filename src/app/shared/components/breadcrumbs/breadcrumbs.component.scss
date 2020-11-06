@@ -1,0 +1,40 @@
+@import "src/app/shared/lib/viega-common/theme/for-import/_variables.scss";
+
+.breadcrumb {
+  background: none;
+  margin: 0;
+
+  a,
+  span {
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    font-family: $viega-font-medium;
+
+    &:hover {
+      color: lightgrey;
+      text-decoration: none;
+    }
+  }
+
+  li {
+    list-style: none;
+    float: left;
+    margin: 5px;
+
+    &:last-child {
+      margin-right: 20px;
+    }
+
+    &::after {
+      content: '\e616';  // right arrow
+      color: silver;
+      font-family: $viega-font-icons;
+      font-size: 9px;
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+  }
+}

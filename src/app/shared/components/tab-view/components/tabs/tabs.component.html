@@ -1,0 +1,10 @@
+<ejs-tab class="viega-tab-view" id="tabs" #tabs [selectedItem]="selectedItem"
+    (selected)="selected.emit($event)" (selecting)="selecting($event)" [animation]="animationSettings">
+  <e-tabitems>
+    <e-tabitem *ngFor="let tab of viegaTabs" [header]="{text: tab.tabTitle}">
+      <ng-template #content>
+        <ng-container *ngTemplateOutlet="tab.template"></ng-container>
+      </ng-template>
+     </e-tabitem>
+  </e-tabitems>
+</ejs-tab>

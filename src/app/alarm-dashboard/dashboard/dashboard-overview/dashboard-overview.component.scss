@@ -1,0 +1,82 @@
+@import "src/app/shared/components/modal-dialog/modal-dialog/modal-dialog.component.scss";
+
+.boundary-container {
+    margin: auto;
+    max-width: 1400px;
+}
+img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.vignette-container {
+    //padding: 0;
+    position: relative;
+    //overflow: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.vignette-container img {
+    //height: auto;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.vignette-container::before {
+    box-shadow: inset 0 0 20px 0px rgba(0,0,0,0.03);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // Renders inset shadow above image
+    content: "";
+}
+
+.e-card:hover img {
+    // Darken image on hover
+    filter: brightness(97%);
+}
+
+.e-card .e-card-header  {
+    display: block !important;
+}
+.e-card .e-card-header {
+    font-family: $viega-font-bold;
+    font-size: 14px;
+}
+
+.dashboard-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.e-card .e-card-content {
+    // Reduce space to header
+    padding: 0;
+}
+
+.e-card {
+    background-color: $viega-c9;
+}
+
+.e-card:hover {
+    background-color: $viega-c8;
+}
+
+.icon-container {
+    text-align: right;
+}
+
+.icon {
+    // Increase clickable area around delete button
+    padding: 8px;
+    margin: -8px;
+}
+
+.icon:hover {
+    background-color: $viega-c13;
+    border-radius: 50%;
+}

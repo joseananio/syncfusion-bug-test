@@ -1,0 +1,30 @@
+<div>
+  <ejs-grid [dataSource]="data" [allowPaging]="allowPaging" [allowSorting]="allowSorting" [pageSettings]='pageSettings' [locale]="locale">
+    <e-columns>
+      <div *ngFor="let item of columns">
+        <!-- Syncfusion template input must not be null or '', hence ngif is used to seperate two kinds of columns -->
+        <div *ngIf="item.headerText != null; then columnWithTemplate; else regularColumn"></div>
+        <ng-template #columnWithTemplate>
+          <e-column
+            [field]="item.field"
+            [headerText]="item.headerText"
+            [width]="item.width || '100%'"
+            [textAlign]="item.textAlign || 'Left'"
+            [format]="item.format || null"
+            [template]="item.template"
+            [hideAtMedia]="item.hideAtMedia"
+          ></e-column>
+        </ng-template>
+        <ng-template #regularColumn>
+          <e-column
+            [field]="item.field"
+            [headerText]="item.headerText"
+            [width]="item.width || '100%'"
+            [textAlign]="item.textAlign || 'Left'"
+            [format]="item.format || null"
+          ></e-column>
+        </ng-template>
+      </div>
+    </e-columns>
+  </ejs-grid>
+</div>

@@ -1,0 +1,9 @@
+@import 'src/app/shared/lib/viega-common/theme/for-import/index';
+
+.history-list {
+    list-style-type: none;
+    a {
+        color: $viega-c4;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,61 @@
+@import "../../theme/for-import/variables";
+/* Customize Handle and Bar Switch */
+$bar_unchecked: $viega-c6;
+$bar_checked: $viega-c5;
+$bar_disabled: $viega-c6;
+$bar_disabled_border: $viega-c4;
+
+$handle_size: 22px;
+
+
+.e-switch-wrapper.custom-switch {
+  width: 50px;
+  height: 24px;
+
+  .e-switch-handle {
+    width: $handle_size;
+    height: $handle_size;
+    background-color: #fff;
+    &.e-switch-active {
+        left: 46px;
+    }
+  }
+  .e-switch-inner{
+        background-color: $bar_unchecked;
+        border-color: $bar_unchecked;
+        &.e-switch-active{
+            background-color: $bar_checked;
+            border-color: $bar_checked;
+        }
+    }
+  &:hover{
+    .e-switch-off{
+        background-color: $bar_checked;
+        border-color: $bar_checked;
+    }
+  }
+  .e-switch-off {
+    background-color: $bar_unchecked;
+    border-color: $bar_unchecked;
+  }
+  .e-switch-on {
+    background-color: $bar_checked;
+    border-color: $bar_checked;
+  }
+  &.e-switch-disabled{
+    .e-switch-inner{
+        background-color: $bar_disabled;
+        border:1px solid $bar_disabled_border;
+    }
+    .e-switch-handle{
+        // background-color: red;
+        border: 1px solid #f1f1f1;
+        box-shadow: 0px 2px 1px $viega-c7;
+    }
+  }
+      .e-ripple {
+        background-color: rgba(80,80,80,0.12)!important;
+      }
+
+}
+

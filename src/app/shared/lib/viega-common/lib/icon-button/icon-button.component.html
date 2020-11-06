@@ -1,0 +1,14 @@
+<button mat-icon-button
+        class="viega-icon-button"
+        [style.background]="background"
+        tabindex="-1"
+        [disabled]="isDisabled"
+        (click)="click($event)">
+    <span (click)="click($event)" class="icon" [ngClass]="'icon-' + icon">
+    </span>
+    <span (click)="click($event)">
+      <!-- This content must have a wrapping element to handle clicks in case it is plain text -->
+      <!-- Chrome does not handle unwrapped ng-content correctly -->
+      <ng-content></ng-content>
+    </span>
+  </button>

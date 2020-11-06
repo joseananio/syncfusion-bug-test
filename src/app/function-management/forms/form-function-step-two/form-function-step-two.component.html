@@ -1,0 +1,137 @@
+<form (ngModelChange)="onFormChange()" id="form-function-device">
+  <div class="row">
+    <div class="col-lg-7 tree-wr">
+      <div class="form-group my-A2">
+        <div *ngIf="model.getAllFlushableDevices().length > 0">
+          <label for="treeelement">
+            {{ 'FUNCTIONS.LABEL_SELECT_DEVICES' | translate }}
+          </label>
+          <app-project-tree
+            #devicesTree
+            id="treeelement"
+            [deviceList]="model.getAllFlushableDevices()"
+            [showCheckBox]="showCheckBox"
+            [maxHeight]="20"
+            (nodeChecked)="onDeviceNodeCheck($event)"
+            [buttonLabel]="'FUNCTIONS.SET_TEMPERATURE' | translate"
+            [showButton]="false"
+          >
+          </app-project-tree>
+        </div>
+        <div *ngIf="model.getAllFlushableDevices().length == 0">
+          {{'FUNCTIONS.NO_DEVICES_FOUND' | translate }}
+        </div>
+        <div class="row" *ngIf="selectingTemperatureLevel">
+          <app-function-temperature-level
+            #tempLevel
+            [model]="model"
+            [parentForm]="form"
+            (temperatureValueChanged)="onChildFormChange($event)"
+          ></app-function-temperature-level>
+        </div>
+      </div>
+      <div class="other-fn-wr" *ngIf="!model.isCirculationFunction()">
+        <div class="form-group">
+          <label id="label-input-func-name" for="input-">
+            {{ 'FUNCTIONS.LABEL_SELECT_DEVICES_OF_OTHER_FUNCTION' | translate }}
+          </label>
+          <div *ngIf="functionList.length == 0" class="ml-4 normal-text">
+            {{ 'FUNCTIONS.NO_FUNCTION_WARINING' | translate }}
+          </div>
+          <div *ngFor="let func of model.getCompatibleFunctions()" class="ml-4">
+            <viega-radio name="selectedFunction"
+              #functionRadio
+              (ngModelChange)="onExistingFunctionSelect($event)"
+              [(ngModel)]="selectedFunction"
+              [value]="func.name"
+            >
+              {{ func.name }}
+            </viega-radio>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!viewIncludes('noflushing')">
+        <div class="form-group">
+          <label id="label-input-func-name" for="input-">
+            {{ 'FUNCTIONS.LABEL_FLUSH_OPTION' | translate }}
+          </label>
+          <div class="ml-4">
+            <viega-checkbox
+              (valueChange)="onParallelFlushCheck($event)"
+              [isChecked]="model.flushSchedule.flushParallel"
+              [label]="parallelFlushLabel | translate"
+            >
+            </viega-checkbox>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 side-data">
+      <div *ngIf="viewIncludes('temperature')" class="form-group">
+        <label id="label-input-func-name" for="input-">
+          {{ 'FUNCTIONS.LABEL_DEVICES_SELECT_TEMPERATURE_SENSOR' | translate }}
+        </label>
+        <div *ngFor="let item of model.devices.temperatureSensors">
+          <viega-radio
+            (ngModelChange)="onFormFieldChange('temperatureSensor', $event)"
+            [(ngModel)]="model.temperatureSensorPwcDevicePointUuid"
+            name="temperatureSensor"
+            [value]="item.uuid"
+          >
+            {{ item.name | translate }}
+          </viega-radio>
+        </div>
+      </div>
+
+      <div *ngIf="viewIncludes('dte')" class="form-group">
+        <label id="label-input-func-name" for="input-">
+          {{ 'FUNCTIONS.LABEL_DEVICES_SELECT_DTE_DEVICE' | translate }}
+        </label>
+        <div  *ngFor="let item of this.model.devices.dteDevices">
+          <viega-radio
+            (ngModelChange)="onFormFieldChange('dteDevice', $event)"
+            [(ngModel)]="model.dteUuid"
+            name="dteUuid"
+            id="dteUuid_{{item.uuid}}"
+            [value]="item.uuid"
+            [isChecked]="item.isChecked"
+            [isDisabled]="item.isDisabled"
+          >
+            {{ item.name | translate }}
+          </viega-radio>
+        </div>
+      </div>
+
+      <div *ngIf="viewIncludes('keySwitch')" class="form-group">
+        <label id="label-input-func-name" for="input-">
+          <span>{{ 'FUNCTIONS.LABEL_DEVICES_SELECT_KEY_SWITCH_DEVICE' | translate }} </span>
+        </label>
+        <div *ngFor="let item of model.devices.keySwitchDevices">
+          <viega-radio
+            (ngModelChange)="onFormFieldChange('keySwitchDevice', $event)"
+            [(ngModel)]="model.keySwitchUuid"
+            name="keySwitchUuid"
+            [value]="item.uuid"
+            required
+          >
+            {{ item.name | translate }}
+          </viega-radio>
+        </div>
+      </div>
+
+      <div *ngIf="viewIncludes('circulationDevice')" class="form-group">
+        <label id="label-input-func-name" for="input-"
+          >{{ 'FUNCTIONS.LABEL_DEVICES_SELECT_CIRCULATION_DEVICE' | translate }}
+        </label>
+        <div *ngFor="let item of model.devices.circulationDevices">
+          <viega-checkbox
+            [isChecked]="this.model.circulationValveConfigurationMapping && this.model.circulationValveConfigurationMapping[item.uuid]"
+            [label]="item.name | translate"
+            (valueChange)="onFormFieldChange('circulationValveUuid', item.uuid)"
+          >
+          </viega-checkbox>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

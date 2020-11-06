@@ -1,0 +1,67 @@
+<div class="container">
+  <h2>{{"DEVICES.FUNCTION_TEST.REPORT.DTE.REPORT_TITLE" | translate}}</h2>
+
+  <div *ngIf="!hasReportArrived">
+    <p>{{"DEVICES.FUNCTION_TEST.REPORT.DTE.NO_TEST_AVAILABLE" | translate}}</p>
+  </div>
+
+  <div *ngIf="hasReportArrived && reportData">
+
+    <h3> {{"DEVICES.FUNCTION_TEST.REPORT.DTE.OVERVIEW" | translate}} </h3>
+    <table>
+      <tr>
+        <td>{{"DEVICES.FUNCTION_TEST.REPORT.DTE.DEVICE_NAME" | translate}}</td>
+        <td>{{deviceInfo?.name || '-'}}</td>
+      </tr>
+      <tr>
+        <td>{{"DEVICES.FUNCTION_TEST.REPORT.DTE.USER_NAME" | translate}}</td>
+        <td>{{reportData.testUser.loginName}}</td>
+      </tr>
+      <tr>
+        <td>{{"DEVICES.FUNCTION_TEST.REPORT.DTE.TEST_ID" | translate}}</td>
+        <td>{{reportData.testId}}</td>
+      </tr>
+      <tr>
+        <td>{{"DEVICES.FUNCTION_TEST.REPORT.DTE.START_TIME" | translate}}</td>
+        <td>{{reportData.startTime | date:'short':'':('_META.LOCALE' | translate)}}</td>
+      </tr>
+      <tr>
+        <td>{{"DEVICES.FUNCTION_TEST.REPORT.DTE.END_TIME" | translate}}</td>
+        <td>{{reportData.endTime | date:'short':'':('_META.LOCALE' | translate)}}</td>
+      </tr>
+    </table>
+
+    <h3> {{"DEVICES.FUNCTION_TEST.REPORT.DTE.RESULTS" | translate}} </h3>
+    <div *ngFor="let result of reportData.testCaseResults">
+      <div>
+        <!--  <p> {{"DEVICES.FUNCTION_TEST.REPORT.DTE." + result.testCaseTitle | translate}} </p> -->
+        <h4> {{eDteFunctionTestPrefix + titleHotfix(result.testCaseTitle.i18N).toUpperCase() | translate}} </h4>
+        <table>
+          <div *ngIf="result.testCaseResultStatus !== eTestCaseStatus.Aborted">
+            <tr>
+              <td>{{"DEVICES.FUNCTION_TEST.REPORT.DTE.RESULT_MESSAGES" | translate}}</td>
+              <td>
+            <tr *ngFor="let msg of result.resultMessages">
+              <!-- TODO (Reger):  -->
+              {{convertKeys(msg) | translateLocaliationData}}
+            </tr>
+            </td>
+            </tr>
+            <tr>
+              <td>{{"DEVICES.FUNCTION_TEST.REPORT.DTE.IS_SKIPPED" | translate}}</td>
+              <td>
+                <!-- The following is written to allow easy i18n extraction. -->
+                {{(result.isSkipped === true ? ("GLOBAL.TRUE" | translate ) : ("GLOBAL.FALSE" | translate)) | titlecase}}
+              </td>
+            </tr>
+          </div>
+          <div *ngIf="result.testCaseResultStatus === eTestCaseStatus.Aborted">
+            <tr>
+              <td>{{"DEVICES.FUNCTION_TEST.REPORT.DTE.ABORTED_TEST" | translate}}</td>
+            </tr>
+          </div>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

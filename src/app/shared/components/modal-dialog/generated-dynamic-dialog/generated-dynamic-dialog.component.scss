@@ -1,0 +1,47 @@
+app-modular-input-numeric,
+app-modular-input-button,
+app-modular-output-info,
+app-modular-output-value {
+  display: inline-block;
+}
+app-modular-input-button {
+  padding-left: 10px;
+}
+.row {
+  display: block;
+  width: 100%;
+}
+
+.col {
+  display: inline-block;
+  width: auto;
+}
+
+.active button,
+.active viega-button {
+  background-color: magenta !important;
+}
+
+.component-header {
+  font-weight: bold;
+}
+
+.spinner-inside-input {
+  display: inline-block;
+  margin-bottom: -0.6em;
+  margin-left: -2.2em;
+  transform: scale(0.8);
+}
+
+/* Hide increment arrows https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+/* Chrome, Safari, Edge, Opera */
+input.input-no-arrows::-webkit-outer-spin-button,
+input.input-no-arrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input.input-no-arrows[type='number'] {
+  -moz-appearance: textfield;
+}

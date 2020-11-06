@@ -1,0 +1,21 @@
+@import "src/app/shared/components/modal-dialog/modal-dialog/modal-dialog.component.scss";
+
+@mixin viega-guideline-font {
+    font-size: 14px;
+    font-family: $viega-font-family;
+    color: $viega-c2;
+}
+
+.form-group.row {
+    margin-bottom: 20px;
+    @include viega-guideline-font();
+}
+
+@media(min-width:map-get($viega-grid-breakpoints, 'md')) {
+    .input-item.name {
+        width: 250px;
+    }
+}
+.currentFunctionTypeIndicator {
+    color: $viega-c11;
+}

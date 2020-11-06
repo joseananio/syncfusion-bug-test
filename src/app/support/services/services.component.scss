@@ -1,0 +1,53 @@
+@import "src/app/shared/lib/viega-common/theme/for-import/shared";
+
+.container {
+    margin: 0px;
+    padding: 10px;
+    font-size: 16px;
+
+    .services-hearder {
+        margin-top: 40px;
+        font-family: $viega-font-bold;
+    }
+
+    .address {
+        width: 80px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .current-address {
+        p {
+            line-height: 14px;
+        }
+        .country-font {
+            font-size: 15px;
+        }
+        .bolden {
+            font-family: $viega-font-bold;
+        }
+        .website {
+            text-transform: uppercase;
+        }
+    }
+
+    .icon {
+        font-family: $viega-font-icons;
+    }
+
+    // Put a world map in the background.
+    .country-list {
+        position: relative;
+
+        &:after {
+            color: $viega-c9;
+            font-family: $viega-font-icons;
+            font-size: 500px;
+            content: "\e61d";
+            position: absolute;
+            top: -90px;
+            left: 60px;
+            z-index: -1;
+        }
+    }
+}

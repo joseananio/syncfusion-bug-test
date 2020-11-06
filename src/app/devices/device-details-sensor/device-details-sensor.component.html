@@ -1,0 +1,20 @@
+<div class="col">
+  <div class="row my-0">
+    {{ 'DEVICES.SENSORS_LIST_AVAILABLE_MESSAGE' | translate }}
+  </div>
+  <div *ngFor="let item of availableSensorPorts">
+
+    <div class="row my-0">
+      <div class="">
+        <viega-loading-spinner *ngIf="item.loading" class="spinner"></viega-loading-spinner>
+        <viega-icon-button icon="plus-01" *ngIf="!item.loading" (click)="onSensorLinkClick(item.port)">
+        </viega-icon-button>
+      </div>
+      <div class="align-self-center">
+        {{item.name}}
+      </div>
+    </div>
+
+  </div>
+
+</div>

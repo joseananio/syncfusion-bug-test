@@ -1,0 +1,117 @@
+<!-- Drag container needs to wrap all templates inside to avoid drags glitching -->
+<div (mouseover)="isHovering=true;" (mouseleave)="isHovering=false;" #item cdkDrag [cdkDragDisabled]='isDragDisable'
+  [cdkDragData]="device" (cdkDragEnded)="onDragEnded($event)">
+  <!-- TODO (Reger): Replace image by datasource / input -->
+  <!-- TODO (Reger): Show main value (current temperature?) and bind live data -->
+  <!-- TODO Add text displaying state, according to color -->
+  <!-- TODO (Reger): Show edit content button -->
+  <!-- TODO Add text displaying state, according to color -->
+  <!-- TODO (Reger): Implement edit context for expanded state. IS using template for this ok? -->
+
+  <!-- Default template -->
+  <div *ngIf="!devicex.isExpanded && !isHovering; else hoverTemplate" class="card small-item"
+    [style.backgroundColor]="deviceColor">
+    <div class="card-header title">{{devicePointName}}</div>
+    <div class="card-content">
+      {{liveValueIntString || '-'}} °C
+      <!--  Todo (Reger) Bind live variables here, preferredly with ngfor -->
+    </div>
+  </div>
+
+  <!-- Template in hovering state -->
+  <ng-template #hoverTemplate>
+    <div *ngIf="!devicex.isExpanded && isHovering; else expandedTemplate" class="e-card expanded-item"
+      (mouseover)="isHovering=true;" (mouseleave)="isHovering=false;">
+      <div class="e-card-header">
+        <div class="e-card-header-title row no-gutters">
+          <div class="dashboardItem-title col-10">
+            {{devicePointName || '-'}}
+          </div>
+          <div class="col-2 icon-container">
+            <!-- Prevent routing by parent component when clicking on the button -->
+            <span *ngIf="!isEditing" class="icon mr-2" [ngClass]="'icon-location-01'"
+              (click)="$event.preventDefault(); $event.stopPropagation(); expand(true)"></span>
+            <span *ngIf="!isEditing" class="icon" [ngClass]="'icon-cross-01'"
+              (click)="$event.preventDefault(); $event.stopPropagation(); deleteItem()"></span>
+          </div>
+        </div>
+      </div>
+      <div class="e-card-content row mx-0 my-1">
+        <div class="col-2 pl-2 pr-0">
+          <img class="img-fluid" src="assets/img/icon-beat-e.png" alt="beat-e">
+        </div>
+        <div class="col-10 px-2">
+
+          <div class="row m-0 mb-1 live-values">
+            <div class="col-6 pl-0 pr-3">
+              Status:
+            </div>
+            <div class="col-6 px-0">
+              {{device.deviceStatusSimple}}
+            </div>
+          </div>
+
+          <div class="row m-0 mb-1 live-values">
+            <div class="col-6 pl-0 pr-3">
+              {{'DASHBOARD.TEMPERATURE' | translate}}
+            </div>
+            <div class="col-6 px-0">
+              {{liveValueFloatString || '-'}} °C
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- Template in expanded state -->
+  <ng-template #expandedTemplate>
+    <div class="e-card expanded-item" (mouseover)="isHovering=true;">
+      <div class="e-card-header">
+        <div class="e-card-header-title row no-gutters">
+          <div class="dashboardItem-title col-10">
+            <span class="status-indicator mr-1" [style.backgroundColor]="deviceColor"></span>
+            {{devicePointName || '-'}}
+          </div>
+          <div class="col-2 icon-container">
+            <!-- Prevent routing by parent component when clicking on the button -->
+            <span *ngIf="!isEditing" class="icon mr-2" [ngClass]="'icon-minus-01'"
+              (click)="$event.preventDefault(); $event.stopPropagation(); expand(false)"></span>
+            <span *ngIf="!isEditing" class="icon" [ngClass]="'icon-cross-01'"
+              (click)="$event.preventDefault(); $event.stopPropagation(); deleteItem()"></span>
+          </div>
+        </div>
+      </div>
+      <div class="e-card-content row mx-0 my-1">
+        <div class="col-2 pl-2 pr-0">
+          <!-- TODO (Reger): Use actual device image instead of mock -->
+          <img class="img-fluid" src="assets/img/icon-beat-e.png"  alt="beat-e">
+        </div>
+        <div class="col-10 px-2">
+
+          <div class="row m-0 mb-1 live-values">
+            <div class="col-6 pl-0 pr-3">
+              Status:
+            </div>
+            <div class="col-6 px-0">
+              {{device.deviceStatusSimple}}
+            </div>
+          </div>
+
+          <div class="row m-0 mb-1 live-values">
+            <div class="col-6 pl-0 pr-3">
+              {{'DASHBOARD.TEMPERATURE' | translate}}
+            </div>
+            <div class="col-6 px-0">
+              {{liveValueFloatString || '-'}} °C
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </ng-template>
+
+</div>

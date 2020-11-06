@@ -1,0 +1,22 @@
+<div class="v-wrapper">
+    <div class="header">
+        <viega-logo></viega-logo>
+
+        <ng-container
+            [ngTemplateOutlet]="headerTemplate || defaultHeader"
+            [ngTemplateOutletContext]="{ model: { close: requestDialogCloseBound } }">
+        </ng-container>
+    </div>
+
+    <div class="content" [style.overflow-x]="overflowX" [style.overflow-y]="overflowY">
+        <ng-content></ng-content>
+    </div>
+</div>
+
+<ng-template #defaultHeader>
+    <div class="header-inner">
+        <h1 [innerHTML]="heading"></h1>
+
+        <viega-icon-button *ngIf="!hideCloseButton" icon="cross-01" (click)="requestDialogClose()"></viega-icon-button>
+    </div>
+</ng-template>

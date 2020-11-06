@@ -1,0 +1,27 @@
+@import "src/app/shared/lib/viega-common/lib/datagrid/datagrid/datagrid.component.scss";
+
+.search-box {
+    max-width: 300px;
+    text-align: left;
+}
+
+.new-btn-box {
+    text-align: right;
+}
+
+ejs-grid {
+    margin-top: 15px;
+}
+
+.statusbox {
+    height: 25px;
+    width: 50px;
+    background: $viega-c11;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    border-radius: 5px;
+
+    &.inactive {
+        background-color: $viega-c15;
+    }
+}

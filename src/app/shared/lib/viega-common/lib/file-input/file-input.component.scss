@@ -1,0 +1,79 @@
+@import "../../theme/for-import/shared";
+
+:host {
+    min-width: 8em;
+    padding: .7em;
+
+    display: block;
+    border: 1px solid $viega-c8;
+    background: $viega-c10;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+span {
+    max-width: 17em;
+    overflow: hidden;
+    user-select: none;
+}
+
+.filename {
+    margin-top: .5em;
+    font-family: $viega-font-regular;
+    font-size: $viega-font-size-text;
+    line-height: $viega-line-height-text;
+    text-overflow: ellipsis;
+    // line-height: 1.5;
+    white-space: nowrap;
+}
+
+img {
+    flex: 0 0 auto;
+    max-height: 5em;
+    margin-bottom: .5em;
+}
+
+.representative-icon {
+    flex: 0 0 auto;
+    font-size: 2.5em;
+    color: $viega-c15;
+}
+
+input {
+    flex: 1 1;
+    display: none;
+}
+
+.drop-icon {
+    width: 80%;
+
+    color: $viega-c8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em 1em;
+    border: .2em dashed $viega-c8;
+    border-radius: 9px;
+    transition: .3s;
+
+    &.dragover {
+        color: $viega-c15;
+        border-color: $viega-c15;
+        transform: scale(.9, .9);
+    }
+
+    span::before {
+        font-size: 2em;
+    }
+}
+
+.drag-drop-only-mode {
+    display: block;
+    cursor: default;
+}

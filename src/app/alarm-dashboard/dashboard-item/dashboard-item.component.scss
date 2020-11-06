@@ -1,0 +1,101 @@
+@import "src/app/shared/components/modal-dialog/modal-dialog/modal-dialog.component.scss";
+
+.status-indicator {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.small-item {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    border: solid #a9a9a9 1px;
+    // background: #008B8B;
+    border-radius: 5px;
+    padding: 5px;
+    .title {
+        text-align: center;
+        font-style: normal;
+        font-weight: lighter;
+        font-size: xx-small;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #ffffff;
+        margin-top: 5px;
+    }
+    .card-content {
+        text-align: center;
+        font-style: normal;
+        font-weight: lighter;
+        font-size: large;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #ffffff;
+        margin-top: 5px;
+    }
+}
+
+// ==Expanded item==
+.expanded-item {
+    width: 280px;
+    position: absolute;
+}
+
+// Let's the image scale relative to row-colum layout
+.img-fluid {
+    height: auto;
+    width: 100%;
+}
+
+.e-card .e-card-header  {
+    padding: 6px;
+    display: block !important;
+}
+.e-card-header {
+    font-family: $viega-font-bold;
+    font-size: 14px;
+    background-color: $viega-c9;
+}
+.e-card-header:hover {
+    background-color: $viega-c8;
+}
+
+.dashboardItem-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.e-card .e-card-content {
+    // Reduce space to header
+    padding: 0;
+}
+
+.e-card {
+    // Take viega color with alpha
+    background-color: rgba( $viega-c9, .7 );
+    border-radius: 5px;
+}
+
+.e-card:hover {
+    background-color: $viega-c9;
+}
+
+.icon-container {
+    text-align: right;
+}
+
+.icon {
+    // Increase clickable area around delete button
+    padding: 6px;
+    margin: -6px;
+}
+
+.icon:hover {
+    background-color: $viega-c13;
+    border-radius: 50%;
+}

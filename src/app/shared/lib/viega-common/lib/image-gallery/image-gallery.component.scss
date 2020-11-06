@@ -1,0 +1,101 @@
+@import "../../theme/for-import/shared";
+
+$current-image-padding: .5em;
+$preview-image-padding: .4em;
+$preview-image-height: 5em;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 30em;
+}
+
+.current-image-wrapper {
+    position: relative;
+    display: flex;
+    padding: $current-image-padding;
+    flex: 1 1;
+    border: 3px solid $viega-c9;
+    margin-bottom: 1em;
+}
+
+.current-image {
+    position: relative;
+    flex: 1 1;
+
+    background-color: $viega-c10;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: zoom-in;
+
+    &.no-zoom {
+        cursor: default;
+    }
+}
+
+.zoom-button {
+    position: absolute;
+    bottom: $current-image-padding;
+    right: $current-image-padding;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    font-family: $viega-font-medium;
+
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    opacity: .8;
+
+    color: $viega-c10;
+    text-shadow: $viega-c4 0px 0px .1em;
+
+    &.large {
+        font-size: 3.5em;
+    }
+
+    &.thumbnail {
+        font-size: .9em;
+    }
+}
+
+.gallery-pane {
+    flex: 0 0 auto;
+
+    padding: 1em 2em;
+    background: $viega-c9;
+
+    button {
+        display: inline-block;
+        width: 6em;
+        margin: $preview-image-padding;
+        padding: .5em;
+        background-color: $viega-c10;
+        border: none;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        transition: .2s;
+        transform: scale(1, 1);
+        cursor: pointer;
+
+        &:active {
+            transform: scale(.9, .9);
+        }
+    }
+}
+
+.preview-image {
+    height: $preview-image-height - $preview-image-padding;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: $viega-c10;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,49 @@
+@import "../../shared/lib/viega-common/theme/for-import/shared";
+
+
+.label {
+    height: 30px;
+    line-height: 30px;
+    background: $viega-c11;
+    font-size: 14px;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 12px;
+    position: relative;
+    text-align: center;
+    min-width: 40px;
+    padding: 0 10px;
+
+    &.error {
+        background-color: rgb(192, 50, 50);
+    }
+
+    &.warning {
+        background-color: orange;
+    }
+}
+
+.error {
+    color: $viega-c15;
+    font-family: $viega-font-bold;
+}
+
+.form-group {
+    line-height: 50px;
+
+    input,
+    viega-button {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+
+    input {
+        border: 1px solid $viega-c8;
+
+        &.field-error {
+            border: 1px solid $viega-c15;
+        }
+    }
+}

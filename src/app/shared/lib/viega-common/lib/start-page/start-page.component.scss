@@ -1,0 +1,149 @@
+@import "../../theme/for-import/shared";
+@import "../header/export";
+
+$viega-start-page-panel-width: 25em;
+$viega-start-page-panel-h-padding: 2.9em;
+$viega-start-page-panel-h-padding-mobile: 1em;
+
+/* desktop, tablet */
+@media (min-width: map-get($viega-grid-breakpoints, 'md') + 1px) {
+    .desktop-hidden {
+        display: none;
+    }
+
+    .wrapper {
+        top: $viega-header-top-bar-height;
+        bottom: 0;
+    }
+
+    .panel {
+        width: $viega-start-page-panel-width;
+        height: 100%;
+    }
+
+    header {
+        //font-family: $viega-font-light;
+        margin: 15em 0 1.2em 0;
+        width: $viega-start-page-panel-width + 8em;
+    }
+
+    .content {
+        margin: 4em $viega-start-page-panel-h-padding;
+    }
+
+    .background-image {
+        width: 100%;
+        height: 100%;
+        background-position: -10% 0;
+    }
+}
+
+/* mobile */
+@media (max-width: map-get($viega-grid-breakpoints, 'md')) {
+    .mobile-hidden {
+        display: none;
+    }
+
+    .wrapper {
+        height: calc(100% - #{$viega-header-height-mobile});
+    }
+
+    .panel {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+
+        @media (orientation: portrait) {
+            bottom: 0;
+        }
+
+        @media (orientation: landscape) {
+            margin-top: 27em;
+        }
+    }
+
+    header {
+        padding: 0 1em;
+
+        h1 {
+            font-family: $viega-font-bold;
+            font-size: 1.125em;
+            font-weight: normal;
+            padding: .5em 0;
+            line-height: 1;
+        }
+    }
+
+    .content {
+        padding: 1.3em $viega-start-page-panel-h-padding-mobile;
+    }
+
+    .background-image {
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        background-repeat: repeat;
+        background-size: auto 90%;
+
+        @media (orientation: portrait) {
+            height: 50vh;
+            background-position: 55% 0;
+        }
+
+        @media (orientation: landscape) {
+            height: 40em;
+            background-position: 55% -10%;
+        }
+    }
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    background: #000;
+}
+
+.panel {
+    position: absolute;
+    background: $viega-c9;
+    z-index: 1;
+}
+
+header {
+    background: $viega-c13;
+}
+
+.viega-yellow-bar {
+    background: $viega-c13;
+    padding: 1.875em 2.875em;
+
+    h1 {
+        line-height: 1;
+        margin-bottom: .2em;
+        font-size: 2.25em;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.5
+    }
+
+    .subtitle {
+        font-family: $viega-font-bold;
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+    &.mobile {
+        padding: 0 1em;
+
+        h1 {
+            font-family: $viega-font-bold;
+            font-size: 1.125em;
+            font-weight: normal;
+            line-height: 1;
+            padding: .5em 0;
+        }
+    }
+}

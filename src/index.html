@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Viega AquaVip Solutions</title>
+    <base href="/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Prevent (almost) all content not coming from our server. -->
+    <!-- unsafe-eval is required because of Syncfusion templating even in production. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-eval'; font-src 'self' data:; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+    />
+    <!-- Preload loading spinner image for LoadingSpinnerComponent to make sure that it is always immediately available. -->
+    <link rel="prefetch" href="assets/viega-common/loading-spinner/assets/ajax-loader.gif" as="image" />
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+@import "../../theme/for-import/shared";
+
+$header-height: 3em;
+$logo-width: 5em;
+$h-padding: 1.5em;
+$v-padding: .5em;
+
+:host {
+    position: relative;
+    display: block;
+    min-width: 30em;
+
+    &.logo-hidden {
+        viega-logo {
+            display: none;
+        }
+
+        .header {
+            padding-left: $h-padding;
+        }
+
+        .primary {
+            margin-left: 0;
+        }
+
+        .content {
+            padding-top: $h-padding / 2;
+        }
+    }
+}
+
+.v-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: $header-height;
+
+    flex: 0 0 auto;
+    padding: $v-padding $h-padding $v-padding 8em;
+    background: $viega-c9;
+    border-bottom: 2px solid $viega-c8;
+
+    h1 {
+        font-family: $viega-font-bold;
+        font-size: .9em;
+        line-height: 1.2;
+        margin: 0;
+    }
+}
+
+viega-logo {
+    position: absolute;
+    left: $h-padding;
+    top: $v-padding;
+    width: $logo-width;
+    z-index: 10;
+}
+
+viega-button {
+    margin-left: $h-padding;
+    flex: 0 0 auto;
+}
+
+.content {
+    padding: $h-padding $h-padding $h-padding $h-padding;
+}

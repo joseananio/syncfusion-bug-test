@@ -1,0 +1,47 @@
+@import '../for-import/variables';
+
+$viega-color-hover: $viega-c8;
+$viega-color-font: $viega-c2;
+
+.e-fullrow {
+    background-color: $viega-color-background;
+}
+
+.e-treeview {
+    .e-list-parent {
+        &.e-ul  {
+            margin-top: 0;
+        }
+    }
+    &.e-list-item {
+        &.e-ul {
+            margin: 0 0 0 -4px;
+        }
+    }
+    .e-list-item{
+        padding-top: 0;
+        padding-bottom: 0;
+        .icon {
+            color: $viega-c7;
+        }
+        .e-text-content {
+            padding-left: 0;
+        }
+        &.e-active {
+            > .e-fullrow {
+                background-color: $viega-color-selected;
+            }
+            > .e-text-content .e-list-text {
+                color: $viega-color-font;
+            }
+        }
+        &.e-hover {
+            > .e-fullrow {
+                background-color: $viega-color-hover;
+            }
+            > .e-text-content .e-list-text {
+                color: $viega-color-font;
+            }
+        }
+    }
+}

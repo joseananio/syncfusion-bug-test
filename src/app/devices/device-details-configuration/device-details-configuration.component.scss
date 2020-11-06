@@ -1,0 +1,19 @@
+.device-param-label,
+.device-param-value {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.device-param-value {
+    width: 120px;
+}
+
+.device-param-label {
+    padding-right: 1em;
+    text-overflow: ellipsis;
+}
+
+.device-config-table {
+    table-layout: fixed;
+    width: 100%;
+}

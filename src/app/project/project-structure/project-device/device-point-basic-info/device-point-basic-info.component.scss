@@ -1,0 +1,17 @@
+@import "src/app/shared/lib/viega-common/theme/for-import/shared";
+
+.invalid-field {
+  color: $viega-c15;
+  margin: 5px;
+}
+
+// Remove spinner buttons in number inputs
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinners {
+    -moz-appearance: textfield;
+}

@@ -1,0 +1,95 @@
+@import "../../theme/for-import/shared";
+
+$disabled-color: $viega-c10;
+$disabled-bg-color: transparentize($color: $viega-c2, $amount: .75);
+
+:host {
+    display: inline-block;
+    border-radius: 5px;
+    transition: .4s background-color;
+    height: 50px;
+
+    &[type='default'],
+    &:not([type]) {
+        color: $viega-c9;
+        background: $viega-c2;
+
+        &:hover {
+            color: $viega-c13;
+        }
+
+        &:focus {
+            color: $viega-c13;
+        }
+
+        &[disabled] {
+            color: $disabled-color;
+            background: $disabled-bg-color;
+        }
+    }
+
+    &[type='secondary'],
+    &[type='back'],
+    &[type='back-mini'],
+    &[type='cancel'] {
+        color: $viega-c2;
+        background: $viega-c9;
+
+        &:hover {
+            background: #ececec;
+        }
+
+        &[disabled] {
+            color: $disabled-color;
+            background: $disabled-bg-color;
+        }
+    }
+
+    &[type='back-mini'] {
+        width: 2.4em;
+    }
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    .icon.unified-padding {
+        padding: 1em;
+    }
+
+    &.align-reverse {
+        flex-direction: row-reverse;
+
+        .icon {
+            padding: 0 1em 0 0;
+        }
+    }
+}
+
+.icon {
+    top: 0;
+    font-size: .8em;
+    padding: 0 .5em 0 1em;
+
+    &::before {
+        position: relative;
+    }
+}
+
+button.viega-button-raised {
+    height: inherit;
+    font-family: $viega-font-bold;
+    color: inherit !important;
+    border-radius: inherit;
+    transition: color .5s;
+    min-width: initial;
+    width: 100%;
+    background: inherit !important;
+
+    &.type-back-mini {
+        padding: 0;
+    }
+}

@@ -1,0 +1,12 @@
+<div class="w-holder" id="app-home">
+  <div class="w-item" *ngFor="let item of widgetItems">
+    <viega-app-widget
+      [isDisabled]="item.disabled"
+      [icon]="item.icon"
+      [routerLink]="item.uri"
+      [id]="item.id"
+      [badgeValue]="item.batchValueGetter && item.batchValueGetter()"
+      >{{ item.text | translate }}</viega-app-widget
+    >
+  </div>
+</div>

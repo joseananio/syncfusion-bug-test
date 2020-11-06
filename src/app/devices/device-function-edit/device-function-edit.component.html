@@ -1,0 +1,31 @@
+<app-modal-dialog
+  [title]="'DEVICES.ASSIGN_DEVICE_TO_FUNCTION' | translate"
+  [buttons]="modalButtons"
+  (buttonEvent)="onButtonClick($event)"
+>
+  <div *ngIf="stateLoading" class="row m-3"><em>{{ 'GLOBAL.LOADING_DATA' | translate }}</em></div>
+  <div *ngIf="!stateLoading" class="row m-3">
+    <div class="col-sm-12">
+      <!-- <form action=""> -->
+      <div class="row input-group mb-2">
+        <label class="col-sm-5  align-self-center" id="label-user-name">
+          {{ 'DEVICES.ASSIGN_EXISTING_FUNCTION' | translate }}
+        </label>
+        <viega-dropdown
+          [dataSource]="functionNames"
+          class="col-sm-7 modal-input-box"
+          (valueChange)="onFunctionSelected($event)"
+          id="input-user-name"
+          name="name"
+          [locale]="'_META.LOCALE' |translate"
+        ></viega-dropdown>
+        <div class="col">
+          <viega-button (click)="onAddNewFunction()"
+            >{{ 'DEVICES.CREATE_NEW_FUNCTION' | translate }}</viega-button
+          >
+        </div>
+      </div>
+      <!-- </form> -->
+    </div>
+  </div>
+</app-modal-dialog>

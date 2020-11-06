@@ -1,0 +1,18 @@
+/**
+ * Variable overrides for the Viega Syncfusion theme.
+ */
+@import '../for-import/variables';
+
+/**
+ * Use standard Viega font
+ */
+$font-family: $viega-font-regular;
+
+/**
+ * Prevents the inclusion of the Roboto font from the Syncfusion styles.
+ * We don't want Roboto and we don't want to depend on the Google CDN.
+ * If Roboto is used anywhere, it is a bug.
+ */
+$is-roboto-loaded: true;
+
+@import './viega-syncfusion-treeview';

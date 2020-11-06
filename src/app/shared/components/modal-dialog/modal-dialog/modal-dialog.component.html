@@ -1,0 +1,43 @@
+<div class="modal-container">
+  <!-- The bootstrap grid system also works inside material dialogs. -->
+  <!-- Bootstrap grid is only used for it's gutters and columns here, responsiveness is not needed. -->
+
+  <!-- Using mat-dialog-title, the title bar sticks while scrolling -->
+  <div mat-dialog-title id="modal-dialog">
+    <div>
+      <div class="modal-header-box">
+        <img src="assets/viega-common/logo/assets/viega-logo.svg" class="modal-header-logo" />
+        <div class="modal-header-text">
+          <label class="user-add-label">
+            {{ title | translate }}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ng-content allow inserting html template content from the parent component. -->
+  <mat-dialog-content>
+    <div class="container">
+      <ng-content></ng-content>
+    </div>
+  </mat-dialog-content>
+
+  <!-- Button row beneath ng content, build according to "buttons" input to this component -->
+
+  <mat-dialog-actions>
+    <div class="modal-button-row">
+      <div *ngFor="let button of getButtons()" class="modal-button {{ button.class || '' }}">
+        <viega-button
+          mat-button
+          (click)="callParent(button.eventName)"
+          [id]="button.id"
+          [type]="button.type"
+          [isDisabled]="button.isDisabled"
+        >
+          {{ button.name | translate }}</viega-button
+        >
+      </div>
+    </div>
+  </mat-dialog-actions>
+</div>

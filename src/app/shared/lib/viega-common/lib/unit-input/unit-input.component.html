@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <viega-slider [class.hidden]="!isSliderEnabled"
+                  [isSkipAllowed]="true"
+                  [min]="min"
+                  [max]="max"
+                  [increment]="increment"
+                  [ngModel]="value"
+                  [disabled]="disabled"
+                  (valueChange)="slider_valueChange($event)"></viega-slider>
+
+    <div class="input-box" [class.invalid]="value < min || value > max">
+        <input type="text"
+               [attr.id]="inputId"
+               [min]="min"
+               [max]="max"
+               [ngModel]="value"
+               [disabled]="disabled"
+               (input)="input_keyUp($event)"
+               (keydown)="input_keyDown($event)"
+               [style.width]="inputWidth"
+               spellcheck="false">
+        <span>{{unitLabel}}</span>
+    </div>
+</div>

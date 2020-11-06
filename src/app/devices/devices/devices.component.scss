@@ -1,0 +1,103 @@
+@import "src/app/shared/components/modal-dialog/modal-dialog/modal-dialog.component.scss";
+
+// Apply color to active toggle button
+// (with a far too large selector, so this is the most specific one)
+:host ::ng-deep {
+    .top-controlls viega-toggle-button .custom-switch .e-switch-active .e-switch-on,
+    .toggle-holder viega-toggle-button .custom-switch .e-switch-active .e-switch-on {
+        background-color: $viega-c11;
+        border-color: $viega-c11;
+        opacity: 1;
+    }
+}
+
+.lss-status {
+    @import "src/app/shared/scss/status-label";
+}
+
+svg {
+  height: 16px;
+  width: 16px;
+  margin-left: 10px;
+}
+.top-controlls {
+  viega-toggle-button {
+    display: inline-block;
+  }
+}
+
+.top-controls-labels {
+    margin-top: -1rem !important;
+    margin-bottom: -1rem !important;
+    height: 2.5rem;
+    & > * {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+.table-header-info-button {
+    position: absolute;
+    top: 0;
+}
+
+:host ::ng-deep .device-tree {
+  @import "src/app/shared/scss/status-label";
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  // deep nesting to be more specific than default datagrid styling
+  .e-table {
+    $horizontalPadding: 2px;
+
+    // So far there seems to be no better way to disable the filter bar
+    .e-filterbar {
+      display: none;
+    }
+
+    .e-row .e-rowcell,
+    .e-columnheader .e-headercell {
+      font-family: $viega-font-regular;
+      padding-left: $horizontalPadding;
+      padding-right: $horizontalPadding;
+    }
+
+    // column with status label and controller image
+    .e-row .e-rowcell {
+      padding-left: $horizontalPadding;
+      padding-right: $horizontalPadding;
+      &[aria-colindex="0"] {
+        .status-label {
+          margin-bottom: 6px;
+          vertical-align: baseline;
+        }
+
+        .controller-image {
+          vertical-align: baseline;
+        }
+      }
+    }
+  }
+}
+
+.filterText {
+    display: none;
+}
+
+.link-spinner {
+    margin: 5px;
+    position: absolute;
+    right: 2 * 40px;
+    display: none;
+}
+
+// Show spinner when link or unlink button not shown
+.link-button.hidden + .link-spinner {
+    display: inline-block;
+}
+
+.hidden {
+    visibility: hidden;
+}

@@ -1,0 +1,22 @@
+<div class="filter-template">
+  <viega-group-heading>
+    {{'SHARED.FILTER_TEMPLATES' | translate}}
+  </viega-group-heading>
+
+  <div class="row pt-1">
+    <div class="col-10 p-0">
+      <ejs-listbox
+        #listboxReference
+        (change)="onSelect($event)"
+        id="filter-template-listbox"
+        [height]="listboxHeight"
+        [selectionSettings]="selection"
+        [enabled]="enabled"
+      ></ejs-listbox>
+    </div>
+    <div class="col-2 mt-0 p-0">
+      <viega-icon-button icon="plus-01" (click)="onAddTemplate()"></viega-icon-button>
+      <viega-icon-button *ngIf="selected !== null" icon="cross-01" (click)="onDeleteTemplate()"></viega-icon-button>
+    </div>
+  </div>
+</div>

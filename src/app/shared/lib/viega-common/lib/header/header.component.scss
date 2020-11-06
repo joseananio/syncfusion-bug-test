@@ -1,0 +1,219 @@
+@import "../../theme/for-import/variables";
+@import "./export";
+
+$top-bar-v-padding: .48em;
+$logo-width: 5.5em;
+$burger-button-size: 2.5em;
+$burger-button-padding: .9em;
+
+$mobile-panel-h-padding: 1.1em;
+$mobile-panel-logo-width: 2.5em;
+
+// TODO: use greater min-width in landscape mode
+/* desktop, tablet */
+@media (min-width: map-get($viega-grid-breakpoints, 'md') + 1) {
+    // use this class to hide elements in desktop mode
+    .mobile {
+        display: none;
+
+        &.desktop {
+            display: inherit;
+        }
+    }
+}
+
+/* mobile */
+@media (max-width: map-get($viega-grid-breakpoints, 'md')) {
+    // use this class to hide elements in mobile mode
+    .desktop {
+        display: none;
+
+        &.mobile {
+            display: inherit;
+        }
+    }
+}
+
+:host {
+    display: block;
+    width: 100vw;
+}
+
+.desktop-header {
+    $h-padding: $viega-header-hpadding-desktop;
+
+    .bottom-content-wrapper {
+        margin-right: $h-padding;
+    }
+
+    .page-title {
+        flex-grow: 0;
+    }
+
+    .left-content-wrapper {
+        flex: 1 1;
+    }
+
+    viega-logo {
+        margin: .5em $h-padding;
+    }
+
+    .top-bar {
+        padding: 0 $h-padding;
+    }
+
+    .burger-button {
+        margin: 0 ($h-padding - $burger-button-padding);
+    }
+
+    .bottom-content-wrapper {
+        margin: 0 $viega-header-hpadding-desktop 0 ($h-padding * 2 + $logo-width);
+        height: $viega-header-height-desktop - $viega-header-top-bar-height;
+    }
+}
+
+.mobile-header {
+    $h-padding: $viega-header-hpadding-mobile;
+
+    .page-title {
+        flex-grow: 1;
+    }
+
+    viega-logo {
+        margin: .5em $h-padding;
+    }
+
+    .top-bar {
+        padding: 0 $h-padding;
+    }
+
+    .burger-button {
+        margin: 0 ($h-padding - $burger-button-padding);
+    }
+
+    .bottom-content-wrapper {
+        margin: 0 0 0 ($h-padding * 2 + $logo-width);
+        height: $viega-header-height-mobile;
+    }
+}
+
+header, aside {
+    background: #111;
+}
+
+.top-bar {
+    background: #2d2d2d;
+    height: $viega-header-top-bar-height;
+
+    .title {
+        display: inline-block;
+        font-family: $viega-font-regular;
+        font-size: .7em;
+        color: #808080;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: $top-bar-v-padding 0;
+
+        a {
+            color: #808080;
+            text-decoration: none;
+            transition: .2s;
+            cursor: pointer;
+
+            &:hover {
+                color:  #fff;
+            }
+        }
+    }
+
+    .desktop-menu-items-wrapper {
+        float: right;
+    }
+}
+
+header viega-logo {
+    position: absolute;
+    z-index: 100;
+    width: $logo-width;
+}
+
+.bottom-content-wrapper {
+    clear: both;
+    display: flex;
+}
+
+.page-title {
+    font-size: 1.2em;
+    font-family: $viega-font-regular;
+    color: #eee;
+    padding: 1.2em;
+}
+
+.burger-button {
+    // TODO: use icon font if possible
+    background: url('/assets/viega-common/header/assets/burger-button-icon.svg');
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: $burger-button-size;
+    padding: $burger-button-padding;
+    flex-grow: 0;
+}
+
+aside {
+    background: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.2s;
+    z-index: 200;
+
+    &.expanded {
+        width: 80%;
+    }
+
+    .header {
+        background: #272727;
+        color: #bebebe;
+        font-size: 1.2em;
+        padding: .8em $mobile-panel-h-padding .8em ($mobile-panel-logo-width + $mobile-panel-h-padding * 2);
+        height: 2em;
+        border-bottom: 1px solid #111;
+    }
+
+    .page-title {
+        display: inline-block;
+        font-size: .8em;
+        color: #bebebe;
+        padding: .2em 0;
+    }
+
+    viega-logo {
+        position: absolute;
+        left: $mobile-panel-h-padding;
+        width: $mobile-panel-logo-width;
+    }
+
+    .bottom-content {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+.page-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 199;
+}
+
+.hidden {
+    display: none !important;
+}

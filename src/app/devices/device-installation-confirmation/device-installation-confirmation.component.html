@@ -1,0 +1,18 @@
+<app-modal-dialog
+    [title]="'DEVICES.INSTALLATION_SUCCESS_TITLE' | translate"
+    [buttons]="buttons"
+    (buttonEvent)="onButtonEvent($event)"
+    id="modal-question-dialog">
+  <div class="container">
+    <div class="row">
+      <app-device-icon [deviceType]="data.deviceTypeName" size="64" class="col-2">
+      </app-device-icon>
+      <div class="col-10">
+        {{'DEVICES.DEVICE_INSTALLATION_SUMMARY' | translate:data}}
+        <div class="mt-2">
+          {{devicePointPath}}
+        </div>
+      </div>
+    </div>
+  </div>
+</app-modal-dialog>

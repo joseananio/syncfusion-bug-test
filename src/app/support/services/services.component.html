@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="services-hearder">
+        <label>{{'SUPPORT.CHOOSE_YOUR_COUNTRY' |translate}}</label>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-6 country-list">
+      <p class="address" (click)="onSelect(contact)" *ngFor="let contact of contacts">{{contact.country |translate}}</p>
+    </div>
+    <div class="col-sm-6">
+      <div class="current-address" *ngIf="currentContact">
+        <p class="bolden country-font mb-3">{{currentContact.country| translate}}</p>
+        <p>{{currentContact.address | translate}}</p>
+        <p><span class="icon icon-phone-01"></span>&nbsp;{{currentContact.mobile}}</p>
+        <p><span class="icon icon-drucken-01"></span>&nbsp;{{currentContact.fax}}</p>
+        <p *ngFor="let email of currentContact.emails"><span class="icon icon-mail-01"></span>&nbsp;{{email}}</p>
+      </div>
+    </div>
+  </div>
+</div>

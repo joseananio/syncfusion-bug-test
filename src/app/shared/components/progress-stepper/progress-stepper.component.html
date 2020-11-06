@@ -1,0 +1,31 @@
+<ng-container *ngIf="initialized">
+  <div class="view" #stepper>
+    <!-- header -->
+    <div class="item-wr">
+      <div class="item-box" *ngFor="let step of progressSteps; let i = index">
+        <button class="item-trigger" [class.active]="i <= selectedStepIndex">
+          <div class="label">
+            {{ step.headerText }}
+          </div>
+          <div class="indicator-ball"></div>
+        </button>
+      </div>
+    </div>
+    <!-- bottom lines -->
+    <div class="col-12">
+      <div class="ruler"></div>
+      <div
+        class="ruler-active"
+        [ngStyle]="{
+          width: (100 / (progressSteps.length - 1)) * selectedStepIndex + '%'
+        }"
+      ></div>
+    </div>
+  </div>
+  <!-- content -->
+  <div *ngFor="let step of progressSteps; let i = index">
+    <div *ngIf="i === selectedStepIndex" class="step-container">
+      <ng-container *ngTemplateOutlet="step.template"></ng-container>
+    </div>
+  </div>
+</ng-container>

@@ -1,0 +1,13 @@
+<table>
+  <tr *ngFor="let parameter of displayParameters">
+    <td>{{ 'API.DEVICE_PARAMETERS.' + parameter.keyName | translate }}</td>
+    <td *ngIf="parameter.dataType !== 'boolean'">
+      <!-- TODO: Remove hiding of TODO when all proper units are known -->
+      {{ parameter.value || '-' }} {{ parameter.unit !== 'TODO' ? parameter.unit : '' }}
+    </td>
+    <td *ngIf="parameter.dataType === 'boolean'">
+      <!-- TODO: Replace fake values with actual ones -->
+      {{ parameter.valueBoolean ? ('GLOBAL.ACTIVE' | translate) : ('GLOBAL.INACTIVE' | translate) }}
+    </td>
+  </tr>
+</table>

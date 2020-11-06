@@ -1,0 +1,39 @@
+@import "../../shared/lib/viega-common/theme/for-import/shared";
+@import "../../shared/lib/viega-common/theme/global/_icons";
+
+.confirm {
+    height: 120px;
+    width: 100%;
+    z-index: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .message {
+        margin-left: 30px;
+        margin-right: 60px;
+        margin-top: 30px;
+        color: $viega-c1;
+        text-align: center;
+        font-size: 16px;
+        z-index: 2;
+    }
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: block;
+        z-index: 1;
+        position: absolute;
+    }
+}
+
+.dialog-icon {
+    font-family: $viega-font-icons;
+    font-size: 30px;
+    margin-left: 30px;
+}

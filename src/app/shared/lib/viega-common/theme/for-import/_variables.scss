@@ -1,0 +1,43 @@
+// required by _variables
+@import 'node_modules/bootstrap/scss/functions';
+// for $grid-breakpoints
+@import 'node_modules/bootstrap/scss/variables';
+
+
+// The layout breakpoints.
+$viega-grid-breakpoints: $grid-breakpoints;
+
+$viega-font-regular: "HelveticaNeue31Regular", Helvetica, Arial, sans-serif;
+$viega-font-light: "HelveticaNeue45Light", Helvetica, Arial, sans-serif;
+$viega-font-bold: "HelveticaNeue75Bold", Helvetica, Arial, sans-serif;
+$viega-font-medium: "HelveticaNeue65Medium", Helvetica, Arial, sans-serif;
+$viega-font-icons: "Icomoon";
+
+// mainly for paragraphs
+$viega-font-size-text: .8125em;
+$viega-line-height-text: 1.615382;
+
+// Viega palette
+$viega-c1: #000;
+$viega-c2: #111;
+$viega-c3: #222;
+$viega-c4: #272727;
+$viega-c5: #333;
+$viega-c6: #4f4f4f;
+$viega-c7: #999;
+$viega-c8: #e1e7e7;
+$viega-c9: #f1f4f4;
+$viega-c10: #fff;
+$viega-c11: #489b48;
+$viega-c12: #e3eddc;
+$viega-c13: #ffff00;
+$viega-c14: #ffffea;
+$viega-c15: #cc3d5b;
+$viega-c16: #f4e9e8;
+
+$viega-focus-color: transparentize($color: $viega-c11, $amount: .5);
+$viega-color-selected: $viega-c13;
+$viega-color-header: $viega-c8;
+$viega-color-background: $viega-c9;
+
+$viega-border-radius: 4px;

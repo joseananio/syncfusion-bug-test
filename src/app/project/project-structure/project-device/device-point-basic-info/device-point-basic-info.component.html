@@ -1,0 +1,123 @@
+<div>
+  <ng-template #dropDownItemTemplate let-data>
+    {{data | translate}}
+  </ng-template>
+  <ng-template #dropDownValueTemplate let-data>
+    <span class="value">{{data | translate}}</span>
+  </ng-template>
+
+  <div class="row m-0 p-0">
+    <div class="col-12">
+      <form name="form" #formView (input)="onChange()">
+
+        <div *ngIf="stateLoading" class="row m-3"><em>{{ 'GLOBAL.LOADING_DATA'| translate}}</em></div>
+        <div *ngIf="!stateLoading">
+
+          <div class="row m-3">{{ 'PROJECT.ASSIGN_GLOBALLY_UNIQUE_NAME' | translate }}</div>
+
+          <div class="row m-0 py-2">
+            <div class="col-12">
+              <div class="form-group row">
+                <label class="control-label col-sm-3" for="devicetype">{{ 'PROJECT.DEVICE_TYPE'| translate }}</label>
+                <div class="col-sm-9">
+                  <viega-dropdown *ngIf="this.data.mode === 'new'" type="text" class="form-control" style="width: 36%"
+                    id="devicetype" name="devicetype"
+                    [dataSource]="deviceTypes"
+                    (change)="onDeviceTypeChange($event)"
+                    [value]="selectedDeviceType"
+                    [locale]="'_META.LOCALE' | translate"
+                  ></viega-dropdown>
+                  <span *ngIf="this.data.mode !== 'new'">
+                    {{getTranslatedDeviceTypeName(selectedDeviceType)}}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TODO: Figure out if Hyplus devices have a name. -->
+          <div class="row m-0 py-2">
+            <div class="col-12">
+              <div class="form-group row">
+                <label class="control-label col-sm-3" for="name">{{ 'PROJECT.NAME' | translate }}</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="name" name="name" #name=ngModel
+                    [(ngModel)]="this.formData.name" required />
+                  <div *ngIf="name.invalid && (name.touched)" class="invalid-field">
+                    <span *ngIf="!!name.errors.required">
+                      {{ 'GLOBAL.REQUIRED_FIELD_TEXT' | translate }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="isHyplus()" class="row m-0 py-2">
+            <div class="col-12">
+              <div class="form-group row">
+                <label class="control-label col-sm-3" for="ip">
+                  {{'PROJECT.IP_ADDRESS' | translate}}
+                </label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="ip" name="ip" #ip=ngModel
+                    [(ngModel)]="this.formData.ip" [pattern]="ipPattern" required>
+                  <div *ngIf="ip.invalid && ip.touched" class="invalid-field">
+                      {{ 'PROJECT.INVALID_IP_ADDRESS' | translate }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="isHyplus()" class="row m-0 py-2">
+            <div class="col-12">
+              <div class="form-group row">
+                <label class="control-label col-sm-3" for="serial">
+                  {{'PROJECT.SERIAL_NUMBER' | translate}}
+                </label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control no-spinners" id="serial" name="serial" #serial=ngModel
+                    [(ngModel)]="this.formData.serial" required>
+                  <div *ngIf="serial.invalid && serial.touched" class="invalid-field">
+                      {{ 'GLOBAL.REQUIRED_FIELD_TEXT' | translate }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="isHyplus()" class="row m-0 py-2">
+            <div class="col-12">
+              <div class="form-group row">
+                <label class="control-label col-sm-3" for="revision">
+                  {{'PROJECT.REVISION_NUMBER' | translate}}
+                </label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control no-spinners" id="revision" name="revision" #revision=ngModel
+                    [(ngModel)]="this.formData.revision" required>
+                  <div *ngIf="revision.invalid && revision.touched" class="invalid-field">
+                      {{ 'GLOBAL.REQUIRED_FIELD_TEXT' | translate }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row m-0 py-2">
+            <div class="col-12">
+              <div class="form-group row">
+                <label class="control-label col-sm-3" for="remark">{{ 'PROJECT.REMARK' | translate }}</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="remark" name="remark" #remark
+                    [(ngModel)]="this.formData.remark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

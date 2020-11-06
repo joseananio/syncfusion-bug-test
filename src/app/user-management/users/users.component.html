@@ -1,0 +1,34 @@
+<div class="row m-3" *ngIf="authorities.has(AuthorityCodes.CREATEANYUSER)">
+  <div class="col-lg-2">
+    <viega-button (click)="onAddUserClick()" id="btn-user-add">{{ 'USERS.CREATE_USER_TEXT' | translate }}</viega-button>
+  </div>
+</div>
+
+<div class="row m-3">
+  <div class="col-12">
+    <div class="control-section">
+      <ejs-grid (dataBound)='dataBound()' id='table-user-list' #userGrid
+        [dataSource]='allUsers' [allowPaging]='true' [allowSorting]='true'
+        [selectionSettings]="userGridSelectionsOptions" [pageSettings]="pageSettings" allowTextWrap="true"
+        [locale]="'_META.LOCALE' | translate">
+        <e-columns>
+          <e-column *ngFor="let item of allUsersColumnData" [field]="item.field" [headerText]="item.headerText | translate" [textAlign]="item.textAlign || 'Left'"
+            [format]="item.format || null" [hideAtMedia]="item.hideAtMedia || null" [type]="item.type || null">
+          </e-column>
+          <e-column field="isLocked" [headerText]="'USERS.STATUS' | translate">
+            <ng-template #template let-data>
+              <span *ngIf="data.isLocked">{{ 'USERS.DISABLED' | translate }}</span>
+              <span *ngIf="!data.isLocked">{{ 'USERS.ENABLED' | translate }}</span>
+            </ng-template>
+          </e-column>
+          <e-column class="user-grid-tools" [headerText]="'GLOBAL.ACTION' | translate" width="130px" textAlign="Center">
+            <ng-template #template let-data>
+              <viega-icon-button *ngIf="authorities.has(AuthorityCodes.EDITANYUSER)" icon="edit-01" (click)="onUserDetailsClick(data.loginName)"></viega-icon-button>
+              <viega-icon-button *ngIf="authorities.has(AuthorityCodes.DELETEANYUSER)" icon="cross-01" (click)="onUserDeleteclick(data.loginName)"></viega-icon-button>
+            </ng-template>
+          </e-column>
+        </e-columns>
+      </ejs-grid>
+    </div>
+  </div>
+</div>

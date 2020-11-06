@@ -1,0 +1,36 @@
+@import './shared/lib/viega-common/theme/for-import/index';
+
+viega-header {
+    width: 100%;
+    color: $viega-c13;
+    position: fixed;
+    z-index: 999;
+}
+
+.spacer {
+    height: 70px;
+
+    @media(min-width: map-get($viega-grid-breakpoints, 'md')) {
+        height: 103px;
+    }
+}
+
+.content-wr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: -20px;
+}
+.content-wr .right {
+    width: 70%;
+    height: 65px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+.content-wr .left {
+    line-height: 65px;
+    width: 30%;
+    min-height: 1px;
+}

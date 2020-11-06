@@ -1,0 +1,9 @@
+<input type="radio" [attr.name]="name" [attr.value]="instanceValue" [attr.checked]="isChecked ? '' : null" [attr.disabled]="disabled">
+
+<span class="option-box" [class.disabled]="disabled" tabindex="0" #optionbox>
+    <span class="inner-circle" [class.active]="isChecked"></span>
+</span>
+
+<label class="viega-radio-button-label" [class.disabled]="disabled">
+    <ng-content></ng-content>
+</label>

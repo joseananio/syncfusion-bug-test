@@ -1,0 +1,17 @@
+// Global SCSS Code
+//
+// Applications using this library should directly link this file in their index.html to apply styles through the
+// whole application without shadow dom.
+
+@import "../for-import/_variables";
+@import "./_angular-material-theme";
+@import "./_fonts";
+@import "./_icons";
+
+@import "../../lib/button/export-global";
+@import "../../lib/radio/export-global";
+@import "../../lib/dialog-wrapper/export-global";
+@import "../../lib/dropdown/export-global";
+@import "../../lib/toggle-button/export-global";
+@import "../../lib/info-button/export-global";
+@import "../../lib/datagrid/datagrid/export-global";

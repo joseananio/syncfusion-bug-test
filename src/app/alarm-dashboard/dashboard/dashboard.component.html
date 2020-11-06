@@ -1,0 +1,11 @@
+<div #dashboard cdkDrop  class="dashboard-container" [appBackgroundImage]="backgroundImageDataUri" (click)="onCanvasClick($event)">
+  <div class="edit-wrapper">
+    <viega-button id="backgroundImageRemove" [enableIcon]="true" class="action-item suppressCanvasClick" class="edit-button" (click)="editOrSave($event)">
+      {{editText |translate}}
+    </viega-button>
+    <div *ngIf="isEditing" class="drop-zone">
+      <input type="file" id="backgroundImageAdd" class="action-item" (change)="onBackgroundImageSelect($event)" />
+      <viega-button icon="left_thin-01" class="action-item" (click)="onRemoveBackgroundImage()">{{'DASHBOARD.REMOVE_PICTURE' | translate}}</viega-button>
+    </div>
+  </div>
+</div>

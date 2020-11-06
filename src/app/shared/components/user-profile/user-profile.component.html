@@ -1,0 +1,116 @@
+<!-- Modal child component, including header and buttons as defined in "buttons" -->
+<app-modal-dialog [title]="modalTitle" [buttons]="buttons" (buttonEvent)="onButtonEvent($event)">
+
+  <form name="form" (input)="onChange()">
+
+    <!-- ROW 1 -->
+    <div class="row m-3">
+      <div class="col-sm-6">
+        <label class="modal-input-form">
+          {{'USERS.PROFILE_FIRSTNAME' | translate}}<br>
+          <input type="text" class="modal-input-box" name="firstname" id="input-user-edit-firstname" required
+            #firstNameVal="ngModel" [(ngModel)]="userDetails.firstName">
+          <div *ngIf="firstNameVal.invalid && (firstNameVal.touched)" class="alert alert-danger">
+            <label *ngIf="!!firstNameVal.errors.required">
+              {{'USERS.PROFILE_REQUIRED_FIELD' | translate}}
+            </label>
+          </div>
+        </label>
+      </div>
+      <div class="col-sm-6">
+        <label class="modal-input-form">
+          {{'USERS.PROFILE_LASTNAME' | translate}}<br>
+          <input type="text" class="modal-input-box" name="lastname" id="input-user-edit-lastname"
+            required #lastNameVal="ngModel" [(ngModel)]="userDetails.lastName">
+          <div *ngIf="lastNameVal.invalid && (lastNameVal.touched)" class="alert alert-danger">
+            <label *ngIf="!!lastNameVal.errors.required">
+              {{'USERS.PROFILE_REQUIRED_FIELD' | translate}}
+            </label>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="row m-3">
+      <div class="col-sm-6">
+        <label class="modal-input-form">
+          {{'USERS.PROFILE_EMAIL' | translate}}<br>
+          <input type="email" class="modal-input-box" name="email" id="input-user-edit-email"
+            required email #emailVal="ngModel"
+            [(ngModel)]="userDetails.email">
+          <div *ngIf="emailVal.invalid && (emailVal.touched)" class="alert alert-danger">
+            <label *ngIf="!!emailVal.errors.required">
+              {{'USERS.PROFILE_REQUIRED_FIELD' | translate}}
+            </label>
+            <label *ngIf="(!!emailVal.errors.email) || (!!emailVal.errors.pattern)">
+              {{'USERS.PROFILE_INVALID_EMAIL' | translate}}
+            </label>
+          </div>
+        </label>
+      </div>
+      <div class="col-sm-6">
+      </div>
+    </div>
+
+    <!-- ROW 3 -->
+    <div class="row m-3">
+      <div class="col-sm-6">
+        <label class="modal-input-form">
+          {{'USERS.PROFILE_USERNAME' | translate}}<br>
+          <input type="text" class="modal-input-box" name="username" id="input-user-edit-loginname"
+            required #userNameVal="ngModel" [(ngModel)]="userDetails.loginName">
+          <div *ngIf="userNameVal.invalid && (userNameVal.touched)" class="alert alert-danger">
+            <label *ngIf="!!userNameVal.errors.required">
+              {{'USERS.PROFILE_REQUIRED_FIELD' | translate}}
+            </label>
+          </div>
+        </label>
+      </div>
+      <div class="col-sm-6">
+      </div>
+    </div>
+
+    <!-- ROW 4 -->
+    <!-- Password inputs use 'readonly' workaround to avoid browser filling out credentials -->
+    <div>
+      <div class="row m-3">
+        <div class="col-sm-6">
+          <label class="modal-input-form-label" id="label-user-add-password">
+            {{'USERS.PROFILE_PASSWORD' | translate}}<br>
+            <input type="password" class="modal-input-box" id="input-user-add-password"
+              name="password" [(ngModel)]="userPassword.password" pattern={{passwordPattern}} #passwordVal="ngModel"
+              readonly (focus)="removeReadonly($event)" placeholder="******">
+            <div *ngIf="passwordVal.invalid && (passwordVal.touched)" class="alert alert-danger">
+              <label *ngIf="!!passwordVal.errors.required">
+                {{'USERS.PROFILE_REQUIRED_FIELD' | translate}}
+              </label>
+              <label *ngIf="!!passwordVal.errors.pattern">
+                {{'USERS.PROFILE_PASSWORD_INSECURE' | translate}}
+              </label>
+            </div>
+          </label>
+        </div>
+        <div class="col-sm-6">
+          <label *ngIf="userPassword.password !== ''" class="modal-input-form-label" id="label-user-add-password-retype">
+            {{'USERS.PROFILE_PASSWORD_REPEAT' | translate}}<br>
+            <input type="password" class="modal-input-box" id="input-user-add-password-retype"
+              name="passwordConfirmation" [(ngModel)]="userPassword.passwordConfirmation" required
+              pattern="{{ passwordVal.value }}" #passwordConfirmationVal="ngModel" readonly
+              (focus)="removeReadonly($event)" placeholder="******">
+            <div *ngIf="passwordConfirmationVal.invalid && (passwordConfirmationVal.touched)" class="alert alert-danger">
+              <label *ngIf="!!passwordConfirmationVal.errors.pattern">{{'USERS.PROFILE_PASSWORD_MISMATCH' | translate}}</label>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div *ngIf="passwordVal.invalid && (passwordVal.touched)" class="row mx-3 mt-0">
+        <div class="col-12 alert alert-danger">
+          <label *ngIf="!!passwordVal.errors.pattern">
+            {{'USERS.PROFILE_REQUIREMENTS_MESSAGE' | translate}}
+          </label>
+        </div>
+      </div>
+    </div>
+  </form>
+</app-modal-dialog>

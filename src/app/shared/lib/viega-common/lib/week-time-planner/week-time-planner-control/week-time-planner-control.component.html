@@ -1,0 +1,39 @@
+<div class="control">
+  <div class="title" *ngIf="title">{{ i18n.TITLE }}</div>
+  <div class="control-option spul-volume">
+    <viega-radio
+      (ngModelChange)="onActiveSpulOption('volume')"
+      [(ngModel)]="activeSpulOption"
+      value="volume"
+      >{{i18n.VOLUME}}</viega-radio
+    >
+    <div class="input-wr">
+      <viega-unit-input
+        [isSliderEnabled]="false"
+        [(ngModel)]="spulVolumeInput"
+        [isDisabled]="activeSpulOption != 'volume' || !isActive"
+        (ngModelChange)="handleSpulInputChange('volume', $event)"
+        [unitLabel]="spulOptionUnits['volume']"
+      ></viega-unit-input>
+    </div>
+  </div>
+  <div class="control-option">
+    <viega-radio
+      (ngModelChange)="onActiveSpulOption('time')"
+      [(ngModel)]="activeSpulOption"
+      value="time"
+      >{{i18n.TIME}}</viega-radio
+    >
+    <div class="input-wr">
+      <viega-unit-input
+        [isSliderEnabled]="false"
+        [(ngModel)]="spulTimeInput"
+        [isDisabled]="activeSpulOption != 'time' || !isActive"
+        (ngModelChange)="handleSpulInputChange('time', $event)"
+        [unitLabel]="spulOptionUnits['time']"
+        [min]="0"
+        [max]="84600"
+      ></viega-unit-input>
+    </div>
+  </div>
+</div>
