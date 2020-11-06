@@ -19,7 +19,7 @@
                 [ngClass]="getStatus(data).class">
               </span>
               <div class="filterText">{{getStatus(data).text}}</div>
-              <app-device-icon [size]="40" [deviceType]="data.deviceTypeName"></app-device-icon>
+              <!-- <app-device-icon [size]="40" [deviceType]="data.deviceTypeName"></app-device-icon> -->
             </ng-template>
           </e-column>
           <e-column field="name" [headerText]="'DEVICES.DEVICE_POINT_NAME' | translate" [hideAtMedia]="getHideAtMedia('sm')">

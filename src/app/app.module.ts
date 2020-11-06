@@ -1,3 +1,4 @@
+import { ComponentsModule } from './shared/components/components.module';
 import { ViegaCommonModule } from 'src/app/shared/lib/viega-common/lib/viega-common.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -34,6 +35,7 @@ export function httpLoaderFactory(httpClient: HttpClient) {
     ViegaCommonModule,
     MatIconModule,
     ToastModule,
+    ComponentsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -45,7 +47,6 @@ export function httpLoaderFactory(httpClient: HttpClient) {
     }),
   ],
   providers: [
-
   ],
   bootstrap: [AppComponent],
 })

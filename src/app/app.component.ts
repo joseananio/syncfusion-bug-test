@@ -2,7 +2,7 @@ import { registerLocaleData } from '@angular/common';
 import de from '@angular/common/locales/de';
 import en from '@angular/common/locales/en';
 import {
-  Component, HostBinding, Inject, OnDestroy, OnInit,
+  Component, HostBinding, OnDestroy, OnInit,
 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -78,7 +78,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.setLocalisation();
     this.translate.onLangChange.subscribe((params: LangChangeEvent) => {
-      sessionStorage.set('locale', params.lang);
+      sessionStorage.setItem('locale', params.lang);
       this.loadLocalization(params.lang);
     });
   }
@@ -95,7 +95,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.translate.addLangs(['de', 'en']);
     // If someone uses a third language in the browser, English is most likely the best fallback.
     this.translate.setDefaultLang('en');
-    const storedLocale = sessionStorage.get('locale');
+    const storedLocale = sessionStorage.getItem('locale');
     const browserLang = this.translate.getBrowserLang();
     this.translate.use(storedLocale || browserLang);
   }
