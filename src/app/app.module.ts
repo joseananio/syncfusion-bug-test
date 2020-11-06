@@ -1,4 +1,3 @@
-import { ComponentsModule } from './shared/components/components.module';
 import { ViegaCommonModule } from 'src/app/shared/lib/viega-common/lib/viega-common.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,7 +10,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LangSelectorComponent } from './shared/components/lang-selector/lang-selector.component';
+import { DeviceIconComponent } from './device-icon/device-icon.component';
+import { LangSelectorComponent } from './lang-selector/lang-selector.component';
 
 declare const VERSION: string;
 
@@ -25,6 +25,7 @@ export function httpLoaderFactory(httpClient: HttpClient) {
   declarations: [
     AppComponent,
     LangSelectorComponent,
+    DeviceIconComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,6 @@ export function httpLoaderFactory(httpClient: HttpClient) {
     ViegaCommonModule,
     MatIconModule,
     ToastModule,
-    ComponentsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

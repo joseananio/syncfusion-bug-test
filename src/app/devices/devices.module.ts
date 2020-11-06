@@ -1,4 +1,3 @@
-import { ComponentsModule } from './../shared/components/components.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -23,7 +22,6 @@ import { DevicesComponent } from './devices/devices.component';
     TreeViewModule,
     TranslateModule,
     ListBoxModule,
-    ComponentsModule,
   ],
   providers: [FilterService, SortService],
   exports: [],

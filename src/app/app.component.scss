@@ -1,18 +1,5 @@
-@import './shared/lib/viega-common/theme/for-import/index';
-
-viega-header {
-    width: 100%;
-    color: $viega-c13;
-    position: fixed;
-    z-index: 999;
-}
-
 .spacer {
     height: 70px;
-
-    @media(min-width: map-get($viega-grid-breakpoints, 'md')) {
-        height: 103px;
-    }
 }
 
 .content-wr {

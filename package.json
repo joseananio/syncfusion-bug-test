@@ -1,21 +1,15 @@
 {
   "name": "twms-frontend-common",
-  "version": "1.16.7-rc.2",
-  "backendPort": "80",
-  "backendVersion": "1.16.7-rc0",
-  "swaggerCodegenVersion": "3.0.22",
+  "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start-backend": "start ./third_party/twms-backend/TwmsBackend.exe",
-    "start_backend": "npm run start-backend",
     "serve-ci": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng serve",
     "build": "ng build --prod",
     "lint": "npm run lint-no-fix -- --fix",
     "lint-no-fix": "eslint . --ext .ts",
     "i18n-update-full": "npm run get-device-parameters && npm run i18n-update",
-    "i18n-update": "ngx-translate-extract --input ./src --output ./src/assets/i18n/i18n-keys.json --clean --sort --format namespaced-json -m && node tools/i18n-merge.js && rimraf ./src/assets/i18n/i18n-keys.json",
-    "swagger": "rimraf src/app/core/services/api && rimraf src/app/core/services/model && download --out api/ http://localhost:%npm_package_backendPort%/doc/v1/api.json && node tools/pretty-print-api-json.js && java -jar third_party/swagger-codegen-cli/swagger-codegen-cli.jar generate -o src/app/core/services/ -i api/api.json -l typescript-angular --additional-properties ngVersion=10.1.0,modelPropertyNaming=original && node ./tools/sanitize-swagger.js"
+    "i18n-update": "ngx-translate-extract --input ./src --output ./src/assets/i18n/i18n-keys.json --clean --sort --format namespaced-json -m && node tools/i18n-merge.js && rimraf ./src/assets/i18n/i18n-keys.json"
   },
   "private": true,
   "dependencies": {
