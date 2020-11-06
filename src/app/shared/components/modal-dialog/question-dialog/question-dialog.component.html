@@ -1,7 +1,0 @@
-<app-modal-dialog [title]="data.title | translate" [buttons]="buttons" (buttonEvent)="onButtonEvent($event)" id="modal-question-dialog">
-  <div class="row m-3">
-    <div class="modal-label">
-      {{ !!data.params ? (data.message | translate: data.params) : (data.message | translate) }}
-    </div>
-  </div>
-</app-modal-dialog>

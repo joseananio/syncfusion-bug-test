@@ -1,0 +1,1100 @@
+[
+  {
+    "uuid": "c067a011eaaaaaaaaaaaaaaaaaaa0006",
+    "name": "Controller 3 Achte Etage Slave",
+    "serialNumber": "PT9040",
+    "remark": "Wichtige Notiz",
+    "lastMaintenanceTimestamp": "2019-05-30T00:00:00.000000Z",
+    "maintenanceInterval": "7",
+    "managedByUserUUID": "",
+    "controllerStatus": "OFFLINE",
+    "controllerPoint_UUID": "",
+    "ipAddress": null,
+    "macAddress": null,
+    "controllerType": "Slave",
+    "softwareRevision": null,
+    "isRemoteController": true,
+    "devices": [],
+    "deviceTypeName": "Controller",
+    "isInExpandState": true,
+    "status": "DEVICES.OFFLINE_STATUS",
+    "softwareVersion": null,
+    "actions": [true, true, false, false, false]
+  },
+  {
+    "uuid": "c067a011eaaaaaaaaaaaaaaaaaaa0005",
+    "name": "Controller 3 Fünfte Etage Slave",
+    "serialNumber": "PT8040",
+    "remark": "Wichtige Notiz",
+    "lastMaintenanceTimestamp": "2019-05-29T00:00:00.000000Z",
+    "maintenanceInterval": "7",
+    "managedByUserUUID": "",
+    "controllerStatus": "OFFLINE",
+    "controllerPoint_UUID": "",
+    "ipAddress": null,
+    "macAddress": null,
+    "controllerType": "Slave",
+    "softwareRevision": null,
+    "isRemoteController": true,
+    "devices": [],
+    "deviceTypeName": "Controller",
+    "isInExpandState": true,
+    "status": "DEVICES.OFFLINE_STATUS",
+    "softwareVersion": null,
+    "actions": [true, true, false, false, false]
+  },
+  {
+    "uuid": "c067a011eaaaaaaaaaaaaaaaaaaa0002",
+    "name": "Erste Etage Flügel B Slave",
+    "serialNumber": "PT5731",
+    "remark": "Wichtige Notiz",
+    "lastMaintenanceTimestamp": "2019-04-28T00:00:00.000000Z",
+    "maintenanceInterval": "7",
+    "managedByUserUUID": "",
+    "controllerStatus": "OFFLINE",
+    "controllerPoint_UUID": "c067a011eab01d7aaaaaaaaaaaaa0002",
+    "ipAddress": null,
+    "macAddress": null,
+    "controllerType": "Slave",
+    "softwareRevision": null,
+    "isRemoteController": true,
+    "devices": [
+      {
+        "uuid": "dec1ceaaad7eaaaaaaaaaaaaaaaa8882",
+        "name": "Dummy UNLINKED DTE",
+        "vendorId": 1212,
+        "productCode": 799663,
+        "revisionNumber": 2,
+        "serialNumber": 1908598815,
+        "identificationParameter": "",
+        "remark": "Dummy DTE",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-03-15T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0002",
+        "devicePointUUID": "",
+        "deviceTypeName": "DTE",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorBackendRemote",
+        "deviceStatusSimple": "Offline",
+        "preSelectedNodeId": 12,
+        "availablePorts": [],
+        "availablePortCount": 0,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0002",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": false,
+        "status": "DEVICES.ERROR_STATUS",
+        "isInExpandState": true,
+        "actions": [true, true, false, false, false],
+        "devices": []
+      },
+      {
+        "uuid": "dec1ceaaabea7eaaaaaaaaaaaaaa0040",
+        "name": "GPIO Bar Controller B",
+        "vendorId": 0,
+        "productCode": 0,
+        "revisionNumber": 0,
+        "serialNumber": 0,
+        "identificationParameter": "",
+        "remark": "",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-05-11T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0002",
+        "devicePointUUID": "",
+        "deviceTypeName": "GPIO",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorBackendRemote",
+        "deviceStatusSimple": "Offline",
+        "preSelectedNodeId": 0,
+        "availablePorts": [
+          {
+            "index": 0,
+            "portType": {
+              "typeName": "GPIO_DigitalIn",
+              "supportedDeviceTypes": ["KeySwitch", "UfcFaultContact"]
+            }
+          },
+          {
+            "index": 1,
+            "portType": {
+              "typeName": "GPIO_DigitalIn",
+              "supportedDeviceTypes": ["KeySwitch", "UfcFaultContact"]
+            }
+          },
+          {
+            "index": 2,
+            "portType": {
+              "typeName": "GPIO_DigitalIn",
+              "supportedDeviceTypes": ["KeySwitch", "UfcFaultContact"]
+            }
+          },
+          {
+            "index": 3,
+            "portType": {
+              "typeName": "GPIO_DigitalIn",
+              "supportedDeviceTypes": ["KeySwitch", "UfcFaultContact"]
+            }
+          },
+          {
+            "index": 0,
+            "portType": {
+              "typeName": "GPIO_DigitalOut",
+              "supportedDeviceTypes": ["LEDBar"]
+            }
+          },
+          {
+            "index": 1,
+            "portType": {
+              "typeName": "GPIO_DigitalOut",
+              "supportedDeviceTypes": ["LEDBar"]
+            }
+          },
+          {
+            "index": 2,
+            "portType": {
+              "typeName": "GPIO_DigitalOut",
+              "supportedDeviceTypes": ["LEDBar"]
+            }
+          },
+          {
+            "index": 3,
+            "portType": {
+              "typeName": "GPIO_DigitalOut",
+              "supportedDeviceTypes": ["LEDBar"]
+            }
+          }
+        ],
+        "availablePortCount": 8,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0002",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": false,
+        "status": "DEVICES.ERROR_STATUS",
+        "isInExpandState": true,
+        "actions": [true, true, false, false, false],
+        "devices": []
+      }
+    ],
+    "deviceTypeName": "Controller",
+    "isInExpandState": true,
+    "status": "DEVICES.OFFLINE_STATUS",
+    "softwareVersion": null,
+    "actions": [true, false, false, false, true]
+  },
+  {
+    "uuid": "c067a011eaaaaaaaaaaaaaaaaaaa0004",
+    "name": "Controller D Dritte Etage Slave",
+    "serialNumber": "PT6046",
+    "remark": "Wichtige Notiz",
+    "lastMaintenanceTimestamp": "2019-05-30T00:00:00.000000Z",
+    "maintenanceInterval": "7",
+    "managedByUserUUID": "",
+    "controllerStatus": "OFFLINE",
+    "controllerPoint_UUID": "",
+    "ipAddress": null,
+    "macAddress": null,
+    "controllerType": "Slave",
+    "softwareRevision": null,
+    "isRemoteController": true,
+    "devices": [],
+    "deviceTypeName": "Controller",
+    "isInExpandState": true,
+    "status": "DEVICES.OFFLINE_STATUS",
+    "softwareVersion": null,
+    "actions": [true, true, false, false, false]
+  },
+  {
+    "uuid": "c067a011eaaaaaaaaaaaaaaaaaaa0003",
+    "name": "Controller DTE Slave",
+    "serialNumber": "PT6040",
+    "remark": "Wichtige Notiz",
+    "lastMaintenanceTimestamp": "2019-04-30T00:00:00.000000Z",
+    "maintenanceInterval": "7",
+    "managedByUserUUID": "",
+    "controllerStatus": "OFFLINE",
+    "controllerPoint_UUID": "c067a011eab01d7aaaaaaaaaaaaa0003",
+    "ipAddress": null,
+    "macAddress": null,
+    "controllerType": "Slave",
+    "softwareRevision": null,
+    "isRemoteController": true,
+    "devices": [
+      {
+        "uuid": "dec1ceaaad7eaaaaaaaaaaaaaaaa0002",
+        "name": "Remote DTE",
+        "vendorId": 1212,
+        "productCode": 799663,
+        "revisionNumber": 2,
+        "serialNumber": 1908590015,
+        "identificationParameter": "",
+        "remark": "Dieses Gerät ist nur ein Mock.",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-03-15T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0003",
+        "devicePointUUID": "dec1ceb01d7aaad7eaaaaaaaaaaa9992",
+        "deviceTypeName": "DTE",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorBackendRemote",
+        "deviceStatusSimple": "Offline",
+        "preSelectedNodeId": 14,
+        "availablePorts": [],
+        "availablePortCount": 0,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0003",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": true,
+        "status": "DEVICES.ERROR_STATUS",
+        "ipAddress": null,
+        "isInExpandState": true,
+        "softwareVersion": null,
+        "actions": [true, false, true, false, true],
+        "devices": []
+      },
+      {
+        "uuid": "dec1ceaaabea7eaaaaaaaaaaaaaa0041",
+        "name": "GPIO Bar Controller DTE",
+        "vendorId": 0,
+        "productCode": 0,
+        "revisionNumber": 0,
+        "serialNumber": 0,
+        "identificationParameter": "",
+        "remark": "",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-05-11T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0003",
+        "devicePointUUID": "",
+        "deviceTypeName": "GPIO",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorBackendRemote",
+        "deviceStatusSimple": "Offline",
+        "preSelectedNodeId": 0,
+        "availablePorts": [],
+        "availablePortCount": 0,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0003",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": false,
+        "status": "DEVICES.ERROR_STATUS",
+        "isInExpandState": true,
+        "actions": [true, true, false, false, false],
+        "devices": [
+          {
+            "uuid": "dec1ceaaad7eaaaaaaaaaaaaaaaa00a2",
+            "name": "LED Bar Dte Bad rechter Flur",
+            "vendorId": 0,
+            "productCode": 0,
+            "revisionNumber": 0,
+            "serialNumber": 0,
+            "identificationParameter": "",
+            "remark": "Dieses Gerät ist nur ein Mock.",
+            "cliqueName": "SEGMENT_1",
+            "lastMaintenanceTimestamp": "2019-03-15T00:00:00.000000Z",
+            "maintenanceInterval": "7",
+            "ancestorDeviceUUID": "dec1ceaaabea7eaaaaaaaaaaaaaa0041",
+            "ancestorDevicePorts": [
+              {
+                "index": 0,
+                "portType": {
+                  "typeName": "GPIO_DigitalOut",
+                  "supportedDeviceTypes": ["LEDBar"]
+                }
+              },
+              {
+                "index": 1,
+                "portType": {
+                  "typeName": "GPIO_DigitalOut",
+                  "supportedDeviceTypes": ["LEDBar"]
+                }
+              },
+              {
+                "index": 2,
+                "portType": {
+                  "typeName": "GPIO_DigitalOut",
+                  "supportedDeviceTypes": ["LEDBar"]
+                }
+              }
+            ],
+            "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0003",
+            "devicePointUUID": "",
+            "deviceTypeName": "LEDBar",
+            "managedByUserUUID": "",
+            "deviceStatus": "ErrorBackendRemote",
+            "deviceStatusSimple": "Offline",
+            "preSelectedNodeId": 0,
+            "availablePorts": [],
+            "availablePortCount": 0,
+            "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0003",
+            "deviceUpdateStatus": {
+              "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+              "deviceUpdateRunningStatus": null,
+              "deviceUpdateFailedStatus": null,
+              "lastEmicoDeviceUpdateFailedStatus": null
+            },
+            "devicePointEnabled": false,
+            "status": "DEVICES.ERROR_STATUS",
+            "isInExpandState": true,
+            "actions": [true, true, false, false, false]
+          },
+          {
+            "uuid": "dec1ceaaad7eaaaaaaaaaaaaaaaa00b2",
+            "name": "UFC Fault Switch Dte Bad rechter Flur",
+            "vendorId": 1081,
+            "productCode": 123,
+            "revisionNumber": 0,
+            "serialNumber": 0,
+            "identificationParameter": "",
+            "remark": "Dieses Gerät ist nur ein Mock.",
+            "cliqueName": "SEGMENT_1",
+            "lastMaintenanceTimestamp": "2019-03-15T00:00:00.000000Z",
+            "maintenanceInterval": "7",
+            "ancestorDeviceUUID": "dec1ceaaabea7eaaaaaaaaaaaaaa0041",
+            "ancestorDevicePorts": [
+              {
+                "index": 3,
+                "portType": {
+                  "typeName": "GPIO_DigitalIn",
+                  "supportedDeviceTypes": ["KeySwitch", "UfcFaultContact"]
+                }
+              }
+            ],
+            "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0003",
+            "devicePointUUID": "",
+            "deviceTypeName": "UfcFaultContact",
+            "managedByUserUUID": "",
+            "deviceStatus": "ErrorBackendRemote",
+            "deviceStatusSimple": "Offline",
+            "preSelectedNodeId": 0,
+            "availablePorts": [],
+            "availablePortCount": 0,
+            "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0003",
+            "deviceUpdateStatus": {
+              "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+              "deviceUpdateRunningStatus": null,
+              "deviceUpdateFailedStatus": null,
+              "lastEmicoDeviceUpdateFailedStatus": null
+            },
+            "devicePointEnabled": false,
+            "status": "DEVICES.ERROR_STATUS",
+            "isInExpandState": true,
+            "actions": [true, true, false, false, false]
+          }
+        ]
+      }
+    ],
+    "deviceTypeName": "Controller",
+    "isInExpandState": true,
+    "status": "DEVICES.OFFLINE_STATUS",
+    "softwareVersion": null,
+    "actions": [true, false, false, false, true]
+  },
+  {
+    "uuid": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+    "name": "Master",
+    "serialNumber": "DummySN",
+    "remark": "Wichtige Notiz",
+    "lastMaintenanceTimestamp": "2019-04-12T00:00:00.000000Z",
+    "maintenanceInterval": "7",
+    "managedByUserUUID": "",
+    "controllerStatus": "FUSI_OK",
+    "controllerPoint_UUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+    "ipAddress": "169.254.67.65",
+    "macAddress": "14B31F248F69",
+    "controllerType": "Master",
+    "softwareRevision": "Windows Dummy SV",
+    "isRemoteController": false,
+    "devices": [
+      {
+        "uuid": "dec1ceaaabea7eaaaaaaaaaaaaaa0001",
+        "name": " Beat-E Bad linker Flur",
+        "vendorId": 1171,
+        "productCode": 918272,
+        "revisionNumber": 3,
+        "serialNumber": 1908210005,
+        "identificationParameter": "20.1.0",
+        "remark": "Dieses Gerät ist nur ein Mock.",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-05-11T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+        "devicePointUUID": "dec1ceb01d7aaabea7eaaaaaaaaa0001",
+        "deviceTypeName": "Beat-E",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorBackend",
+        "deviceStatusSimple": "Online",
+        "preSelectedNodeId": 21,
+        "availablePorts": [],
+        "availablePortCount": 0,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": true,
+        "status": "DEVICES.ERROR_STATUS",
+        "ipAddress": null,
+        "isInExpandState": true,
+        "softwareVersion": null,
+        "actions": [true, false, true, false, true],
+        "devices": []
+      },
+      {
+        "uuid": "dec1ceaaabea7eaaaaaaaaaaaaaa0002",
+        "name": "Beat-E Bad rechter Flur unlinked",
+        "vendorId": 1171,
+        "productCode": 918272,
+        "revisionNumber": 3,
+        "serialNumber": 1908210335,
+        "identificationParameter": "20.1.0",
+        "remark": "Dieses Gerät ist nur ein Mock.",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-05-11T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+        "devicePointUUID": "",
+        "deviceTypeName": "Beat-E",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorBackend",
+        "deviceStatusSimple": "Online",
+        "preSelectedNodeId": 11,
+        "availablePorts": [],
+        "availablePortCount": 0,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": false,
+        "status": "DEVICES.ERROR_STATUS",
+        "isInExpandState": true,
+        "actions": [true, true, false, false, false],
+        "devices": []
+      },
+      {
+        "uuid": "dec1ceaaad7eaaaaaaaaaaaaaaaa9992",
+        "name": " Dte Bad rechter Flur",
+        "vendorId": 1212,
+        "productCode": 799663,
+        "revisionNumber": 2,
+        "serialNumber": 1908599915,
+        "identificationParameter": "",
+        "remark": "Dummy local DTE",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-03-15T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+        "devicePointUUID": "dec1ceb01d7aaad7eaaaaaaaaaaa0002",
+        "deviceTypeName": "DTE",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorBackend",
+        "deviceStatusSimple": "Offline",
+        "preSelectedNodeId": 15,
+        "availablePorts": [],
+        "availablePortCount": 0,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": true,
+        "status": "DEVICES.ERROR_STATUS",
+        "ipAddress": null,
+        "isInExpandState": true,
+        "softwareVersion": null,
+        "actions": [true, false, true, false, true],
+        "devices": []
+      },
+      {
+        "uuid": "dec1ceaaabea7eaaaaaaaaaaaaaa0039",
+        "name": "GPIO Bar Controller Master",
+        "vendorId": 0,
+        "productCode": 0,
+        "revisionNumber": 0,
+        "serialNumber": 0,
+        "identificationParameter": "",
+        "remark": "",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-05-11T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+        "devicePointUUID": "",
+        "deviceTypeName": "GPIO",
+        "managedByUserUUID": "",
+        "deviceStatus": "Idle",
+        "deviceStatusSimple": "Online",
+        "preSelectedNodeId": 0,
+        "availablePorts": [
+          {
+            "index": 0,
+            "portType": {
+              "typeName": "GPIO_DigitalIn",
+              "supportedDeviceTypes": ["KeySwitch", "UfcFaultContact"]
+            }
+          },
+          {
+            "index": 1,
+            "portType": {
+              "typeName": "GPIO_DigitalIn",
+              "supportedDeviceTypes": ["KeySwitch", "UfcFaultContact"]
+            }
+          },
+          {
+            "index": 2,
+            "portType": {
+              "typeName": "GPIO_DigitalIn",
+              "supportedDeviceTypes": ["KeySwitch", "UfcFaultContact"]
+            }
+          },
+          {
+            "index": 0,
+            "portType": {
+              "typeName": "GPIO_DigitalOut",
+              "supportedDeviceTypes": ["LEDBar"]
+            }
+          },
+          {
+            "index": 1,
+            "portType": {
+              "typeName": "GPIO_DigitalOut",
+              "supportedDeviceTypes": ["LEDBar"]
+            }
+          },
+          {
+            "index": 2,
+            "portType": {
+              "typeName": "GPIO_DigitalOut",
+              "supportedDeviceTypes": ["LEDBar"]
+            }
+          }
+        ],
+        "availablePortCount": 6,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": false,
+        "status": "DEVICES.UNALLOCATED",
+        "isInExpandState": true,
+        "actions": [true, true, false, false, false],
+        "devices": [
+          {
+            "uuid": "dec1ceaaabed5f17cbaaaaaaaaaa0001",
+            "name": " Key switch Bäder rechter Flur",
+            "vendorId": 1081,
+            "productCode": 23,
+            "revisionNumber": 2,
+            "serialNumber": 1208720015,
+            "identificationParameter": "",
+            "remark": "Dieses Gerät ist nur ein Mock.",
+            "cliqueName": "SEGMENT_1",
+            "lastMaintenanceTimestamp": "2019-03-11T00:00:00.000000Z",
+            "maintenanceInterval": "7",
+            "ancestorDeviceUUID": "dec1ceaaabea7eaaaaaaaaaaaaaa0039",
+            "ancestorDevicePorts": [
+              {
+                "index": 3,
+                "portType": {
+                  "typeName": "GPIO_DigitalIn",
+                  "supportedDeviceTypes": ["KeySwitch", "UfcFaultContact"]
+                }
+              }
+            ],
+            "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+            "devicePointUUID": "dec1ceb01d7aaabed5f17cbaaaaa0001",
+            "deviceTypeName": "KeySwitch",
+            "managedByUserUUID": "",
+            "deviceStatus": "ErrorBackend",
+            "deviceStatusSimple": "Offline",
+            "preSelectedNodeId": 0,
+            "availablePorts": [],
+            "availablePortCount": 0,
+            "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+            "deviceUpdateStatus": {
+              "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+              "deviceUpdateRunningStatus": null,
+              "deviceUpdateFailedStatus": null,
+              "lastEmicoDeviceUpdateFailedStatus": null
+            },
+            "devicePointEnabled": true,
+            "status": "DEVICES.ERROR_STATUS",
+            "ipAddress": null,
+            "isInExpandState": true,
+            "softwareVersion": null,
+            "actions": [true, false, true, false, true]
+          }
+        ]
+      },
+      {
+        "uuid": "dec1ceaaaac1ad71caaaaaaaaaaa0001",
+        "name": " Rulantica Bad rechter Flur",
+        "vendorId": 52,
+        "productCode": 2069,
+        "revisionNumber": 2,
+        "serialNumber": 1008720034,
+        "identificationParameter": "",
+        "remark": "Dieses Gerät ist nur ein Mock.",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-03-11T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+        "devicePointUUID": "dec1ceb01d7aaac1ad71caaaaaaa0001",
+        "deviceTypeName": "Rulantica",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorDevice",
+        "deviceStatusSimple": "Offline",
+        "preSelectedNodeId": 31,
+        "availablePorts": [],
+        "availablePortCount": 0,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": true,
+        "status": "DEVICES.ERROR_STATUS",
+        "ipAddress": null,
+        "isInExpandState": true,
+        "softwareVersion": null,
+        "actions": [true, false, true, false, true],
+        "devices": []
+      },
+      {
+        "uuid": "dec1ceaaafa11eaaaaaaaaaaaaaa0001",
+        "name": " Wall-E Bad linker Flur",
+        "vendorId": 1171,
+        "productCode": 918272,
+        "revisionNumber": 3,
+        "serialNumber": 1908211235,
+        "identificationParameter": "23.3.0",
+        "remark": "Dieses Gerät ist nur ein Mock.",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-05-27T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+        "devicePointUUID": "dec1ceb01d7aaafa11eaaaaaaaaa0001",
+        "deviceTypeName": "Wall-E",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorBackend",
+        "deviceStatusSimple": "Online",
+        "preSelectedNodeId": 22,
+        "availablePorts": [],
+        "availablePortCount": 0,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": true,
+        "status": "DEVICES.ERROR_STATUS",
+        "ipAddress": null,
+        "isInExpandState": true,
+        "softwareVersion": null,
+        "actions": [true, false, true, false, true],
+        "devices": []
+      },
+      {
+        "uuid": "dec1ceaaafa11eaaaaaaaaaaaaaa0002",
+        "name": " Wall-E Bad rechter Flur",
+        "vendorId": 1171,
+        "productCode": 918272,
+        "revisionNumber": 2,
+        "serialNumber": 1308720015,
+        "identificationParameter": "23.3.0",
+        "remark": "Dieses Gerät ist nur ein Mock.",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-03-11T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+        "devicePointUUID": "dec1ceb01d7aaafa11eaaaaaaaaa0002",
+        "deviceTypeName": "Wall-E",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorBackend",
+        "deviceStatusSimple": "Online",
+        "preSelectedNodeId": 23,
+        "availablePorts": [],
+        "availablePortCount": 0,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": true,
+        "status": "DEVICES.ERROR_STATUS",
+        "ipAddress": null,
+        "isInExpandState": true,
+        "softwareVersion": null,
+        "actions": [true, false, true, false, true],
+        "devices": []
+      },
+      {
+        "uuid": "dec1ceaaabea7eaaaaaaaaaaaaaa0005",
+        "name": "Wall-E test",
+        "vendorId": 1171,
+        "productCode": 918272,
+        "revisionNumber": 3,
+        "serialNumber": 1908210054,
+        "identificationParameter": "23.3.0",
+        "remark": "Dieses Gerät ist nur ein Mock.",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-05-11T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+        "devicePointUUID": "",
+        "deviceTypeName": "Wall-E",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorBackend",
+        "deviceStatusSimple": "Online",
+        "preSelectedNodeId": 30,
+        "availablePorts": [],
+        "availablePortCount": 0,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": false,
+        "status": "DEVICES.ERROR_STATUS",
+        "isInExpandState": true,
+        "actions": [true, true, false, false, false],
+        "devices": []
+      },
+      {
+        "uuid": "wireportabea7eaaaaaaaaaaaaaa0006",
+        "name": "Wire-Port Dummy for Temp Sensor",
+        "vendorId": 1171,
+        "productCode": 918272,
+        "revisionNumber": 3,
+        "serialNumber": 1908210056,
+        "identificationParameter": "",
+        "remark": "Dieses Gerät ist nur ein Mock.",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-05-11T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+        "devicePointUUID": "",
+        "deviceTypeName": "WirePort",
+        "managedByUserUUID": "",
+        "deviceStatus": "Unknown",
+        "deviceStatusSimple": "Offline",
+        "preSelectedNodeId": 29,
+        "availablePorts": [
+          {
+            "index": 0,
+            "portType": {
+              "typeName": "TLC",
+              "supportedDeviceTypes": ["Beat-E", "Wall-E", "Rulantica"]
+            }
+          }
+        ],
+        "availablePortCount": 1,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": false,
+        "status": "DEVICES.UNKNOWN_STATUS",
+        "isInExpandState": true,
+        "actions": [true, true, false, false, false],
+        "devices": [
+          {
+            "uuid": "599f841f4911f1319b7edea7f199790a",
+            "name": "Temperature-Sensor Device Point",
+            "vendorId": 0,
+            "productCode": 0,
+            "revisionNumber": 3,
+            "serialNumber": 1308720017,
+            "identificationParameter": "",
+            "remark": "Dieses Gerät ist nur ein Mock.",
+            "cliqueName": "SEGMENT_1",
+            "lastMaintenanceTimestamp": "2019-05-11T00:00:00.000000Z",
+            "maintenanceInterval": "7",
+            "ancestorDeviceUUID": "wireportabea7eaaaaaaaaaaaaaa0006",
+            "ancestorDevicePorts": [
+              {
+                "index": 0,
+                "portType": {
+                  "typeName": "MultiIO",
+                  "supportedDeviceTypes": [
+                    "FlowSensor",
+                    "PressureSensor",
+                    "TemperatureSensor",
+                    "PulseSensor",
+                    "FlowAndTemperatureSensor",
+                    "MagneticValve",
+                    "Pump"
+                  ]
+                }
+              }
+            ],
+            "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+            "devicePointUUID": "tempsensorea7eaaaaaaaaaaaaaa0008",
+            "deviceTypeName": "TemperatureSensor",
+            "managedByUserUUID": "",
+            "deviceStatus": "Unknown",
+            "deviceStatusSimple": "Offline",
+            "preSelectedNodeId": 0,
+            "availablePorts": [],
+            "availablePortCount": 0,
+            "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+            "deviceUpdateStatus": {
+              "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+              "deviceUpdateRunningStatus": null,
+              "deviceUpdateFailedStatus": null,
+              "lastEmicoDeviceUpdateFailedStatus": null
+            },
+            "devicePointEnabled": true,
+            "status": "DEVICES.UNKNOWN_STATUS",
+            "ipAddress": null,
+            "isInExpandState": true,
+            "softwareVersion": null,
+            "actions": [true, false, true, false, true]
+          }
+        ]
+      },
+      {
+        "uuid": "dec1ceaaace1ceaaaaaaaaaaaaaa0001",
+        "name": " WireSens Bad rechter Flur",
+        "vendorId": 1212,
+        "productCode": 794948,
+        "revisionNumber": 2,
+        "serialNumber": 1308720017,
+        "identificationParameter": "",
+        "remark": "Dieses Gerät ist nur ein Mock.",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-03-11T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+        "devicePointUUID": "dec1ceb01d7aaace1ceaaaaaaaaa0001",
+        "deviceTypeName": "WireSens",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorBackend",
+        "deviceStatusSimple": "Online",
+        "preSelectedNodeId": 19,
+        "availablePorts": [
+          {
+            "index": 0,
+            "portType": {
+              "typeName": "MultiIO",
+              "supportedDeviceTypes": [
+                "FlowSensor",
+                "PressureSensor",
+                "TemperatureSensor",
+                "PulseSensor",
+                "FlowAndTemperatureSensor",
+                "MagneticValve",
+                "Pump"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "portType": {
+              "typeName": "MultiIO",
+              "supportedDeviceTypes": [
+                "FlowSensor",
+                "PressureSensor",
+                "TemperatureSensor",
+                "PulseSensor",
+                "FlowAndTemperatureSensor",
+                "MagneticValve",
+                "Pump"
+              ]
+            }
+          }
+        ],
+        "availablePortCount": 2,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": true,
+        "status": "DEVICES.ERROR_STATUS",
+        "ipAddress": null,
+        "isInExpandState": true,
+        "softwareVersion": null,
+        "actions": [true, false, true, false, true],
+        "devices": []
+      },
+      {
+        "uuid": "dec1ceaaace1ceaaaaaaaaaaaaaa0002",
+        "name": "WireSens Bad rechter Flur 2 unlinked",
+        "vendorId": 1212,
+        "productCode": 794948,
+        "revisionNumber": 2,
+        "serialNumber": 1308720045,
+        "identificationParameter": "",
+        "remark": "Dieses Gerät ist nur ein Mock.",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-03-11T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+        "devicePointUUID": "",
+        "deviceTypeName": "WireSens",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorBackend",
+        "deviceStatusSimple": "Online",
+        "preSelectedNodeId": 10,
+        "availablePorts": [
+          {
+            "index": 0,
+            "portType": {
+              "typeName": "MultiIO",
+              "supportedDeviceTypes": [
+                "FlowSensor",
+                "PressureSensor",
+                "TemperatureSensor",
+                "PulseSensor",
+                "FlowAndTemperatureSensor",
+                "MagneticValve",
+                "Pump"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "portType": {
+              "typeName": "MultiIO",
+              "supportedDeviceTypes": [
+                "FlowSensor",
+                "PressureSensor",
+                "TemperatureSensor",
+                "PulseSensor",
+                "FlowAndTemperatureSensor",
+                "MagneticValve",
+                "Pump"
+              ]
+            }
+          }
+        ],
+        "availablePortCount": 2,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": false,
+        "status": "DEVICES.ERROR_STATUS",
+        "isInExpandState": true,
+        "actions": [true, true, false, false, false],
+        "devices": []
+      },
+      {
+        "uuid": "dec1ceaaaa71f4eaaaaaaaaaaaaa0001",
+        "name": " Zirk-E Bäder rechter Flur",
+        "vendorId": 1171,
+        "productCode": 787200,
+        "revisionNumber": 2,
+        "serialNumber": 1008720015,
+        "identificationParameter": "",
+        "remark": "Dieses Gerät ist nur ein Mock.",
+        "cliqueName": "SEGMENT_1",
+        "lastMaintenanceTimestamp": "2019-03-11T00:00:00.000000Z",
+        "maintenanceInterval": "7",
+        "ancestorDeviceUUID": "",
+        "ancestorDevicePorts": null,
+        "createdByUUID": "c067a011eaaaaaaaaaaaaaaaaaaa0001",
+        "devicePointUUID": "dec1ceb01d7aaa71f4eaaaaaaaaa0001",
+        "deviceTypeName": "Zirk-E",
+        "managedByUserUUID": "",
+        "deviceStatus": "ErrorBackend",
+        "deviceStatusSimple": "Online",
+        "preSelectedNodeId": 16,
+        "availablePorts": [],
+        "availablePortCount": 0,
+        "controllerPointUUID": "c067a011eab01d7aaaaaaaaaaaaa0001",
+        "deviceUpdateStatus": {
+          "deviceUpdateGeneralStatus": "UpdateNotStartedYet",
+          "deviceUpdateRunningStatus": null,
+          "deviceUpdateFailedStatus": null,
+          "lastEmicoDeviceUpdateFailedStatus": null
+        },
+        "devicePointEnabled": true,
+        "status": "DEVICES.ERROR_STATUS",
+        "ipAddress": null,
+        "isInExpandState": true,
+        "softwareVersion": null,
+        "actions": [true, false, true, false, true],
+        "devices": []
+      }
+    ],
+    "deviceTypeName": "Controller",
+    "isInExpandState": true,
+    "status": "DEVICES.OK_STATUS",
+    "softwareVersion": "Windows Dummy SV",
+    "actions": [true, false, false, false, true]
+  }
+]

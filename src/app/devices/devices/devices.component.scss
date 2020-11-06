@@ -1,18 +1,14 @@
-@import "src/app/shared/components/modal-dialog/modal-dialog/modal-dialog.component.scss";
 
 // Apply color to active toggle button
 // (with a far too large selector, so this is the most specific one)
 :host ::ng-deep {
     .top-controlls viega-toggle-button .custom-switch .e-switch-active .e-switch-on,
     .toggle-holder viega-toggle-button .custom-switch .e-switch-active .e-switch-on {
-        background-color: $viega-c11;
-        border-color: $viega-c11;
         opacity: 1;
     }
 }
 
 .lss-status {
-    @import "src/app/shared/scss/status-label";
 }
 
 svg {
@@ -42,7 +38,6 @@ svg {
 }
 
 :host ::ng-deep .device-tree {
-  @import "src/app/shared/scss/status-label";
 
   .hidden {
     visibility: hidden;
@@ -59,7 +54,6 @@ svg {
 
     .e-row .e-rowcell,
     .e-columnheader .e-headercell {
-      font-family: $viega-font-regular;
       padding-left: $horizontalPadding;
       padding-right: $horizontalPadding;
     }

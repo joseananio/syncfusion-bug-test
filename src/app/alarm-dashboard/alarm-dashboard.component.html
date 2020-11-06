@@ -1,7 +1,0 @@
-<div *ngIf="selectedDashboardConfig" class="dashboard-container" cdkDrop>
-  <app-dashboard
-    [dashboardItems]="dashboardModel"
-    [backgroundImageDataUri]="getImageUrl()"
-    (saveConfig)="saveConfig($event)"
-  ></app-dashboard>
-</div>

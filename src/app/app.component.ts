@@ -11,14 +11,7 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { L10n, loadCldr, setCulture } from '@syncfusion/ej2-base';
 import { version } from 'package.json';
 import { Subscription } from 'rxjs';
-import { ControllerService, ControllerStatus } from 'src/app/core/services';
-import { UserProfileComponent } from 'src/app/shared/components/user-profile/user-profile.component';
-import {
-  AuthenticationService,
-  AuthObservableData, AuthRequestType,
-  NotificationService,
-  StorageService,
-} from './core/services/local-services';
+
 
 declare let require: any;
 
@@ -73,79 +66,21 @@ export class AppComponent implements OnInit, OnDestroy {
   private loginStateSubscription: Subscription;
 
   public topMenuItems: MenuItem[] = [
-    {
-      text: _('APP.MY_PROFILE'),
-      action: () => {
-        this.dialog.open(
-          UserProfileComponent,
-          {
-            data: {
-              userLoginName: this.authenticationService.getUserName(),
-            },
-          },
-        );
-      },
-      mobileViewOnly: true,
-      show: () => this.authenticationService.isLoggedIn(),
-    },
-    {
-      text: _('APP.LOGOUT'),
-      action: () => {
-        this.authenticationService.logout().subscribe(
-          (response: AuthObservableData) => {
-            if (response.requestType === AuthRequestType.LOGOUT) {
-              this.router.navigate(['login']);
-            } else {
-              this.errorService.notify(_('APP.LOGOUT_FAILED'));
-            }
-          },
-          () => {
-            this.errorService.notify(_('APP.LOGOUT_FAILED'));
-          },
-        );
-      },
-      mobileViewOnly: true,
-      show: () => this.authenticationService.isLoggedIn(),
-    },
-    {
-      text: _('APP.SERVICE'),
-      action: '/support',
-    },
   ];
 
   constructor(
-    private controllerService: ControllerService,
     private router: Router,
     private dialog: MatDialog,
     private translate: TranslateService,
-    private errorService: NotificationService,
-    private storageService: StorageService,
-    @Inject('AuthService') private authenticationService: AuthenticationService,
   ) {
   }
 
   ngOnInit() {
     this.setLocalisation();
     this.translate.onLangChange.subscribe((params: LangChangeEvent) => {
-      this.storageService.set('locale', params.lang);
+      sessionStorage.set('locale', params.lang);
       this.loadLocalization(params.lang);
     });
-
-    this.loginStateSubscription = this.authenticationService.getLoggedInObservable().subscribe(
-      (loggedIn) => {
-        this.loggedIn = loggedIn;
-        if (loggedIn) {
-          this.setGlobalErrorMessage();
-        } else {
-          this.controllersInErrorStateCount = undefined;
-        }
-      },
-      () => {
-        this.controllersInErrorStateCount = undefined;
-        this.loggedIn = false;
-        this.errorService.notify(_('APP.UNKNOWN_SESSION_STATE'));
-      },
-    );
   }
 
   ngOnDestroy() {
@@ -160,7 +95,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.translate.addLangs(['de', 'en']);
     // If someone uses a third language in the browser, English is most likely the best fallback.
     this.translate.setDefaultLang('en');
-    const storedLocale = this.storageService.get('locale');
+    const storedLocale = sessionStorage.get('locale');
     const browserLang = this.translate.getBrowserLang();
     this.translate.use(storedLocale || browserLang);
   }
@@ -253,21 +188,6 @@ export class AppComponent implements OnInit, OnDestroy {
         },
       });
     });
-  }
-
-  private setGlobalErrorMessage() {
-    this.controllerService.getControllerMetadataList().subscribe(
-      (controllers) => {
-        this.controllersInErrorStateCount = controllers.reduce(
-          (accumulator, controller) => accumulator
-              + (controller.controllerStatus === ControllerStatus.FATALPERSISTANTSYSTEMFAILURE ? 1 : 0),
-          0,
-        );
-      },
-      () => {
-        // Do nothing. When we are not logged in, it is fine if this fails.
-      },
-    );
   }
 
   public isFunction(variable: any) {

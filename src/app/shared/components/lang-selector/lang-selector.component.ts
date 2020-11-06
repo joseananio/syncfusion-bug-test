@@ -38,7 +38,7 @@ export class LangSelectorComponent implements OnInit {
     this.translate.use(langId).subscribe(
       () => {
         this.selectedLang = this.appLanguages.find((language) => language.id === this.translate.currentLang);
-        window.location.reload(); // TODO: Workaround for TWMS2020-1525 after TWMS2020-3580
+        // window.location.reload(); // TODO: Workaround for TWMS2020-1525 after TWMS2020-3580
       },
     );
   }

@@ -1,49 +1,12 @@
 <div class="spacer">
-  <viega-header [appTitle]="'GLOBAL.COMPANY_NAME' | translate">
-    <ul menu-items>
-      <ng-container *ngFor="let item of topMenuItems">
-        <li *ngIf="!item.mobileViewOnly && (!item.show || item.show())" [routerLink]="!isFunction(item.action) && item.action" (click)="isFunction(item.action) && item.action()">
-          <a>{{ item.text | translate }}</a>
-        </li>
-      </ng-container>
-    </ul>
-
     <div content class="content-wr">
-      <div class="left">
-        <app-breadcrumbs></app-breadcrumbs>
-      </div>
       <div class="right">
         <div class="float-right">
-          <div class="d-inline-block">
-            <viega-app-status *ngIf="loggedIn"></viega-app-status>
-          </div>
           <div class="d-inline-block mr-2">
             <viega-lang-selector></viega-lang-selector>
-          </div>
-          <div class="d-inline-block">
-            <viega-login-status *ngIf="loggedIn"></viega-login-status>
           </div>
         </div>
       </div>
     </div>
-
-    <div mobile-panel-content>
-      <!-- My custom mobile panel content goes here -->
-      <viega-lang-selector [isMobile]="true"></viega-lang-selector>
-    </div>
-
-    <ul mobile-panel-bottom>
-      <ng-container *ngFor="let item of topMenuItems">
-        <li *ngIf="!item.show || item.show()" [routerLink]="!isFunction(item.action) && item.action" (click)="isFunction(item.action) && item.action()">
-          <a>{{ item.text | translate}}</a>
-        </li>
-      </ng-container>
-    </ul>
-  </viega-header>
-  <app-notification-bar *ngIf="controllersInErrorStateCount">
-    {{controllersInErrorStateCount | i18nPlural: controllerErrorMessages | translate: { controllerCount: controllersInErrorStateCount } }}
-    {{'APP.GLOBAL_RESET_INSTRUCTIONS' | translate}}
-  </app-notification-bar>
 </div>
 <router-outlet></router-outlet>
-<app-global-error-notifier></app-global-error-notifier>

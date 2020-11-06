@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DeviceTypeName } from 'src/app/core/services';
+import { DeviceTypeName } from 'src/app/devices/devices/devices.component';
 
 @Component({
   selector: 'app-device-icon',

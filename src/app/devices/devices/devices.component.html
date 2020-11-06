@@ -1,41 +1,5 @@
-<div class="container-fluid">
-  <div class="top-controlls row m-3">
-    <viega-search-box #searchBox class="align-self-center col-sm-3 mb-2 searchbox" (valueChange)="onSearchChange($event.newState)"
-      [placeholder]="searchInputPlaceholder | translate"></viega-search-box>
-    <label class="align-self-center toggle-label col-sm-auto mb-2">
-      <viega-toggle-button (valueChange)="onToggleDevicePointFilter($event)"></viega-toggle-button>
-      {{'DEVICES.UNALLOCATED' | translate}}
-    </label>
-    <label class="align-self-center toggle-label col-sm-auto mr-auto mb-2">
-      <viega-toggle-button (valueChange)="onToggleStateFilter($event)"></viega-toggle-button>
-      {{'DEVICES.STATUS_NOT_OK' | translate}}
-    </label>
-    <div class="align-self-center col-sm-auto lss-status mb-2">
-      <viega-button id="btn-device-localize" (click)="onReverseSearch()" type="secondary">
-        {{'DEVICES.REVERSE_SEARCH_DEVICES' | translate}}
-      </viega-button>
-    </div>
-    <div class="align-self-center col-sm-auto lss-status mb-2">
-      <div>{{controllerSearchStateLabel | translate}}</div>
-      <viega-button id="btn-find-controller" (click)="onFindController()" type="secondary">
-        {{controllerSearchButtonText | translate}}
-      </viega-button>
-    </div>
-    <div class="align-self-center col-sm-auto lss-status mb-2">
-      <div>{{deviceSearchStateLabel | translate}}</div>
-      <viega-button id="btn-device-search" *ngIf="true" (click)="onSearchDevices()" type="secondary">
-        {{deviceSearchButtonText | translate}}
-      </viega-button>
-    </div>
-  </div>
 
-  <div class="row m-3 top-controls-labels">
-    <div class="col-sm-3 "></div>
-    <div class="col-sm-auto mb-2"></div>
-    <div class="col-sm-auto mb-2 mr-auto"></div>
-    <div class="col-sm-auto mb-2">{{controllerSearchStateLabel | translate}}</div>
-    <div class="col-sm-auto mb-2">{{deviceSearchStateLabel | translate}}</div>
-  </div>
+<div class="container-fluid">
   <div *ngIf="stateLoading" class="row m-3"><em>{{'GLOBAL.LOADING_DATA' | translate}}</em></div>
   <div *ngIf="!stateLoading " class="row m-3">
     <!-- Do not render the grid before the data source is available. This mitigates a bug in the
@@ -58,15 +22,6 @@
               <app-device-icon [size]="40" [deviceType]="data.deviceTypeName"></app-device-icon>
             </ng-template>
           </e-column>
-          <e-column class="func-grid-tools" [headerText]="'GLOBAL.ACTIVE' | translate" field="active" width="80"
-            textAlign="Center" [hideAtMedia]="getHideAtMedia('sm')">
-            <ng-template #template let-data>
-              <div class="toggle-holder" [class.hidden]="!data.devicePointUUID || !data.actions[2]">
-                <viega-toggle-button (valueChange)="onToggleActivationBtnClick(data)"
-                  [(isChecked)]="data.devicePointEnabled"></viega-toggle-button>
-              </div>
-            </ng-template>
-          </e-column>
           <e-column field="name" [headerText]="'DEVICES.DEVICE_POINT_NAME' | translate" [hideAtMedia]="getHideAtMedia('sm')">
             <ng-template #template let-data>
               {{data.translate ? (data.name | translate) : data.name}}
@@ -80,86 +35,6 @@
           <e-column field="deviceTypeName" [headerText]="'DEVICES.DEVICE_TYPE' | translate" [hideAtMedia]="getHideAtMedia('lg')">
             <ng-template #template let-data>
               {{getDeviceTypeNameI18nKey(data.deviceTypeName) | translate}}
-            </ng-template>
-          </e-column>
-          <ng-container *ngFor="let column of columns">
-            <e-column [field]="column.field" [headerText]="column.headerText ? (column.headerText | translate) : null" [visible]="(column.visible !== undefined) ? column.visible : null"
-              [valueAccessor]="column.valueAccessor || null" [hideAtMedia]="column.hideAtMedia || null">
-            </e-column>
-          </ng-container>
-          <e-column width="164">
-            <div>
-              <ng-template #headerTemplate>
-                <span class="e-headertext">
-                    {{'GLOBAL.ACTION' | translate}}
-
-                  <viega-info-button [header]="actionInfoHeader | translate" class="table-header-info-button">
-                    <div class="row">
-                      <div class="col-2">
-                        <viega-icon-button icon="edit-01"></viega-icon-button>
-                      </div>
-                      <div class="col-10 align-self-center">
-                        {{'DEVICES.ACTION_EDIT' | translate}}
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-2">
-                        <viega-icon-button icon="link-01"></viega-icon-button>
-                      </div>
-                      <div class="col-10 align-self-center">
-                        {{'DEVICES.ACTION_LINK_DEVICEPOINT' | translate}}
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-2">
-                        <viega-icon-button icon="unlink-01"></viega-icon-button>
-                      </div>
-                      <div class="col-10 align-self-center">
-                        {{'DEVICES.ACTION_DISCONNECT_DEVICEPOINT' | translate}}
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-2">
-                        <viega-icon-button icon="calendar"></viega-icon-button>
-                      </div>
-                      <div class="col-10 align-self-center">
-                        {{'DEVICES.ACTION_SETUP_FUNCTIONS' | translate}}
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-2">
-                        <viega-icon-button icon="gebrauchs"></viega-icon-button>
-                      </div>
-                      <div class="col-10 align-self-center">
-                        {{'DEVICES.ACTION_ASSIGN_TO_FUNCTION' | translate}}
-                      </div>
-                    </div>
-
-                  </viega-info-button>
-                </span>
-              </ng-template>
-            </div>
-            <ng-template #template let-data>
-              <viega-icon-button icon="edit-01" [class.hidden]="!data.actions[0]"
-                (click)="onDetailsClick($event, data)">
-              </viega-icon-button>
-              <viega-icon-button
-                  [icon]="data.actions[1] ? 'link-01' : 'unlink-01'"
-                  class="link-button"
-                  [class.hidden]="!data.actions[1] && !data.actions[4]"
-                  (click)="data.actions[1] ? onLinkClicked($event, data) : onUnlink($event, data)">
-              </viega-icon-button>
-              <viega-loading-spinner class="link-spinner"></viega-loading-spinner>
-              <viega-icon-button icon="calendar" [class.hidden]="!data.actions[2]"
-                (click)="onFunctionClick($event, data)">
-              </viega-icon-button>
-              <viega-icon-button icon="gebrauchs" [class.hidden]="!data.actions[3]"
-                (click)="onEditFunctionClick($event, data)">
-              </viega-icon-button>
             </ng-template>
           </e-column>
         </e-columns>
