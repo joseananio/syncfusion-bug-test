@@ -1,9 +1,9 @@
 // Bootstrap grid system
-@import '../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
+@import '~bootstrap/dist/css/bootstrap-grid.min.css';
 
 // Flag icons
 // TODO: (anane) recompile to use only necessary icons
-@import '../node_modules/flag-icon-css/css/flag-icon.min.css';
+@import '~flag-icon-css/css/flag-icon.min.css';
 
 
 // Custom Theming for Angular Material
@@ -46,21 +46,21 @@ body {
  * The Syncfusion styles are imported here, to allow injecting variables into the Synfusion styles.
  */
 
-@import 'node_modules/@syncfusion/ej2-base/styles/material';
-@import 'node_modules/@syncfusion/ej2-layouts/styles/material';
-@import 'node_modules/@syncfusion/ej2-buttons/styles/material';
-@import 'node_modules/@syncfusion/ej2-calendars/styles/material';
-@import 'node_modules/@syncfusion/ej2-dropdowns/styles/material';
-@import 'node_modules/@syncfusion/ej2-inputs/styles/material';
-@import 'node_modules/@syncfusion/ej2-lists/styles/material';
-@import 'node_modules/@syncfusion/ej2-navigations/styles/material';
-@import 'node_modules/@syncfusion/ej2-popups/styles/material';
-@import 'node_modules/@syncfusion/ej2-splitbuttons/styles/material';
-@import 'node_modules/@syncfusion/ej2-angular-buttons/styles/material';
-@import 'node_modules/@syncfusion/ej2-angular-calendars/styles/material';
-@import 'node_modules/@syncfusion/ej2-angular-dropdowns/styles/material';
-@import 'node_modules/@syncfusion/ej2-angular-grids/styles/material';
-@import 'node_modules/@syncfusion/ej2-angular-navigations/styles/material';
-@import 'node_modules/@syncfusion/ej2-angular-popups/styles/material';
-@import 'node_modules/@syncfusion/ej2-angular-treegrid/styles/material';
-@import 'node_modules/@syncfusion/ej2-angular-notifications/styles/material';
+// @import 'node_modules/@syncfusion/ej2-base/styles/material';
+// @import 'node_modules/@syncfusion/ej2-layouts/styles/material';
+// @import 'node_modules/@syncfusion/ej2-buttons/styles/material';
+// @import 'node_modules/@syncfusion/ej2-calendars/styles/material';
+// @import 'node_modules/@syncfusion/ej2-dropdowns/styles/material';
+// @import 'node_modules/@syncfusion/ej2-inputs/styles/material';
+// @import 'node_modules/@syncfusion/ej2-lists/styles/material';
+// @import 'node_modules/@syncfusion/ej2-navigations/styles/material';
+// @import 'node_modules/@syncfusion/ej2-popups/styles/material';
+// @import 'node_modules/@syncfusion/ej2-splitbuttons/styles/material';
+// @import 'node_modules/@syncfusion/ej2-angular-buttons/styles/material';
+// @import 'node_modules/@syncfusion/ej2-angular-calendars/styles/material';
+// @import 'node_modules/@syncfusion/ej2-angular-dropdowns/styles/material';
+// @import 'node_modules/@syncfusion/ej2-angular-grids/styles/material';
+// @import 'node_modules/@syncfusion/ej2-angular-navigations/styles/material';
+// @import 'node_modules/@syncfusion/ej2-angular-popups/styles/material';
+// @import 'node_modules/@syncfusion/ej2-angular-treegrid/styles/material';
+// @import 'node_modules/@syncfusion/ej2-angular-notifications/styles/material';
