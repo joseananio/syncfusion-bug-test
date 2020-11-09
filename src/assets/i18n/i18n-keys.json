@@ -1,0 +1,61 @@
+{
+	"APP": {
+		"DEVICES": "",
+		"GLOBAL_ERROR_MESSAGE_PLURAL": "",
+		"GLOBAL_ERROR_MESSAGE_SINGULAR": ""
+	},
+	"DATEPICKER": {
+		"DATE_PLACE_HOLDER": "",
+		"TODAY": ""
+	},
+	"DATERANGEPICKER": {
+		"APPLY_TEXT": "",
+		"CANCEL_TEXT": "",
+		"CUSTOM_RANGE": "",
+		"DAYS": "",
+		"END_LABEL": "",
+		"PLACE_HOLDER": "",
+		"SELECTED_TEXT": "",
+		"START_LABEL": ""
+	},
+	"DEVICES": {
+		"DEVICE_POINT_NAME": "",
+		"DEVICE_TYPE": "",
+		"IP_ADDRESS": "",
+		"SERIAL_NUMBER": "",
+		"SOFTWARE_VERSION": ""
+	},
+	"DROPDOWN": {
+		"ACTION_FAILURE_TEMPLATE": "",
+		"NO_RECORDS_TEMPLATE": ""
+	},
+	"GLOBAL": {
+		"LOADING_DATA": "",
+		"STATUS": ""
+	},
+	"GRID": {
+		"CLEAR_BUTTON": "",
+		"EMPTY_RECORD": "",
+		"FILTER_BUTTON": "",
+		"ITEM": "",
+		"ITEMS": ""
+	},
+	"PAGER": {
+		"ALL": "",
+		"CURRENT_PAGE_INFO": "",
+		"FIRST_PAGE_TOOLTIP": "",
+		"LAST_PAGE_TOOLTIP": "",
+		"NEXT_PAGER_TOOLTIP": "",
+		"NEXT_PAGE_TOOLTIP": "",
+		"PAGER_ALL_DROP_DOWN": "",
+		"PAGER_DROP_DOWN": "",
+		"PREVIOUS_PAGER_TOOLTIP": "",
+		"PREVIOUS_PAGE_TOOLTIP": "",
+		"TOTAL_ITEMS_INFO": "",
+		"TOTAL_ITEM_INFO": ""
+	},
+	"_META": {
+		"LOCALE": "",
+		"VERSION": ""
+	}
+}

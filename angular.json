@@ -36,8 +36,7 @@
               "includePaths": ["node_modules/@syncfusion"]
             },
             "styles": [
-              "src/styles.scss",
-              "src/app/shared/lib/viega-common/theme/global/index.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           },

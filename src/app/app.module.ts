@@ -1,13 +1,11 @@
-import { ViegaCommonModule } from 'src/app/shared/lib/viega-common/lib/viega-common.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ToastModule } from '@syncfusion/ej2-angular-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LangSelectorComponent } from './lang-selector/lang-selector.component';
@@ -30,10 +28,8 @@ export function httpLoaderFactory(httpClient: HttpClient) {
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatDialogModule,
     MatMenuModule,
-    ViegaCommonModule,
-    MatIconModule,
-    ToastModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

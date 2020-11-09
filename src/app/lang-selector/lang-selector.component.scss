@@ -1,9 +1,12 @@
-@import "src/app/shared/lib/viega-common/theme/for-import/shared";
 
 .lang-section {
-    width: 40px;
-    max-width: 100px;
+    width: 100%;
+    padding-top: 10px;
+    height: 60px;
     color: #fff;
+    // position: fixed;
+    // top: 0;
+    background-color: #111;
 }
 
 .lang-section.mobile {
@@ -34,7 +37,7 @@
         cursor: pointer;
         &:after {
             content: '\e613';
-            font-family: $viega-font-icons;
+            font-family: "Icomoon";
             font-weight: normal;
             font-style: normal;
             font-size: 14px;

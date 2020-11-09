@@ -1,5 +1,5 @@
 {
-  "name": "twms-frontend-common",
+  "name": "bug-report",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,8 +8,7 @@
     "build": "ng build --prod",
     "lint": "npm run lint-no-fix -- --fix",
     "lint-no-fix": "eslint . --ext .ts",
-    "i18n-update-full": "npm run get-device-parameters && npm run i18n-update",
-    "i18n-update": "ngx-translate-extract --input ./src --output ./src/assets/i18n/i18n-keys.json --clean --sort --format namespaced-json -m && node tools/i18n-merge.js && rimraf ./src/assets/i18n/i18n-keys.json"
+    "i18n-update": "ngx-translate-extract --input ./src --output ./src/assets/i18n/i18n-keys.json --clean --sort --format namespaced-json -m"
   },
   "private": true,
   "dependencies": {

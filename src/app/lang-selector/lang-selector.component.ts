@@ -13,7 +13,7 @@ const languagesDb: LanguageItem[] = [
 ];
 
 @Component({
-  selector: 'viega-lang-selector',
+  selector: 'lang-selector',
   templateUrl: './lang-selector.component.html',
   styleUrls: ['./lang-selector.component.scss'],
 })

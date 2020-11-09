@@ -1,9 +1,0 @@
-<div class="viega-app-widget" [class.disabled]="isDisabled">
-  <div class="ripple">
-    <span class="icon" [ngClass]="'icon-' + icon"></span>
-    <div class="text noselect"><ng-content></ng-content></div>
-  </div>
-  <div *ngIf="badgeValue" class="badge" [class.big]="badgeValue > 99">
-    {{ badgeValue }}
-  </div>
-</div>

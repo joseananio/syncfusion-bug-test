@@ -1,9 +1,0 @@
-@import "../../theme/for-import/shared";
-
-$padding: 2em;
-
-img {
-    padding: $padding;
-    max-width: calc(100% - #{$padding} * 2);
-    max-height: calc(100vh - #{$padding} * 2 - 8em);
-}
