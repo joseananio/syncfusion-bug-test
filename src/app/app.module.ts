@@ -10,7 +10,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DeviceIconComponent } from './device-icon/device-icon.component';
 import { LangSelectorComponent } from './lang-selector/lang-selector.component';
 
 declare const VERSION: string;
@@ -25,7 +24,6 @@ export function httpLoaderFactory(httpClient: HttpClient) {
   declarations: [
     AppComponent,
     LangSelectorComponent,
-    DeviceIconComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,6 @@
 # Exclude generated code
-src/app/core/services/api/*
-src/app/core/services/model/*
-src/app/core/services/index.ts
-src/app/core/services/variables.ts
-src/app/core/services/api.module.ts
-src/app/core/services/services.module.ts
-src/app/core/services/configuration.ts
-src/app/core/services/encoder.ts
 src/polyfills.ts
 
-# Exclude viega-common
-src/app/shared/lib/viega-common/lib/*
 
 # Exclude third-party code
 node_modules/**

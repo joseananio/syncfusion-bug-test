@@ -1,0 +1,30 @@
+
+https://next.json-generator.com/
+[
+    {
+       'repeat(4, 8)': {
+        uuid: '{{guid()}}',
+        isActive: '{{bool()}}',
+        serialNumber: 'KS{{integer(2000, 9000)}}',
+        status: '{{random("offline", "online", "unknown", "error").toUpperCase()}}',
+        name: '{{lorem(1, "words")}}',
+        ipAddress: '{{integer(0,255)}}.{{integer(0,255)}}.{{integer(0,255)}}.{{integer(0,255)}}',
+        softwareVersion: 'SW{{integer(100,1000)}}',
+        deviceTypeName: '{{random("Airborne", "Landborne", "Seaborne",  "Vacuumborne")}}',
+        devices: [
+          {
+            'repeat(0, 3)': {
+              uuid: '{{guid()}}',
+              isActive: '{{bool()}}',
+              serialNumber: 'KSS{{integer(2000, 9000)}}',
+              status: '{{random("offline", "online", "unknown", "error").toUpperCase()}}',
+              name: '{{lorem(1, "words")}}',
+              ipAddress: '{{integer(0,255)}}.{{integer(0,255)}}.{{integer(0,255)}}.{{integer(0,255)}}',
+              softwareVersion: 'SWD{{integer(100,1000)}}'
+            }
+          }
+  
+        ]
+      }
+    }
+  ]

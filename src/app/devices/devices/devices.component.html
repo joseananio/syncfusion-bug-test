@@ -19,23 +19,21 @@
                 [ngClass]="getStatus(data).class">
               </span>
               <div class="filterText">{{getStatus(data).text}}</div>
-              <!-- <app-device-icon [size]="40" [deviceType]="data.deviceTypeName"></app-device-icon> -->
+              <img src="assets/images/icon.png" width="20" height="20" alt="icon" />
+
             </ng-template>
           </e-column>
-          <e-column field="name" [headerText]="'DEVICES.DEVICE_POINT_NAME' | translate" [hideAtMedia]="getHideAtMedia('sm')">
+          <e-column field="name" [headerText]="'DEVICES.DEVICE_POINT_NAME' | translate">
             <ng-template #template let-data>
               {{data.translate ? (data.name | translate) : data.name}}
             </ng-template>
           </e-column>
-          <e-column field="serialNumber" [headerText]="'DEVICES.SERIAL_NUMBER' | translate" [hideAtMedia]="getHideAtMedia('lg')">
+          <e-column field="serialNumber" [headerText]="'DEVICES.SERIAL_NUMBER' | translate">
           </e-column>
           <e-column field="softwareVersion" [headerText]="'DEVICES.SOFTWARE_VERSION' | translate"
-            [hideAtMedia]="getHideAtMedia('lg')">
+            >
           </e-column>
-          <e-column field="deviceTypeName" [headerText]="'DEVICES.DEVICE_TYPE' | translate" [hideAtMedia]="getHideAtMedia('lg')">
-            <ng-template #template let-data>
-              {{getDeviceTypeNameI18nKey(data.deviceTypeName) | translate}}
-            </ng-template>
+          <e-column field="deviceTypeName" [headerText]="'DEVICES.DEVICE_TYPE' | translate">
           </e-column>
         </e-columns>
       </ejs-treegrid>

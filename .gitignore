@@ -7,7 +7,6 @@
 
 # dependencies
 /node_modules
-/third_party
 
 # profiling files
 chrome-profiler-events.json
@@ -44,7 +43,6 @@ yarn.lock
 testem.log
 /typings
 .env
-src/assets/i18n/i18n-keys.json
 
 # System Files
 .DS_Store
